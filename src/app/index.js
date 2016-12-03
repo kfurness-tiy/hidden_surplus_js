@@ -13,7 +13,6 @@ const fbRef = firebase.database().ref();
 const fbDoGood = fbRef.child("doGood");
 
 function addDoGood (obj) {
-  console.log("obj",obj);
   let doGood = obj;
   const doGoodId = fbDoGood.push().key;
 
@@ -23,7 +22,6 @@ function addDoGood (obj) {
 }
 
 function getValue () {
-  console.log('pizza');
   let doGood = {
     name: document.getElementById('name').value,
     amount: Number(document.getElementById('amount').value),
@@ -32,7 +30,6 @@ function getValue () {
     selectWhat: document.getElementById("selectWhat").value,
     selectWhere: document.getElementById("selectWhere").value,
   }
-  console.log(doGood);
   addDoGood(doGood);
 }
 
@@ -42,83 +39,58 @@ document.getElementById('submitForm').onclick = getValue;
 fbDoGood.on('value', (snapshot) => {
   //displays entire object
 
+  console.log(snapshot.val());
+  console.log(snapshot.key);
+  console.log(snapshot.key.length);
+
+  let data = snapshot.val();
+
+  // let numberness = data.map((c,i,a) => i);
+  // console.log(numberness);
+
   d3.select(window).on("resize",callFunction);
   callFunction();
 
   function callFunction(){
 
-    var tooltip = d3.select("svg").append("div")
-      .style("opacity", "0").style("position", "absolute")
+    var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height"),
+    radius = 32;
 
-    var svgtest = d3.select('body').select('svg');
+var circles = d3.range(20).map(function() {
+  return {
+    x: Math.round(Math.random() * (width - radius * 2) + radius),
+    y: Math.round(Math.random() * (height - radius * 2) + radius)
+  };
+});
 
-    if (!svgtest.empty()) {
-      svgtest.remove();
-    }
+var color = d3.scaleOrdinal()
+    .range(d3.schemeCategory20);
 
-    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var height = 500;
+svg.selectAll("circle")
+  .data(circles)
+  .enter().append("circle")
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .attr("r", radius)
+    .style("fill", function(d, i) { return color(i); })
+    .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
 
-      var vertices = d3.range(100).map(function(d){ return [Math.random() * width, Math.random() * height]});
+function dragstarted(d) {
+  d3.select(this).raise().classed("active", true);
+}
 
-      var voronoi = d3.voronoi().size([width,height]);
+function dragged(d) {
+  d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+}
 
-      var svg = d3.select('body').append('svg').attr("width", '100%').attr('height', '100%');
-
-      var chartGroup = svg.append("g")
-
-
-      //zoom with mouse wheel
-      chartGroup.call(d3.zoom()
-      //how far I can zoom in/out
-      .scaleExtent([0.8,2])
-      .on("zoom", function() {
-        chartGroup.attr("transform",d3.event.transform);
-      }));
-
-      chartGroup.append('g').attr('class','polygons')
-      .selectAll('path')
-      .data(voronoi.polygons(vertices))
-      .enter().append('path')
-        .attr("d",function(d){return "M"+d.join("L")+"Z";})
-        .on("mousemove", function(d){
-          tooltip.style("opacity", "1")
-          .style("left",d[0][0]+"px")
-          .style("top",d[0][1]+"px")
-          // .style("left",d3.event.pageX+"px")
-          // .style("top",d3.event.pageY+"px")
-          // console.log(d3.event); Good to see all properties of mouse event
-          tooltip.html("Number of sides: " + d.length);
-        })
-        // .on("mouseover", function(){this.style.fill =
-        // "red"})
-        // .on("mouseout", function(){this.style.fill = "white"})
-
-
-
-
-      chartGroup.append('g').attr("class", "fuel")
-        .selectAll('circle')
-          .data(vertices)
-            .enter().append('circle')
-              .attr("cx", function(d){return d[0]})
-              .attr("cy", function(d){return d[1]})
-              .attr("r","2.5");
-
-    d3.select("g.polygons").select("path:nth-child(30)")
-      // can have several transitions!
-      // .transition().duration(1000)
-      // .style("fill", "red")
-      .transition().duration(2000)
-        // .delay(1000)
-      .style("fill","blue").style("opacity","0.7")
-      .attr("transform","translate(10,10)")
-
-
-
-    d3.select("g.polygons").select("path:nth-child(30)")
-      .dispatch("mousemove");
-
+function dragended(d) {
+  d3.select(this).classed("active", false);
+}
   }
 
 });
