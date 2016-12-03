@@ -1,0 +1,23 @@
+{
+  "name": "hidden_surplus_js",
+  "version": "1.0.0",
+  "description": "Hidden surplus is a way to rethink donations and charity contributions. Individuals can choose to sacrafice uneeded purchases and put that money to a greater cause. Hidden Suplus keeps track of the aggregate contributions and shows that together, small donations can make a big difference.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^3.6.2",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
+  }
+}
