@@ -6,7 +6,70 @@
     <title>Hidden Surplus</title>
   </head>
   <body>
+    <header>
+      <img src="./app/img/logo_placeholder.png" alt="Hidden Surplus Logo" />
+      <nav>
+        <ul>
+          <li>About</li>
+          <li>Do Good</li>
+          <li>Progress Made</li>
+        </ul>
+      </nav>
+      <img src="./app/img/jumbotron_placeholder.png" alt="Small sacrafices can bring big changes" />
+    </header>
 
+    <main>
+      <section>
+        <h1>About</h1>
+      </section>
+
+      <section>
+        <h1>Do Good</h1>
+        <form class="form">
+          <div>
+          <label htmlfor="name">Name:
+            <input type="text" id="name" placeholder="Joe" />
+          </label>
+          </div>
+          <div>
+            <label htmlfor="amount">Amount Donated: $
+              <input type="text" id="amount" placeholder="5" />
+            </label>
+          </div>
+          <div>
+            <label htmlfor="gaveUp">What did you give up to donate?
+              <input type="text" id="gaveUp" placeholder="coffee" />
+            </label>
+          </div>
+          <div>
+            <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
+              <select name="select">
+                <option value="value1">Food/Beverage</option>
+                <option value="value2" selected>Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label htmlfor="donateTo">Donated to:
+              <input type="text" id="donateTo" placeholder="Food Bank"/>
+            </label>
+          </div>
+          <div>
+            <label htmlfor="socialMedia">Share on:
+              <input type="checkbox" id="facebook" /> Facebook <br />
+              <input type="checkbox" id="twitter" /> Twitter
+            </label>
+          </div>
+          <button onclick="" type="submit">Submit</button>
+        </form>
+      </section>
+      
+      <section>
+        <h1>Progress Made</h1>
+      </section>
+
+    </main>
     <script src="app/bundle.js"></script>
   </body>
 </html>
