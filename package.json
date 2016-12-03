@@ -4,9 +4,11 @@
   "description": "Hidden surplus is a way to rethink donations and charity contributions. Individuals can choose to sacrafice uneeded purchases and put that money to a greater cause. Hidden Suplus keeps track of the aggregate contributions and shows that together, small donations can make a big difference.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "webpack -d && cp src/index.html dist/index.html && cp -R src/app/img/ dist/app/img/ && webpack-dev-server --content-base src/ --inline --hot",
+    "postinstall": "webpack -p && cp src/index.html dist/index.html && cp -R src/app/img dist/app/img"
   },
-  "author": "",
+  "author": "\"Kelly Furness <kelly.n.waite@gmail.com> (http://kellyfurness.com)",
   "license": "ISC",
   "dependencies": {
     "firebase": "^3.6.2",
@@ -18,6 +20,7 @@
     "json-loader": "^0.5.4",
     "node-sass": "^3.13.0",
     "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1"
+    "style-loader": "^0.13.1",
+    "webpack-dev-server": "^1.16.2"
   }
 }
