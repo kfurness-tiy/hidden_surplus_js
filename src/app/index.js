@@ -79,7 +79,11 @@ svg.selectAll("circle")
     .attr("cx", function(d) { return randomWidth() })
     .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
-    .style("fill", function(d, i) { return color(i); });
+    .style("fill", function(d, i) { return color(i); })
+    .on("mouseover", function(){this.style.fill =
+      "red"})
+      .on("mouseout", function(d,i){this.style.fill = color(i)})
+
 
   }
 
