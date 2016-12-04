@@ -41,12 +41,11 @@ fbDoGood.on('value', (snapshot) => {
 
   console.log(snapshot.val());
   console.log(snapshot.key);
-  console.log(snapshot.key.length);
 
   let data = snapshot.val();
 
-  // let numberness = data.map((c,i,a) => i);
-  // console.log(numberness);
+  let arr = Object.keys(data);
+
 
   d3.select(window).on("resize",callFunction);
   callFunction();
@@ -58,7 +57,7 @@ fbDoGood.on('value', (snapshot) => {
     height = +svg.attr("height"),
     radius = 32;
 
-var circles = d3.range(20).map(function() {
+var circles = d3.range(arr.length).map(function() {
   return {
     x: Math.round(Math.random() * (width - radius * 2) + radius),
     y: Math.round(Math.random() * (height - radius * 2) + radius)

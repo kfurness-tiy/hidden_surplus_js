@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hidden Surplus</title>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
   </head>
   <body>
     <header>
@@ -40,13 +42,14 @@
             <label htmlfor="gaveUp">What did you give up to donate?
               <input type="text" id="gaveUp" placeholder="coffee" />
             </label>
-          </div>
-          <div>
             <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
-              <select name="select">
-                <option value="value1">Food/Beverage</option>
-                <option value="value2" selected>Value 2</option>
-                <option value="value3">Value 3</option>
+              <select name="selectWhat" id="selectWhat">
+                <option value="food">Food/Beverage</option>
+                <option value="beauty" selected>Beauty/Personal Care</option>
+                <option value="clothing">Clothing</option>
+                <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
+                <option value="entertainment">Enertainment</option>
+                <option value="product">Other Product</option>
               </select>
             </label>
           </div>
@@ -54,19 +57,29 @@
             <label htmlfor="donateTo">Donated to:
               <input type="text" id="donateTo" placeholder="Food Bank"/>
             </label>
+            <label htmlfor="typeDonateTo">What category does where you donated to fall into?
+              <select name="selectWhere" id="selectWhere">
+                <option value="charity">Charity</option>
+                <option value="family" selected>Value Family Member/Friend</option>
+                <option value="school">School</option>
+                <option value="fundraiser">Fundraiser</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
           </div>
-          <div>
+          <!-- <div>
             <label htmlfor="socialMedia">Share on:
               <input type="checkbox" id="facebook" /> Facebook <br />
               <input type="checkbox" id="twitter" /> Twitter
             </label>
-          </div>
-          <button onclick="" type="submit">Submit</button>
+          </div> -->
+          <button id="submitForm" type="submit">Submit</button>
         </form>
       </section>
-      
+
       <section>
         <h1>Progress Made</h1>
+        <svg width="960" height="500"></svg>
       </section>
 
     </main>
