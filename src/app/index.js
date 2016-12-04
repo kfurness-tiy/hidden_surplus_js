@@ -37,27 +37,22 @@ document.getElementById('submitForm').onclick = getValue;
 
 
 fbDoGood.on('value', (snapshot) => {
-  //displays entire object
-
-  console.log(snapshot.val());
-  console.log(snapshot.key);
 
   let data = snapshot.val();
-
-  let arr = Object.keys(data);
+  let arr = Object.values(data);
 
   d3.select(window).on("resize",callFunction);
   callFunction();
 
-  function callFunction(){
+function callFunction(){
 
-    var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-    radius = 32;
+  var svg = d3.select("svg"),
+  width = +svg.attr("width"),
+  height = +svg.attr("height"),
+  radius = 32;
 
-    var tooltip = d3.select("svg").append("div")
-      .style("opacity", "0").style("position", "absolute")
+var tooltip = d3.select("body").append("div")
+  .style("opacity", "0").style("position", "absolute");
 
 
 function randomWidth() {
@@ -81,8 +76,18 @@ svg.selectAll("circle")
     .attr("r", radius)
     .style("fill", function(d, i) { return color(i); })
     .on("mouseover", function(){this.style.fill =
-      "red"})
-      .on("mouseout", function(d,i){this.style.fill = color(i)})
+        "red"})
+        .on("mouseout", function(d,i){this.style.fill = color(i)})
+    .attr("d", function () {return arr})
+    .on("mousemove", function(d,i,a){
+        tooltip.style("opacity", "5")
+        // .style("left",d[0][0]+"px")
+        // .style("top",d[0][1]+"px")
+          .style("left",d3.event.pageX+"px")
+          .style("top",d3.event.pageY+"px")
+        // console.log(d3.event); Good to see all properties of mouse event
+        tooltip.html("Amount: $" + arr[i].amount);
+    })
 
 
   }
