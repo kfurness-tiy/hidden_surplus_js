@@ -47,6 +47,7 @@ fbDoGood.on('value', (snapshot) => {
   let arr = Object.keys(data);
 
 
+
   d3.select(window).on("resize",callFunction);
   callFunction();
 
@@ -57,21 +58,25 @@ fbDoGood.on('value', (snapshot) => {
     height = +svg.attr("height"),
     radius = 32;
 
-var circles = d3.range(arr.length).map(function() {
-  return {
-    x: Math.round(Math.random() * (width - radius * 2) + radius),
-    y: Math.round(Math.random() * (height - radius * 2) + radius)
-  };
-});
+
+function randomWidth() {
+  let num = Math.round(Math.random() * (width - radius * 2) + radius)
+  return num;
+}
+
+function randomHeight() {
+  let num = Math.round(Math.random() * (height - radius * 2) + radius)
+  return num;
+}
 
 var color = d3.scaleOrdinal()
     .range(d3.schemeCategory20);
 
 svg.selectAll("circle")
-  .data(circles)
+  .data(arr)
   .enter().append("circle")
-    .attr("cx", function(d) { return d.x; })
-    .attr("cy", function(d) { return d.y; })
+    .attr("cx", function(d) { return randomWidth() })
+    .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
     .style("fill", function(d, i) { return color(i); })
     .call(d3.drag()
