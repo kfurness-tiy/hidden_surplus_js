@@ -81,12 +81,10 @@ svg.selectAll("circle")
     .attr("d", function () {return arr})
     .on("mousemove", function(d,i,a){
         tooltip.style("opacity", "5")
-        // .style("left",d[0][0]+"px")
-        // .style("top",d[0][1]+"px")
           .style("left",d3.event.pageX+"px")
           .style("top",d3.event.pageY+"px")
-        // console.log(d3.event); Good to see all properties of mouse event
-        tooltip.html("Amount: $" + arr[i].amount);
+        tooltip.html("Amount: $" + arr[i].amount + "<br/>"
+          + "Donated: " + arr[i].gaveUp + "<br/>" + "Donated to: " + arr[i].donateTo)
     })
 
 
