@@ -46,8 +46,6 @@ fbDoGood.on('value', (snapshot) => {
 
   let arr = Object.keys(data);
 
-
-
   d3.select(window).on("resize",callFunction);
   callFunction();
 
@@ -57,6 +55,9 @@ fbDoGood.on('value', (snapshot) => {
     width = +svg.attr("width"),
     height = +svg.attr("height"),
     radius = 32;
+
+    var tooltip = d3.select("svg").append("div")
+      .style("opacity", "0").style("position", "absolute")
 
 
 function randomWidth() {
@@ -78,23 +79,8 @@ svg.selectAll("circle")
     .attr("cx", function(d) { return randomWidth() })
     .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
-    .style("fill", function(d, i) { return color(i); })
-    .call(d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended));
+    .style("fill", function(d, i) { return color(i); });
 
-function dragstarted(d) {
-  d3.select(this).raise().classed("active", true);
-}
-
-function dragged(d) {
-  d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
-}
-
-function dragended(d) {
-  d3.select(this).classed("active", false);
-}
   }
 
 });
