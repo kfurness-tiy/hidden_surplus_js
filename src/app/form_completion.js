@@ -30,6 +30,7 @@ function getValueDoGood () {
     selectWhere: document.getElementById("selectWhere").value,
   }
   addDoGood(doGood);
+  return false;
 }
 
 
