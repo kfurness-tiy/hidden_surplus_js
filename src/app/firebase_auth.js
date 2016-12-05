@@ -19,6 +19,7 @@ var config = {
 $(document).ready(function (){
   $("#form").hide();
   $("#signOutNav").hide();
+  $("#signOutMsg").hide();
 })
 
 let user;
@@ -60,8 +61,22 @@ function showForm() {
   $("#welcomeUser").html("Hello, " + user.displayName + ". Fill out the form below to do some good!");
 };
 
- // document.getElementsByClassName('signIn').onclick = signIn;
+function signOut () {
+  firebase.auth().signOut().then(function() {
+    $("#form").hide();
+    $("#signOutNav").hide();
+    $("#signInNav").show();
+    $("#logIn").show();
+    $("#signOutMsg").show();
+    $("#signOutMsg").html("Your have successfully logged out.");
+
+  }, function(error) {
+    $("#signOutMsg").html("We were not able to log you out. Please try again.");
+  });
+};
+
 $('.signIn').click(signIn);
+$('.signOut').click(signOut);
 
 /////////////////// Form //////////////////////////
 
