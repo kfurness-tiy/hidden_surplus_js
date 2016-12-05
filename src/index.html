@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hidden Surplus</title>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -25,9 +28,17 @@
         <h1>About</h1>
       </section>
 
-      <section>
+      <section id="welcome">
         <h1>Do Good</h1>
-        <form class="form">
+        <p>
+          Wanting to do some good? All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
+        </p>
+        <button id="signIn" type="button">Sign In</button>
+      </section>
+
+      <section id="form">
+        <h1>Do Good</h1>
+        <form class="doGoodForm">
           <div>
           <label htmlfor="name">Name:
             <input type="text" id="name" placeholder="Joe" />
@@ -86,6 +97,7 @@
         <h3>Total Amount Donated through Collective Contributions</h3>
         <h1 id="totalAmounts"></h1>
       </section>
+
 
     </main>
     <script src="app/bundle.js"></script>
