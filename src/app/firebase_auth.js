@@ -66,6 +66,7 @@ function signOut () {
   firebase.auth().signOut().then(function() {
     $("#form").hide();
     $("#signOutNav").hide();
+    $("#formSubmitMsg").hide();
     $("#signInNav").show();
     $("#logIn").show();
     $("#signOutMsg").show();
