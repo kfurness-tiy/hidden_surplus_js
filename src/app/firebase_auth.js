@@ -83,10 +83,14 @@ $('.signOut').click(signOut);
 function addDoGood (obj) {
   let doGood = obj;
   const doGoodId = fbDoGood.push().key;
+  const newDonation = "new Donation " + fbDoGood.push().key;
 
   let updates = {};
+  let userUpdated = {};
   updates['doGood/' + doGoodId] = doGood;
+  userUpdated['users/' + user.uid + '/' + newDonation] = doGood;
   fbRef.update(updates);
+  fbRef.update(userUpdated);
 }
 
 function getValueDoGood () {
