@@ -76,6 +76,7 @@ function randomHeight() {
 
 var color = d3.scaleOrdinal()
     .range(d3.schemeCategory20);
+    // .range(['black', 'red', 'blue', 'yellow']);
 
 svg.selectAll("circle")
   .data(arr)
