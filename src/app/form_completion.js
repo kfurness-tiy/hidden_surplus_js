@@ -9,6 +9,7 @@ var config = {
 
 const fbRef = firebase.database().ref();
 const fbDoGood = fbRef.child("doGood");
+const fbUser = fbRef.child('users');
 
 function addDoGood (obj) {
   let doGood = obj;
@@ -19,7 +20,7 @@ function addDoGood (obj) {
   fbRef.update(updates);
 }
 
-function getValue () {
+function getValueDoGood () {
   let doGood = {
     name: document.getElementById('name').value,
     amount: Number(document.getElementById('amount').value),
@@ -31,4 +32,5 @@ function getValue () {
   addDoGood(doGood);
 }
 
-document.getElementById('submitForm').onclick = getValue;
+
+document.getElementById('submitForm').onclick = getValueDoGood;

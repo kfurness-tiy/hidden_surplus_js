@@ -13,7 +13,6 @@ function signIn() {
     var token = result.credential.accessToken;
     // The signed-in user info.
     user = result.user;
-    console.log(user.displayName);
     showForm();
   }).catch(function(error) {
     // Handle Errors here.
@@ -27,11 +26,13 @@ function signIn() {
   });
 };
 
+
+
 function showForm() {
   $("#logIn").hide();
   $("#form").show();
   $("#welcomeUser").html("Hello, " + user.displayName + ". Way to do some good!");
-}
+};
 
  // document.getElementsByClassName('signIn').onclick = signIn;
 $('.signIn').click(signIn);

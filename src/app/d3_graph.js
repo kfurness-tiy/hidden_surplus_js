@@ -1,6 +1,5 @@
 'use strict';
 
-
 const fbRef = firebase.database().ref();
 const fbDoGood = fbRef.child("doGood");
 
