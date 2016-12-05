@@ -15,79 +15,82 @@
       <img src="./app/img/logo_placeholder.png" alt="Hidden Surplus Logo" />
       <nav>
         <ul>
-          <li>About</li>
-          <li>Do Good</li>
-          <li>Progress Made</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#doGood">Do Good</a></li>
+          <li><a href="#doGood">Progress Made</a></li>
+          <button type="button" class="signIn">Login</button>
         </ul>
       </nav>
       <img src="./app/img/jumbotron_placeholder.png" alt="Small sacrafices can bring big changes" />
     </header>
 
     <main>
-      <section>
+      <section id="about">
         <h1>About</h1>
       </section>
 
-      <section id="logIn">
-        <h1>Do Good</h1>
-        <p>
-          Wanting to do some good? All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
-        </p>
-        <button id="signIn" type="button">Sign In</button>
-      </section>
+    <div id="doGood">
+        <section id="logIn">
+          <h1>Do Good</h1>
+          <p>
+            Wanting to do some good? All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
+          </p>
+          <button class="signIn" type="button">Login</button>
+        </section>
 
-      <section id="form">
-        <h1>Do Good</h1>
-        <h2 id="welcomeUser"></h2>
-        <form class="doGoodForm">
-          <div>
-          <label htmlfor="name">Name:
-            <input type="text" id="name" placeholder="Joe" />
-          </label>
-          </div>
-          <div>
-            <label htmlfor="amount">Amount Donated: $
-              <input type="text" id="amount" placeholder="5" />
+        <section id="form">
+          <h1>Do Good</h1>
+          <h2 id="welcomeUser"></h2>
+          <form class="doGoodForm">
+            <div>
+            <label htmlfor="name">Name:
+              <input type="text" id="name" placeholder="Joe" />
             </label>
-          </div>
-          <div>
-            <label htmlfor="gaveUp">What did you give up to donate?
-              <input type="text" id="gaveUp" placeholder="coffee" />
-            </label>
-            <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
-              <select name="selectWhat" id="selectWhat">
-                <option value="food">Food/Beverage</option>
-                <option value="beauty" selected>Beauty/Personal Care</option>
-                <option value="clothing">Clothing</option>
-                <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
-                <option value="entertainment">Enertainment</option>
-                <option value="product">Other Product</option>
-              </select>
-            </label>
-          </div>
-          <div>
-            <label htmlfor="donateTo">Donated to:
-              <input type="text" id="donateTo" placeholder="Food Bank"/>
-            </label>
-            <label htmlfor="typeDonateTo">What category does where you donated to fall into?
-              <select name="selectWhere" id="selectWhere">
-                <option value="charity">Charity</option>
-                <option value="family" selected>Value Family Member/Friend</option>
-                <option value="school">School</option>
-                <option value="fundraiser">Fundraiser</option>
-                <option value="other">Other</option>
-              </select>
-            </label>
-          </div>
-          <!-- <div>
-            <label htmlfor="socialMedia">Share on:
-              <input type="checkbox" id="facebook" /> Facebook <br />
-              <input type="checkbox" id="twitter" /> Twitter
-            </label>
-          </div> -->
-          <button id="submitForm" type="submit">Submit</button>
-        </form>
-      </section>
+            </div>
+            <div>
+              <label htmlfor="amount">Amount Donated: $
+                <input type="text" id="amount" placeholder="5" />
+              </label>
+            </div>
+            <div>
+              <label htmlfor="gaveUp">What did you give up to donate?
+                <input type="text" id="gaveUp" placeholder="coffee" />
+              </label>
+              <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
+                <select name="selectWhat" id="selectWhat">
+                  <option value="food">Food/Beverage</option>
+                  <option value="beauty" selected>Beauty/Personal Care</option>
+                  <option value="clothing">Clothing</option>
+                  <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
+                  <option value="entertainment">Enertainment</option>
+                  <option value="product">Other Product</option>
+                </select>
+              </label>
+            </div>
+            <div>
+              <label htmlfor="donateTo">Donated to:
+                <input type="text" id="donateTo" placeholder="Food Bank"/>
+              </label>
+              <label htmlfor="typeDonateTo">What category does where you donated to fall into?
+                <select name="selectWhere" id="selectWhere">
+                  <option value="charity">Charity</option>
+                  <option value="family" selected>Value Family Member/Friend</option>
+                  <option value="school">School</option>
+                  <option value="fundraiser">Fundraiser</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+            </div>
+            <!-- <div>
+              <label htmlfor="socialMedia">Share on:
+                <input type="checkbox" id="facebook" /> Facebook <br />
+                <input type="checkbox" id="twitter" /> Twitter
+              </label>
+            </div> -->
+            <button id="submitForm" type="submit">Submit</button>
+          </form>
+        </section>
+      </div>  <!-- Ends doGood div -->
 
       <section>
         <h1>Progress Made</h1>

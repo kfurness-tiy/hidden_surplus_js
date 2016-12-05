@@ -33,4 +33,5 @@ function showForm() {
   $("#welcomeUser").html("Hello, " + user.displayName + ". Way to do some good!");
 }
 
-document.getElementById('signIn').onclick = signIn;
+ // document.getElementsByClassName('signIn').onclick = signIn;
+$('.signIn').click(signIn);
