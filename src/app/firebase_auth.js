@@ -82,6 +82,12 @@ $('.signOut').click(signOut);
 /////////////////// Form //////////////////////////
 function goodDone () {
   $('#formSubmitMsg').show();
+  $('#form').hide();
+}
+
+function showAnotherForm () {
+  document.getElementById("doGoodForm").reset();
+  $('#form').show();
 }
 
 function addDoGood (obj) {
@@ -112,4 +118,6 @@ function getValueDoGood () {
 }
 
 
-document.getElementById('submitForm').onclick = getValueDoGood;
+// document.getElementById('submitForm').onclick = getValueDoGood;
+$('#submitForm').click(getValueDoGood);
+$('#showAnotherForm').click(showAnotherForm);
