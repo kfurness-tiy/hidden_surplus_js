@@ -41,6 +41,15 @@ fbDoGood.on('value', (snapshot) => {
   let data = snapshot.val();
   let arr = Object.values(data);
 
+  let total = 0;
+
+  arr.map((c,i,a) => {
+    total += c.amount;
+    return total
+  });
+
+  document.getElementById('totalAmounts').innerHTML = "$" + total;
+
   d3.select(window).on("resize",callFunction);
   callFunction();
 
