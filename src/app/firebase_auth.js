@@ -14,6 +14,7 @@ function signIn() {
     // The signed-in user info.
     user = result.user;
     showForm();
+    writeUserData(user.uid, user.displayName, user.email, user.imageUrl);
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -25,6 +26,15 @@ function signIn() {
     // ...
   });
 };
+
+function writeUserData(userId, name, email, imageUrl) {
+  console.log(userId);
+  firebase.database().ref('users/' + userId).set({
+    name: user.displayName,
+    email: user.email,
+    profile_picture : user.imageUrl
+  });
+}
 
 
 
