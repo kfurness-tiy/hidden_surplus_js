@@ -20,6 +20,7 @@ $(document).ready(function (){
   $("#form").hide();
   $("#signOutNav").hide();
   $("#signOutMsg").hide();
+  $("#formSubmitMsg").hide();
 })
 
 let user;
@@ -79,6 +80,9 @@ $('.signIn').click(signIn);
 $('.signOut').click(signOut);
 
 /////////////////// Form //////////////////////////
+function goodDone () {
+  $('#formSubmitMsg').show();
+}
 
 function addDoGood (obj) {
   let doGood = obj;
@@ -103,6 +107,7 @@ function getValueDoGood () {
     selectWhere: document.getElementById("selectWhere").value,
   }
   addDoGood(doGood);
+  goodDone();
   return false;
 }
 
