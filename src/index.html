@@ -18,7 +18,8 @@
           <li><a href="#about">About</a></li>
           <li><a href="#doGood">Do Good</a></li>
           <li><a href="#doGood">Progress Made</a></li>
-          <button type="button" class="signIn">Login</button>
+          <button id="signInNav" type="button" class="signIn">Log In</button>
+          <button id="signOutNav" type="button" class="signOut">Log Out</button>
         </ul>
       </nav>
       <img src="./app/img/jumbotron_placeholder.png" alt="Small sacrafices can bring big changes" />
@@ -35,12 +36,13 @@
           <p>
             Wanting to do some good? All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
           </p>
-          <button class="signIn" type="button">Login</button>
+          <button class="signIn" type="button">Log In</button>
         </section>
 
         <section id="form">
           <h1>Do Good</h1>
           <h2 id="welcomeUser"></h2>
+          <button class="signOut" type="button">Log Out</button>
           <form class="doGoodForm">
             <div>
             <label htmlfor="name">Name:
