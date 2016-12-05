@@ -14,6 +14,7 @@ function signIn() {
     // The signed-in user info.
     user = result.user;
     console.log(user.displayName);
+    showForm();
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -25,5 +26,11 @@ function signIn() {
     // ...
   });
 };
+
+function showForm() {
+  $("#logIn").hide();
+  $("#form").show();
+  $("#welcomeUser").html("Hello, " + user.displayName + ". Way to do some good!");
+}
 
 document.getElementById('signIn').onclick = signIn;
