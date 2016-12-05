@@ -1,5 +1,9 @@
 'use strict';
 
+$(document).ready(function (){
+  $("#form").hide();
+})
+
 let provider = new firebase.auth.GoogleAuthProvider();
 
 function signIn() {
