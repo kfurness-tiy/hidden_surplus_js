@@ -84,8 +84,16 @@ svg.selectAll("circle")
         tooltip.style("opacity", "5")
           .style("left",d3.event.pageX+"px")
           .style("top",d3.event.pageY+"px")
-        tooltip.html('<span class="dispAmount"> Amount: $' + arr[i].amount + '</span><br/>'
-          + '<span class="dispDonated">Donated: ' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo">Donated to: ' + arr[i].donateTo + '</span>');
+        tooltip.html(function () {
+          if (arr[i].showNameInfo === 'true') {
+            return '<span class="dispName">' + arr[i].name + '<br/><span class="dispAmount"> $' + arr[i].amount + '</span><br/>'
+          + '<span class="dispDonated"> gave up <br/>' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo"> donated to <br/> ' + arr[i].donateTo + '</span>'
+          }
+          else {
+            return '<span class="dispName"> Anonymous <br/>' + '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>'
+          + '<span class="dispDonated"> gave up <br/>' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo"> donated to <br/> ' + arr[i].donateTo + '</span>'
+          }
+        });
     })
 
 
