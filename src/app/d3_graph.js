@@ -35,9 +35,6 @@ let timeNow = time.getTime();
 let week = 604800000;
 let weekOld = timeNow - week;
 
-console.log(timeNow);
-console.log(weekOld);
-
 function randomWidth() {
   let num = Math.round(Math.random() * (width - radius * 2) + radius)
   return num;
@@ -62,17 +59,26 @@ svg.selectAll("circle")
     .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
     .attr("class", function(d) {
-      console.log(d.postTime);
       if (weekOld <= d.postTime) {
-        return "meat"
+        return "newer"
       } else  {
-        return "potato"
+        return "older"
       }
     })
-    .style("fill", function(d, i) { return color(i); })
+    .style("fill", function(d, i) {
+        if ($(this).hasClass("newer")) {
+           return recentColor(i);}
+         else {
+           return color(i);
+         }})
     .on("mouseover", function(){this.style.fill =
         "red"})
-        .on("mouseout", function(d,i){this.style.fill = color(i)})
+        .on("mouseout", function(d, i) {
+            if ($(this).hasClass("newer")) {
+               this.style.fill = recentColor(i);}
+             else {
+               this.style.fill = color(i);
+             }})
     .attr("d", function () {return arr})
     .on("mousemove", function(d,i,a){
         tooltip.style("opacity", "5")
