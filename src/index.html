@@ -11,19 +11,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
+    <div class="container-fluid">
+    <header class="container">
       <img src="./app/img/logo_placeholder.png" alt="Hidden Surplus Logo" />
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#doGood">Do Good</a></li>
-          <li><a href="#doGood">Progress Made</a></li>
+          <li><a href="#doGood">Collective Contributions</a></li>
           <button id="signInNav" type="button" class="signIn">Log In</button>
           <button id="signOutNav" type="button" class="signOut">Log Out</button>
         </ul>
       </nav>
-      <img src="./app/img/jumbotron_placeholder.png" alt="Small sacrafices can bring big changes" />
     </header>
+
+    <div class="jumbotron">
+      <p>Small sacrafices</p>
+      <p>CAN BRING BIG CHANGE</p>
+    </div>
 
     <main>
       <section id="about">
@@ -129,5 +134,6 @@
 
     </main>
     <script src="app/bundle.js"></script>
+  </div>   <!-- End container div -->
   </body>
 </html>

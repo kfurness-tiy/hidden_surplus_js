@@ -46,7 +46,6 @@ function signIn() {
 };
 
 function writeUserData(userId, name, email) {
-  console.log(userId);
   firebase.database().ref('users/' + userId).set({
     name: name,
     email: email,
