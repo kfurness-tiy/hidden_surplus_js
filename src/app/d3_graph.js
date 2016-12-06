@@ -51,6 +51,14 @@ svg.selectAll("circle")
     .attr("cx", function(d) { return randomWidth() })
     .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
+    .attr("class", function(d) {
+      console.log(d.amount);
+      if (d.amount > 5) {
+        return "meat"
+      } else  {
+        return "potato"
+      }
+    })
     .style("fill", function(d, i) { return color(i); })
     .on("mouseover", function(){this.style.fill =
         "red"})
