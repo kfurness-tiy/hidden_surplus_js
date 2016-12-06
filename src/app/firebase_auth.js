@@ -80,6 +80,21 @@ $('.signIn').click(signIn);
 $('.signOut').click(signOut);
 
 /////////////////// Form //////////////////////////
+function validateForm () {
+  let name = document.getElementById('name').value;
+  let amount = Number(document.getElementById('amount').value);
+  let donateTo = document.getElementById('donateTo').value;
+  let gaveUp = document.getElementById('gaveUp').value;
+  if ( name !== '' && amount !== '' && !isNaN(amount) && donateTo !== '' && gaveUp !== '') {
+  getValueDoGood();
+  return false;
+  }
+  else {
+    alert("It looks like some fields were not filled in correctly. Please try again.");
+    return false
+  }
+}
+
 function goodDone () {
   $('#formSubmitMsg').show();
   $('#form').hide();
@@ -117,8 +132,8 @@ function getValueDoGood () {
   }
   addDoGood(doGood);
   goodDone();
-  return false;
 }
 
-$('#submitForm').click(getValueDoGood);
+$('#submitForm').click(validateForm);
+// $('#submitForm').click(getValueDoGood);
 $('#showAnotherForm').click(showAnotherForm);
