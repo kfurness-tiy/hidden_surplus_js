@@ -105,6 +105,7 @@ function addDoGood (obj) {
 }
 
 function getValueDoGood () {
+  let d = new Date();
   let doGood = {
     name: document.getElementById('name').value,
     amount: Number(document.getElementById('amount').value),
@@ -112,6 +113,7 @@ function getValueDoGood () {
     gaveUp: document.getElementById('gaveUp').value,
     selectWhat: document.getElementById("selectWhat").value,
     selectWhere: document.getElementById("selectWhere").value,
+    postTime: d.getTime(),
   }
   addDoGood(doGood);
   goodDone();
