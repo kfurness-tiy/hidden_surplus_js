@@ -23,7 +23,7 @@ fbDoGood.on('value', (snapshot) => {
 function callFunction(){
 
 let heightPx = $(window).height() * 0.60;
-let widthPx = $(window).width() * 0.80;
+let widthPx = $(window).innerWidth() * 0.75;
 
 var svg = d3.select("svg"),
   width = +svg.attr("width", widthPx),
@@ -35,8 +35,8 @@ var tooltip = d3.select("body").append("div")
 
 let time = new Date();
 let timeNow = time.getTime();
-let week = 604800000;
-let weekOld = timeNow - week;
+let day = 86400000;
+let dayOld = timeNow - day;
 
 function randomWidth() {
   let num = Math.round(Math.random() * (widthPx - radius * 2) + radius)
@@ -62,7 +62,7 @@ svg.selectAll("circle")
     .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
     .attr("class", function(d) {
-      if (weekOld <= d.postTime) {
+      if (dayOld <= d.postTime) {
         return "newer"
       } else  {
         return "older"
