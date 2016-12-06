@@ -30,6 +30,13 @@ function callFunction(){
 var tooltip = d3.select("body").append("div")
   .style("opacity", "0").style("position", "absolute");
 
+let time = new Date();
+let timeNow = time.getTime();
+let week = 604800000;
+let weekOld = timeNow - week;
+
+console.log(timeNow);
+console.log(weekOld);
 
 function randomWidth() {
   let num = Math.round(Math.random() * (width - radius * 2) + radius)
@@ -40,6 +47,9 @@ function randomHeight() {
   let num = Math.round(Math.random() * (height - radius * 2) + radius)
   return num;
 }
+
+var recentColor = d3.scaleOrdinal()
+    .range(['pink', 'purple', 'silver']);
 
 var color = d3.scaleOrdinal()
     .range(d3.schemeCategory20);
@@ -52,8 +62,8 @@ svg.selectAll("circle")
     .attr("cy", function(d) { return randomHeight() })
     .attr("r", radius)
     .attr("class", function(d) {
-      console.log(d.amount);
-      if (d.amount > 5) {
+      console.log(d.postTime);
+      if (weekOld <= d.postTime) {
         return "meat"
       } else  {
         return "potato"
