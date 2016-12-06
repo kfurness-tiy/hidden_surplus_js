@@ -233,7 +233,7 @@
 	  var svg = d3.select("svg"),
 	  width = +svg.attr("width"),
 	  height = +svg.attr("height"),
-	  radius = 32;
+	  radius = 20;
 	
 	var tooltip = d3.select("body").append("div")
 	  .style("opacity", "0").style("position", "absolute");
@@ -242,9 +242,6 @@
 	let timeNow = time.getTime();
 	let week = 604800000;
 	let weekOld = timeNow - week;
-	
-	console.log(timeNow);
-	console.log(weekOld);
 	
 	function randomWidth() {
 	  let num = Math.round(Math.random() * (width - radius * 2) + radius)
@@ -270,24 +267,33 @@
 	    .attr("cy", function(d) { return randomHeight() })
 	    .attr("r", radius)
 	    .attr("class", function(d) {
-	      console.log(d.postTime);
 	      if (weekOld <= d.postTime) {
-	        return "meat"
+	        return "newer"
 	      } else  {
-	        return "potato"
+	        return "older"
 	      }
 	    })
-	    .style("fill", function(d, i) { return color(i); })
+	    .style("fill", function(d, i) {
+	        if ($(this).hasClass("newer")) {
+	           return recentColor(i);}
+	         else {
+	           return color(i);
+	         }})
 	    .on("mouseover", function(){this.style.fill =
 	        "red"})
-	        .on("mouseout", function(d,i){this.style.fill = color(i)})
+	        .on("mouseout", function(d, i) {
+	            if ($(this).hasClass("newer")) {
+	               this.style.fill = recentColor(i);}
+	             else {
+	               this.style.fill = color(i);
+	             }})
 	    .attr("d", function () {return arr})
 	    .on("mousemove", function(d,i,a){
 	        tooltip.style("opacity", "5")
 	          .style("left",d3.event.pageX+"px")
 	          .style("top",d3.event.pageY+"px")
-	        tooltip.html("Amount: $" + arr[i].amount + "<br/>"
-	          + "Donated: " + arr[i].gaveUp + "<br/>" + "Donated to: " + arr[i].donateTo)
+	        tooltip.html('<span class="dispAmount"> Amount: $' + arr[i].amount + '</span><br/>'
+	          + '<span class="dispDonated">Donated: ' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo">Donated to: ' + arr[i].donateTo + '</span>');
 	    })
 	
 	

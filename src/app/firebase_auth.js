@@ -113,6 +113,7 @@ function getValueDoGood () {
     gaveUp: document.getElementById('gaveUp').value,
     selectWhat: document.getElementById("selectWhat").value,
     selectWhere: document.getElementById("selectWhere").value,
+    showNameInfo: document.getElementById("showNameInfo").value,
     postTime: d.getTime(),
   }
   addDoGood(doGood);
@@ -120,7 +121,5 @@ function getValueDoGood () {
   return false;
 }
 
-
-// document.getElementById('submitForm').onclick = getValueDoGood;
 $('#submitForm').click(getValueDoGood);
 $('#showAnotherForm').click(showAnotherForm);

@@ -48,7 +48,7 @@
           <h1>Do Good</h1>
           <h2 id="signOutMsg"></h2>
           <p>
-            Wanting to do some good? All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
+            Wanting to do some good? <br/> All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
           </p>
           <button class="signIn" type="button">Log In</button>
         </section>
@@ -90,11 +90,17 @@
               <label htmlfor="typeDonateTo">What category does where you donated to fall into?
                 <select name="selectWhere" id="selectWhere">
                   <option value="charity">Charity</option>
-                  <option value="family" selected>Value Family Member/Friend</option>
+                  <option value="family" selected>Family Member/Friend</option>
                   <option value="school">School</option>
                   <option value="fundraiser">Fundraiser</option>
                   <option value="other">Other</option>
                 </select>
+              </label>
+            </div>
+            <div>
+              <label htmlfor="donateTo">Would you like to display your name with your donation information?
+                <input type="radio" name="yes" value="true"> Yes<br>
+                <input type="radio" name="no" value="false"> Other
               </label>
             </div>
             <!-- <div>

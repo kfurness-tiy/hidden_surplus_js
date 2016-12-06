@@ -74,7 +74,7 @@
               </label>
               <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
                 <select name="selectWhat" id="selectWhat">
-                  <option value="food">Food/Beverage</option>
+                  <option value="food" selected>Food/Beverage</option>
                   <option value="beauty" selected>Beauty/Personal Care</option>
                   <option value="clothing">Clothing</option>
                   <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
@@ -89,11 +89,19 @@
               </label>
               <label htmlfor="typeDonateTo">What category does where you donated to fall into?
                 <select name="selectWhere" id="selectWhere">
-                  <option value="charity">Charity</option>
-                  <option value="family" selected>Family Member/Friend</option>
+                  <option value="charity" selected>Charity</option>
+                  <option value="family">Family Member/Friend</option>
                   <option value="school">School</option>
                   <option value="fundraiser">Fundraiser</option>
                   <option value="other">Other</option>
+                </select>
+              </label>
+            </div>
+            <div>
+              <label htmlfor="showNameInfo">Would you like to display your name with your donation information?
+                <select id="showNameInfo" name="showNameInfo">
+                  <option selected value="true"> Yes </option>
+                  <option value="false"> No </option>
                 </select>
               </label>
             </div>
