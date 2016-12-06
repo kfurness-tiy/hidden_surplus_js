@@ -25,7 +25,7 @@ function callFunction(){
   var svg = d3.select("svg"),
   width = +svg.attr("width"),
   height = +svg.attr("height"),
-  radius = 32;
+  radius = 20;
 
 var tooltip = d3.select("body").append("div")
   .style("opacity", "0").style("position", "absolute");
@@ -84,8 +84,8 @@ svg.selectAll("circle")
         tooltip.style("opacity", "5")
           .style("left",d3.event.pageX+"px")
           .style("top",d3.event.pageY+"px")
-        tooltip.html("Amount: $" + arr[i].amount + "<br/>"
-          + "Donated: " + arr[i].gaveUp + "<br/>" + "Donated to: " + arr[i].donateTo)
+        tooltip.html('<span class="dispAmount"> Amount: $' + arr[i].amount + '</span><br/>'
+          + '<span class="dispDonated">Donated: ' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo">Donated to: ' + arr[i].donateTo + '</span>');
     })
 
 
