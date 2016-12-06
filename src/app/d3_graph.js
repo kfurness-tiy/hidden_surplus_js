@@ -86,12 +86,10 @@ svg.selectAll("circle")
           .style("top",d3.event.pageY+"px")
         tooltip.html(function () {
           if (arr[i].showNameInfo === 'true') {
-            return '<span class="dispName">' + arr[i].name + '<br/><span class="dispAmount"> $' + arr[i].amount + '</span><br/>'
-          + '<span class="dispDonated"> gave up <br/>' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo"> donated to <br/> ' + arr[i].donateTo + '</span>'
+            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>' + '<span class="dispName">' + arr[i].name + '</span><br/>' + '<span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispDonated"> gave up <br/></span>' + '<span class="dispDonatedText">' + arr[i].gaveUp + '</span>'
           }
           else {
-            return '<span class="dispName"> Anonymous <br/>' + '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>'
-          + '<span class="dispDonated"> gave up <br/>' + arr[i].gaveUp + '</span><br/>' + '<span class="dispTo"> donated to <br/> ' + arr[i].donateTo + '</span>'
+            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/> <span class="dispName"> Anonymous </span><br/>'  + '<span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispDonated"> gave up <br/><span class="dispDonatedText">' + arr[i].gaveUp + '</span><br/>'
           }
         });
     })
