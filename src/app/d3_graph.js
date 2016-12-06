@@ -22,9 +22,12 @@ fbDoGood.on('value', (snapshot) => {
 
 function callFunction(){
 
+let heightPx = $(window).height() * 0.60;
+let widthPx = $(window).width() * 0.80;
+
 var svg = d3.select("svg"),
-  width = +svg.attr("width"),
-  height = +svg.attr("height"),
+  width = +svg.attr("width", widthPx),
+  height = +svg.attr("height", heightPx),
   radius = 20;
 
 var tooltip = d3.select("body").append("div")
@@ -36,12 +39,12 @@ let week = 604800000;
 let weekOld = timeNow - week;
 
 function randomWidth() {
-  let num = Math.round(Math.random() * (width - radius * 2) + radius)
+  let num = Math.round(Math.random() * (widthPx - radius * 2) + radius)
   return num;
 }
 
 function randomHeight() {
-  let num = Math.round(Math.random() * (height - radius * 2) + radius)
+  let num = Math.round(Math.random() * (heightPx - radius * 2) + radius)
   return num;
 }
 
