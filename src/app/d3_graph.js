@@ -22,7 +22,7 @@ fbDoGood.on('value', (snapshot) => {
 
 function callFunction(){
 
-  var svg = d3.select("svg"),
+var svg = d3.select("svg"),
   width = +svg.attr("width"),
   height = +svg.attr("height"),
   radius = 20;
