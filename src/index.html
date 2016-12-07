@@ -9,18 +9,19 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maitree" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
+    <div id="home" class="container-fluid">
     <header class="container">
-      <img src="./app/img/logo.png" alt="Hidden Surplus Logo" />
+      <a href=""><img src="./app/img/logo.png" alt="Hidden Surplus Logo" /></a>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#doGood">Do Good</a></li>
-          <li><a href="#contributions">Collective Contributions</a></li>
-          <li><a href="#donations">Donations</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#doGood">DO GOOD</a></li>
+          <li><a href="#contributions">CONTRIBUTIONS</a></li>
+          <li><a href="#donations">DONATIONS</a></li>
           <button id="signInNav" type="button" class="signIn">LOGIN</button>
           <button id="signOutNav" type="button" class="signOut">LOG OUT</button>
         </ul>
@@ -28,9 +29,9 @@
     </header>
 
     <div class="jumbotronDiv">
-      <p>Small sacrifices</p>
-      <p>CAN BRING BIG CHANGE</p>
-      <button class="hsButton" type="button"><a href="#doGood">start now</a></button>
+      <p class="smallSacrifices">small sacrifices</p>
+      <p class="bigChange">CAN BRING BIG CHANGE</p>
+      <a href="#doGood"><button class="hsButton" type="button">start now</button></a>
     </div>
 
     <main>
@@ -133,9 +134,9 @@
         <h1>CHECK OUT <br/> THE GOOD WE'RE DOING</h1>
         <h2>Collective Contributions</h2>
         <h3>
-          Each dot represents a donation. <br/> Hover over the dots to see how others used their hidden surplus for good.
+          Each dot represents a donation. <br/> Hover over the dots to see how others used their hidden surplus for good.<br/> The darker dots are more recent contributions.
         </h3>
-        <div id="testness">
+        <div id="svg">
           <!-- svg appends here -->
         </div>
         <h3>All these dots add up to</h3>

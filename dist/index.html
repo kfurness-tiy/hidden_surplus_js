@@ -9,24 +9,25 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
     <div class="container-fluid">
     <header class="container">
-      <img src="./app/img/logo_placeholder.png" alt="Hidden Surplus Logo" />
+      <img src="./app/img/logo.png" alt="Hidden Surplus Logo" />
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#doGood">Do Good</a></li>
           <li><a href="#contributions">Collective Contributions</a></li>
           <li><a href="#donations">Donations</a></li>
-          <button id="signInNav" type="button" class="signIn">Log In</button>
-          <button id="signOutNav" type="button" class="signOut">Log Out</button>
+          <button id="signInNav" type="button" class="signIn">LOGIN</button>
+          <button id="signOutNav" type="button" class="signOut">LOG OUT</button>
         </ul>
       </nav>
     </header>
 
-    <div class="jumbotron">
+    <div class="jumbotronDiv">
       <p>Small sacrifices</p>
       <p>CAN BRING BIG CHANGE</p>
       <button class="hsButton" type="button"><a href="#doGood">start now</a></button>
@@ -53,21 +54,21 @@
         </button>
       </div>
 
-    <div class="doGoodSection">
-    <div id="doGood">
+    <div id="doGood" class="doGoodSection">
+    <div>
         <section id="logIn">
           <h1>Do Good</h1>
           <h2 id="signOutMsg"></h2>
           <p>
             Wanting to do some good? <br/> All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
           </p>
-          <button class="signIn" type="button">Log In</button>
+          <button class="signIn" type="button">LOGIN</button>
         </section>
 
         <section id="form">
           <h1>Do Good</h1>
           <h2 id="welcomeUser"></h2>
-          <button class="signOut" type="button">Log Out</button>
+          <button class="signOut" type="button">LOG OUT</button>
           <form id="doGoodForm">
             <div>
             <label htmlfor="name">Name:
@@ -135,7 +136,7 @@
           Each dot represents a donation. <br/> Hover over the dots to see how others used their hidden surplus for good.
         </h3>
         <div id="testness">
-          <svg></svg>
+          <!-- svg appends here -->
         </div>
         <h3>All these dots add up to</h3>
         <p id="totalAmounts"></p>
@@ -155,7 +156,7 @@
     </main>
 
     <footer>
-      <h1>Hidden Surplus</h1>
+      <img src="./app/img/white_logo.png" alt="Hidden surplus logo" />
     </footer>
     </div>   <!-- End container div -->
     <script src="app/bundle.js"></script>

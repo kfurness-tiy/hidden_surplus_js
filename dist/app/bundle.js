@@ -95,7 +95,7 @@
 	
 	
 	// module
-	exports.push([module.id, "header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header img {\n    display: inline-block; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n\n.jumbotron {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 60vh;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotron.jpg */ 4) + ");\n  background-repeat: no-repeat;\n  background-size: center; }\n\n#about {\n  text-align: center; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 60vh;\n  background-image: url(" + __webpack_require__(/*! ../img/do_good.jpg */ 5) + ");\n  background-repeat: no-repeat;\n  background-size: center; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.tooltip.hidden {\n  display: none; }\n", ""]);
+	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header img {\n    display: inline-block; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    text-decoration: none;\n    color: #72bfb8; }\n  header button {\n    height: 32px;\n    width: 93px; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 4) + ");\n  background-repeat: no-repeat; }\n\n#about {\n  text-align: center; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 5) + ");\n  background-repeat: no-repeat;\n  background-size: center;\n  text-align: center; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.tooltip.hidden {\n  display: none; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\nfooter {\n  background-color: #3b6670; }\n", ""]);
 	
 	// exports
 
@@ -161,21 +161,21 @@
 
 /***/ },
 /* 4 */
-/*!***********************************!*\
-  !*** ./src/app/img/jumbotron.jpg ***!
-  \***********************************/
+/*!************************************!*\
+  !*** ./src/app/img/jumbotrong.jpg ***!
+  \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "src/app/img/jumbotron.jpg?57e37cf646";
+	module.exports = __webpack_require__.p + "src/app/img/jumbotrong.jpg?066520fbba";
 
 /***/ },
 /* 5 */
-/*!*********************************!*\
-  !*** ./src/app/img/do_good.jpg ***!
-  \*********************************/
+/*!********************************!*\
+  !*** ./src/app/img/doGood.jpg ***!
+  \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "src/app/img/do_good.jpg?d8dcf6828d";
+	module.exports = __webpack_require__.p + "src/app/img/doGood.jpg?92a58ccf3e";
 
 /***/ },
 /* 6 */
@@ -620,7 +620,7 @@
 	  var svg = d3.select("#testness").append('svg'),
 	    width = svg.attr("width", widthPx),
 	    height = svg.attr("height", heightPx),
-	    radius = 20;
+	    radius = 12;
 	
 	  var chartGroup = svg.append("g")
 	
@@ -648,8 +648,9 @@
 	      .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)']);
 	
 	  var color = d3.scaleOrdinal()
-	      .range(d3.schemeCategory20);
+	      .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
 	      // .range(['black', 'red', 'blue', 'yellow']);
+	
 	
 	  chartGroup.selectAll("circle")
 	    .data(arr)
@@ -671,7 +672,9 @@
 	             return color(i);
 	           }})
 	          .on("mouseover", function(d,i,a){
-	              this.style.fill = "red";
+	              this.style.fill = "rgb(51,51,51)"
+	              d3.select(this).attr("r", 15)
+	                  .classed("growRad", true)
 	              tooltip.style("opacity", "5")
 	                .style("left",d3.event.pageX+"px")
 	                .style("top",d3.event.pageY+"px")
@@ -686,6 +689,8 @@
 	              })
 	          .on("mouseout", function(d, i) {
 	             d3.select(".tooltip").classed("hidden", true)
+	             d3.select(this).attr("r", 12)
+	              .classed("growRad", false)
 	              if ($(this).hasClass("newer")) {
 	                 this.style.fill = recentColor(i);}
 	               else {

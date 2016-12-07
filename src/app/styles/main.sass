@@ -21,6 +21,12 @@ button
   width: 160px
   height: 45px
 
+button:hover
+  background-color: rgb(88,148,142)
+
+a:hover
+  text-decoration: none
+
 .container-fluid
   margin-right: 0
   margin-left: 0
@@ -38,17 +44,21 @@ header
   nav
     display: inline-block
     vertical-align: middle
+    text-align: right
+  ul
+    margin-bottom: 0
   li
     display: inline-block
     padding: 1em
   a
     color: $darkGray
   a:hover
-    text-decoration: none
     color: $turq
+    font-weight: bolder
   button
     height: 32px
     width: 93px
+    font-family: 'Maitree', serif
 
 ////// JUMBOTRON ///////
 .jumbotronDiv
@@ -60,7 +70,15 @@ header
   background-position: center
   background-image: url('../img/jumbotrong.jpg')
   background-repeat: no-repeat
-
+  button
+    font-size: 18px
+  p
+    color: white
+    font-size: 55px
+  .bigChange
+    font-weight: bolder
+  smallSacrifices
+    font-weight: lighter
 
 //////// ABOUT /////////
 #about
