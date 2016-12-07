@@ -84,7 +84,6 @@ function callFunction(){
              return color(i);
            }})
           .on("mouseover", function(d,i,a){
-            console.log(this);
               this.style.fill = "rgb(51,51,51)"
               d3.select(this).attr("r", 15)
                   .classed("growRad", true)
