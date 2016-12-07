@@ -32,7 +32,7 @@ function callFunction(){
   var svg = d3.select("#testness").append('svg'),
     width = svg.attr("width", widthPx),
     height = svg.attr("height", heightPx),
-    radius = 20;
+    radius = 12;
 
   var chartGroup = svg.append("g")
 
@@ -60,8 +60,9 @@ function callFunction(){
       .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)']);
 
   var color = d3.scaleOrdinal()
-      .range(d3.schemeCategory20);
+      .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
       // .range(['black', 'red', 'blue', 'yellow']);
+
 
   chartGroup.selectAll("circle")
     .data(arr)
@@ -83,7 +84,10 @@ function callFunction(){
              return color(i);
            }})
           .on("mouseover", function(d,i,a){
-              this.style.fill = "red";
+            console.log(this);
+              this.style.fill = "rgb(51,51,51)"
+              d3.select(this).attr("r", 15)
+                  .classed("growRad", true)
               tooltip.style("opacity", "5")
                 .style("left",d3.event.pageX+"px")
                 .style("top",d3.event.pageY+"px")
@@ -98,6 +102,8 @@ function callFunction(){
               })
           .on("mouseout", function(d, i) {
              d3.select(".tooltip").classed("hidden", true)
+             d3.select(this).attr("r", 12)
+              .classed("growRad", false)
               if ($(this).hasClass("newer")) {
                  this.style.fill = recentColor(i);}
                else {
