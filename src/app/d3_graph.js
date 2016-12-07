@@ -28,7 +28,9 @@ var svg = d3.select("svg"),
   radius = 20;
 
 var tooltip = d3.select("body").append("div")
-  .style("opacity", "0").style("position", "absolute");
+  .classed("tooltip", true)
+  .style("opacity", "0")
+  .style("position", "absolute");
 
 let time = new Date();
 let timeNow = time.getTime();
@@ -78,6 +80,7 @@ svg.selectAll("circle")
             tooltip.style("opacity", "5")
               .style("left",d3.event.pageX+"px")
               .style("top",d3.event.pageY+"px")
+            d3.select(".tooltip").classed("hidden", false)
             tooltip.html(function () {
               if (arr[i].showNameInfo === 'true') {
                 return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>' + '<span class="dispName">' + arr[i].name + '</span><br/>' + '<span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispDonated"> gave up <br/></span>' + '<span class="dispDonatedText">' + arr[i].gaveUp + '</span>'}
@@ -87,6 +90,7 @@ svg.selectAll("circle")
               })
             })
         .on("mouseout", function(d, i) {
+           d3.select(".tooltip").classed("hidden", true)
             if ($(this).hasClass("newer")) {
                this.style.fill = recentColor(i);}
              else {
