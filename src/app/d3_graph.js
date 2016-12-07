@@ -17,17 +17,14 @@ fbDoGood.on('value', (snapshot) => {
 
   document.getElementById('totalAmounts').innerHTML = "$" + total;
 
-  d3.select(window).on("resize",callFunction);
-  callFunction();
-
 function callFunction(){
 
 let heightPx = $(window).height() * 0.60;
 let widthPx = $(window).innerWidth() * 0.75;
 
 var svg = d3.select("svg"),
-  width = +svg.attr("width", widthPx),
-  height = +svg.attr("height", heightPx),
+  width = svg.attr("width", widthPx),
+  height = svg.attr("height", heightPx),
   radius = 20;
 
 var tooltip = d3.select("body").append("div")
@@ -74,30 +71,30 @@ svg.selectAll("circle")
          else {
            return color(i);
          }})
-    .on("mouseover", function(){this.style.fill =
-        "red"})
+    // .on("mouseover", function(){this.style.fill =
+    //     "red"})
+        .on("mouseover", function(d,i,a){
+            this.style.fill = "red";
+            tooltip.style("opacity", "5")
+              .style("left",d3.event.pageX+"px")
+              .style("top",d3.event.pageY+"px")
+            tooltip.html(function () {
+              if (arr[i].showNameInfo === 'true') {
+                return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>' + '<span class="dispName">' + arr[i].name + '</span><br/>' + '<span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispDonated"> gave up <br/></span>' + '<span class="dispDonatedText">' + arr[i].gaveUp + '</span>'}
+                else {
+                  return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/> <span class="dispName"> Anonymous </span><br/>'  + '<span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispDonated"> gave up <br/><span class="dispDonatedText">' + arr[i].gaveUp + '</span><br/>'
+                }
+              })
+            })
         .on("mouseout", function(d, i) {
             if ($(this).hasClass("newer")) {
                this.style.fill = recentColor(i);}
              else {
                this.style.fill = color(i);
-             }})
-    .attr("d", function () {return arr})
-    .on("mousemove", function(d,i,a){
-        tooltip.style("opacity", "5")
-          .style("left",d3.event.pageX+"px")
-          .style("top",d3.event.pageY+"px")
-        tooltip.html(function () {
-          if (arr[i].showNameInfo === 'true') {
-            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>' + '<span class="dispName">' + arr[i].name + '</span><br/>' + '<span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispDonated"> gave up <br/></span>' + '<span class="dispDonatedText">' + arr[i].gaveUp + '</span>'
-          }
-          else {
-            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/> <span class="dispName"> Anonymous </span><br/>'  + '<span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispDonated"> gave up <br/><span class="dispDonatedText">' + arr[i].gaveUp + '</span><br/>'
-          }
-        });
-    })
-
+          }})
 
   }
 
+  d3.select(window).on("resize",callFunction);
+  callFunction();
 });
