@@ -11,23 +11,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
+    <div class="container-fluid">
+    <header class="container">
       <img src="./app/img/logo_placeholder.png" alt="Hidden Surplus Logo" />
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#doGood">Do Good</a></li>
-          <li><a href="#doGood">Progress Made</a></li>
+          <li><a href="#contributions">Collective Contributions</a></li>
+          <li><a href="#donations">Donations</a></li>
           <button id="signInNav" type="button" class="signIn">Log In</button>
           <button id="signOutNav" type="button" class="signOut">Log Out</button>
         </ul>
       </nav>
-      <img src="./app/img/jumbotron_placeholder.png" alt="Small sacrafices can bring big changes" />
     </header>
 
+    <div class="jumbotron">
+      <p>Small sacrifices</p>
+      <p>CAN BRING BIG CHANGE</p>
+      <button class="hsButton" type="button"><a href="#doGood">start now</a></button>
+    </div>
+
     <main>
-      <section id="about">
-        <h1>About</h1>
+      <section id="about"  class="container">
+        <h1>WHAT IS <br/> HIDDEN SURPLUS?</h1>
+        <p>
+          Hidden Surplus is a way to rethink how to put your money to a greater cause by recognizing that small sacrifices can bring big change, and it is a way to track these changes. <br/> Imagine if everyone decided to give up one item or service that they regularly purchase but do not actually need (what we refer to as our hidden surplus) and donated that money instead. We do not want you to give these things up indefinitely, just here and there, whether it's once a month or once a year. <br/> Hidden Surplus is a way to give donations without having to pull out extra funds from your finances, making donating very doable. Hidden Surplus challenges everyone to give up a luxury, put that money towards a good cause, and fill out the "<a href="#doGood">Do Good</a>" form, so everyone can see the amazing change being made!
+        </p>
       </section>
 
       <div id="formSubmitMsg">
@@ -43,6 +53,7 @@
         </button>
       </div>
 
+    <div class="doGoodSection">
     <div id="doGood">
         <section id="logIn">
           <h1>Do Good</h1>
@@ -74,7 +85,7 @@
               </label>
               <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
                 <select name="selectWhat" id="selectWhat">
-                  <option value="food">Food/Beverage</option>
+                  <option value="food" selected>Food/Beverage</option>
                   <option value="beauty" selected>Beauty/Personal Care</option>
                   <option value="clothing">Clothing</option>
                   <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
@@ -89,8 +100,8 @@
               </label>
               <label htmlfor="typeDonateTo">What category does where you donated to fall into?
                 <select name="selectWhere" id="selectWhere">
-                  <option value="charity">Charity</option>
-                  <option value="family" selected>Family Member/Friend</option>
+                  <option value="charity" selected>Charity</option>
+                  <option value="family">Family Member/Friend</option>
                   <option value="school">School</option>
                   <option value="fundraiser">Fundraiser</option>
                   <option value="other">Other</option>
@@ -98,34 +109,53 @@
               </label>
             </div>
             <div>
-              <label htmlfor="donateTo">Would you like to display your name with your donation information?
-                <input type="radio" name="yes" value="true"> Yes<br>
-                <input type="radio" name="no" value="false"> Other
+              <label htmlfor="showNameInfo">Would you like to display your name with your donation information?
+                <select id="showNameInfo" name="showNameInfo">
+                  <option selected value="true"> Yes </option>
+                  <option value="false"> No </option>
+                </select>
               </label>
             </div>
-            <!-- <div>
+            <!-- TODO <div>
               <label htmlfor="socialMedia">Share on:
                 <input type="checkbox" id="facebook" /> Facebook <br />
                 <input type="checkbox" id="twitter" /> Twitter
               </label>
             </div> -->
-            <button id="submitForm" type="submit">Submit</button>
+            <input id="submitForm" type="submit" value="Submit">
           </form>
         </section>
       </div>  <!-- Ends doGood div -->
+    </div>  <!-- Ends doGoodSection div -->
 
-      <section>
-        <h1>Progress Made</h1>
-        <p>
-          Each dot represents a donation. Hover over the dots to see how others used their hidden surplus for good.
-        </p>
-        <svg width="900" height="500"></svg>
-        <h3>Total Amount Donated through Collective Contributions</h3>
-        <h1 id="totalAmounts"></h1>
+      <section id="contributions" class="text-center">
+        <h1>CHECK OUT <br/> THE GOOD WE'RE DOING</h1>
+        <h2>Collective Contributions</h2>
+        <h3>
+          Each dot represents a donation. <br/> Hover over the dots to see how others used their hidden surplus for good.
+        </h3>
+        <svg></svg>
+        <h3>All these dots add up to</h3>
+        <p id="totalAmounts"></p>
       </section>
 
-
+      <div id="donations" class="text-center">
+        <h1>DONATIONS</h1>
+        <div class="whereToDonate col-sm-6">
+          <h3>Where to Donate</h3>
+          <p>Don't know where to donate? <br/> Consider the following...</p>
+        </div>
+        <div class="whatToDonate col-sm-6">
+          <h3>Where to Find Your <br/> Hidden Surplus</h3>
+          <p>Don't know what to give up? <br/> Consider the following...</p>
+        </div>
+      </div>
     </main>
+
+    <footer>
+      <h1>Hidden Surplus</h1>
+    </footer>
+    </div>   <!-- End container div -->
     <script src="app/bundle.js"></script>
   </body>
 </html>
