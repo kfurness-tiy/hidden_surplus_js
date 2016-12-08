@@ -40,6 +40,7 @@ button
 
 .title
   font-size: 26px
+  font-weight: bolder
 
 .wrapper
   min-height: 100%
@@ -48,6 +49,10 @@ button
 .site-footer, .push
   height: 58px
 
+.line
+  text-decoration: line-through
+  font-size: 2em
+  color: white
 
 ////////// HEADER ////////////
 header
@@ -90,10 +95,10 @@ header
   p
     color: white
     font-size: 55px
+  .smallSacrifices
+    font-weight: lighter
   .bigChange
     font-weight: bolder
-  smallSacrifices
-    font-weight: lighter
 
 //////// ABOUT /////////
 #about
@@ -132,13 +137,31 @@ header
   flex-direction: column
   justify-content: center
   align-items: center
-  width: 1271px
+  max-width: 1271px
   margin: auto
   background: linear-gradient(to right, rgba(209,209,209,1) 0%, rgba(250,247,250,1) 29%, rgba(250,247,250,1) 70%, rgba(209,209,209,1) 100%)
-  h3
+  .title
     margin-top: 40px
+    color: $darkSlateTurq
 
-
+.tooltip
+  background-color: rgba(252,252,252, 0.6)
+  border-radius: 1em
+  min-width: 150px
+  margin: 3px auto
+  text-align: center
+  font-weight: bolder
+  color: black
+  .dispAmount
+    font-size: 24px
+  .dispTo
+    font-size: 12px
+    font-style: italic
+  .dispToText
+    font-size: 16px
+  hr
+    margin: 3px
+    border: 1px solid rgba(59, 102, 112, 0.4)
 
 
 ////// DONATIONS //////////
@@ -157,7 +180,7 @@ header
 ///////// FOOTER ///////////
 footer
   background-color: $darkSlateTurq
-  width: 1271px
+  max-width: 1271px
   margin: auto
   div
     padding: 10px 0
