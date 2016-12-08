@@ -26,7 +26,7 @@ function callFunction(){
     svgtest.remove();
   }
 
-  let heightPx = $(window).height() * 0.60;
+  let heightPx = $(window).height() * 0.40;
   let widthPx = $(window).innerWidth() * 0.75;
 
   var svg = d3.select("#svg").append('svg'),

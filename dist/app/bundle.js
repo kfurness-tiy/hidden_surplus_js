@@ -95,7 +95,7 @@
 	
 	
 	// module
-	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header img {\n    display: inline-block; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    text-decoration: none;\n    color: #72bfb8; }\n  header button {\n    height: 32px;\n    width: 93px; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 4) + ");\n  background-repeat: no-repeat; }\n\n#about {\n  text-align: center; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 5) + ");\n  background-repeat: no-repeat;\n  background-size: center;\n  text-align: center; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.tooltip.hidden {\n  display: none; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\nfooter {\n  background-color: #3b6670; }\n", ""]);
+	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header img {\n    display: inline-block; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 4) + ");\n  background-repeat: no-repeat; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px; }\n  .jumbotronDiv .bigChange {\n    font-weight: bolder; }\n  .jumbotronDiv smallSacrifices {\n    font-weight: lighter; }\n\n#about {\n  text-align: center; }\n  #about .title {\n    color: #3b6670; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 5) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.tooltip.hidden {\n  display: none; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\nfooter {\n  background-color: #3b6670; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n", ""]);
 	
 	// exports
 
@@ -543,6 +543,7 @@
 	function showAnotherForm () {
 	  document.getElementById("doGoodForm").reset();
 	  $('#form').show();
+	  $('#formSubmitMsg').hide();
 	}
 	
 	function addDoGood (obj) {
@@ -617,7 +618,7 @@
 	  let heightPx = $(window).height() * 0.60;
 	  let widthPx = $(window).innerWidth() * 0.75;
 	
-	  var svg = d3.select("#testness").append('svg'),
+	  var svg = d3.select("#svg").append('svg'),
 	    width = svg.attr("width", widthPx),
 	    height = svg.attr("height", heightPx),
 	    radius = 12;

@@ -9,18 +9,19 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maitree" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
+    <div id="home" class="container-fluid">
     <header class="container">
-      <img src="./app/img/logo.png" alt="Hidden Surplus Logo" />
+      <a href=""><img src="./app/img/logo.png" alt="Hidden Surplus Logo" /></a>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#doGood">Do Good</a></li>
-          <li><a href="#contributions">Collective Contributions</a></li>
-          <li><a href="#donations">Donations</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#doGood">DO GOOD</a></li>
+          <li><a href="#contributions">CONTRIBUTIONS</a></li>
+          <li><a href="#donations">DONATIONS</a></li>
           <button id="signInNav" type="button" class="signIn">LOGIN</button>
           <button id="signOutNav" type="button" class="signOut">LOG OUT</button>
         </ul>
@@ -28,45 +29,49 @@
     </header>
 
     <div class="jumbotronDiv">
-      <p>Small sacrifices</p>
-      <p>CAN BRING BIG CHANGE</p>
-      <button class="hsButton" type="button"><a href="#doGood">start now</a></button>
+      <p class="smallSacrifices">small sacrifices</p>
+      <p class="bigChange">CAN BRING BIG CHANGE</p>
+      <a href="#doGood"><button class="hsButton" type="button">start now</button></a>
     </div>
 
     <main>
       <section id="about"  class="container">
-        <h1>WHAT IS <br/> HIDDEN SURPLUS?</h1>
+        <h3 class="title">WHAT IS <br/> HIDDEN SURPLUS?</h3>
         <p>
           Hidden Surplus is a way to rethink how to put your money to a greater cause by recognizing that small sacrifices can bring big change, and it is a way to track these changes. <br/> Imagine if everyone decided to give up one item or service that they regularly purchase but do not actually need (what we refer to as our hidden surplus) and donated that money instead. We do not want you to give these things up indefinitely, just here and there, whether it's once a month or once a year. <br/> Hidden Surplus is a way to give donations without having to pull out extra funds from your finances, making donating very doable. Hidden Surplus challenges everyone to give up a luxury, put that money towards a good cause, and fill out the "<a href="#doGood">Do Good</a>" form, so everyone can see the amazing change being made!
         </p>
       </section>
 
-      <div id="formSubmitMsg">
-        <h1>Your goodness has successfully submitted!</h1>
-        <p>
-          Way to do some good! Thank you for giving up some hidden surplus to help change the world for the better!
-        </p>
-        <p>
-          If you need to fill out another form, push the button below.
-        </p>
-        <button id="showAnotherForm" type="button">
-          Another Form
-        </button>
-      </div>
 
-    <div id="doGood" class="doGoodSection">
+
+  <div id="doGood" class="doGoodSection">
+
+    <div id="formSubmitMsg">
+      <h3 class="title">Your goodness has <br/> successfully been submitted!</h3>
+      <p>
+        Way to do some good! Thank you for giving up some hidden surplus to help change the world for the better!
+      </p>
+      <p>
+        If you need to fill out another form, push the button below.
+      </p>
+      <button id="showAnotherForm" type="button">
+        Another Form
+      </button>
+      <button class="signOut" type="button">LOG OUT</button>
+    </div>
+
     <div>
         <section id="logIn">
-          <h1>Do Good</h1>
+          <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
           <h2 id="signOutMsg"></h2>
           <p>
-            Wanting to do some good? <br/> All you have to do is sign in below and then tell us about what hidden surplus you used to make change.
+            Wanting to do some good? <br/> All you have to do is sign in below and then <br/> tell us about what hidden surplus you used to make change.
           </p>
           <button class="signIn" type="button">LOGIN</button>
         </section>
 
         <section id="form">
-          <h1>Do Good</h1>
+          <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
           <h2 id="welcomeUser"></h2>
           <button class="signOut" type="button">LOG OUT</button>
           <form id="doGoodForm">
@@ -130,20 +135,19 @@
     </div>  <!-- Ends doGoodSection div -->
 
       <section id="contributions" class="text-center">
-        <h1>CHECK OUT <br/> THE GOOD WE'RE DOING</h1>
-        <h2>Collective Contributions</h2>
-        <h3>
-          Each dot represents a donation. <br/> Hover over the dots to see how others used their hidden surplus for good.
-        </h3>
-        <div id="testness">
+        <h3 class="title">CHECK OUT <br/> THE GOOD WE'RE DOING</h3>
+        <p>
+          Each dot represents a donation. <br/> Hover over the dots to see how others used their hidden surplus for good.<br/> The darker dots are more recent contributions.
+        </p>
+        <div id="svg">
           <!-- svg appends here -->
         </div>
-        <h3>All these dots add up to</h3>
+        <p>All these dots add up to</p>
         <p id="totalAmounts"></p>
       </section>
 
       <div id="donations" class="text-center">
-        <h1>DONATIONS</h1>
+        <h3 class="title">DONATIONS</h3>
         <div class="whereToDonate col-sm-6">
           <h3>Where to Donate</h3>
           <p>Don't know where to donate? <br/> Consider the following...</p>
