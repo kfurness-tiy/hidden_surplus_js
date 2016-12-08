@@ -14,6 +14,7 @@
   </head>
   <body>
     <div id="home" class="container-fluid">
+    <div class="wrapper">
     <header class="container">
       <a href=""><img src="./app/img/logo.png" alt="Hidden Surplus Logo" /></a>
       <nav>
@@ -60,10 +61,10 @@
       <button class="signOut" type="button">LOG OUT</button>
     </div>
 
-    <div>
+    <div class="container-fluid">
         <section id="logIn">
-          <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
           <h2 id="signOutMsg"></h2>
+          <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
           <p>
             Wanting to do some good? <br/> All you have to do is sign in below and then <br/> tell us about what hidden surplus you used to make change.
           </p>
@@ -158,11 +159,15 @@
         </div>
       </div>
     </main>
+    <div class="push"></div>
+  </div> <!-- close wrapper div -->
+</div>   <!-- End container div -->
 
-    <footer>
-      <img src="./app/img/white_logo.png" alt="Hidden surplus logo" />
+    <footer class="site-footer">
+      <div class="container">
+        <img src="./app/img/white_logo.png" alt="Hidden surplus logo" />
+      </div>
     </footer>
-    </div>   <!-- End container div -->
     <script src="app/bundle.js"></script>
   </body>
 </html>
