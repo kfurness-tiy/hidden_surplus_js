@@ -17,7 +17,8 @@ var config = {
 ///////////////// Authentication /////////////////////
 
 $(document).ready(function (){
-  $("#form").hide();
+  $("#form").show();     // CHANGE
+  $("#logIn").hide();    // CHANGE
   $("#signOutNav").hide();
   $("#signOutMsg").hide();
   $("#formSubmitMsg").hide();
@@ -127,7 +128,7 @@ function getValueDoGood () {
     gaveUp: document.getElementById('gaveUp').value,
     selectWhat: document.getElementById("selectWhat").value,
     selectWhere: document.getElementById("selectWhere").value,
-    showNameInfo: document.getElementById("showNameInfo").value,
+    showNameInfo: $('input[name=showInfo]:checked').val(),
     postTime: d.getTime(),
   }
   addDoGood(doGood);
