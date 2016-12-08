@@ -102,6 +102,7 @@ function goodDone () {
 function showAnotherForm () {
   document.getElementById("doGoodForm").reset();
   $('#form').show();
+  $('#formSubmitMsg').hide();
 }
 
 function addDoGood (obj) {

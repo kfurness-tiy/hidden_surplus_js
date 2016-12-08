@@ -6,6 +6,12 @@ $brightTurq: rgb(80,163,153)
 $gray: rgb(158,157,154)
 $lato: 'Lato', sans-serif
 
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
 
 /////// EVERYTHING //////////
 
@@ -21,17 +27,14 @@ button
   width: 160px
   height: 45px
 
-button:hover
-  background-color: rgb(88,148,142)
-
-a:hover
-  text-decoration: none
-
 .container-fluid
   margin-right: 0
   margin-left: 0
   padding-right: 0
   padding-left: 0
+
+.title
+  font-size: 26px
 
 
 ////////// HEADER ////////////
@@ -83,6 +86,8 @@ header
 //////// ABOUT /////////
 #about
   text-align: center
+  .title
+    color: $darkSlateTurq
 
 
 //////// DO GOOD ///////
@@ -94,9 +99,15 @@ header
   height: 550px
   background-image: url('../img/doGood.jpg')
   background-repeat: no-repeat
-  background-size: center
+  background-position: center
   text-align: center
 
+//// LOGIN
+#logIn
+  p
+    color: white
+  h3
+    color: white
 
 /////// CONTRIBUTIONS //////////
 #contributions
@@ -113,6 +124,7 @@ header
 ////// DONATIONS //////////
 #donations
 
+
 .tooltip.hidden
   display: none
 
@@ -124,3 +136,12 @@ header
 ///////// FOOTER ///////////
 footer
   background-color: $darkSlateTurq
+
+
+//////// PSEUDO CLASSES ////////////
+
+button:hover
+  background-color: rgb(88,148,142)
+
+a:hover
+  text-decoration: none
