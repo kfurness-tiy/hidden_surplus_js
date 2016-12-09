@@ -81,37 +81,44 @@
               <input type="text" id="amount" class="col-sm-3" placeholder="$ Amount Donated" />
             </div>
             <div class="row">
-                <textarea type="text" id="gaveUp" class="col-sm-6 col-sm-offset-3" placeholder="What did you give up?"></textarea>
+                <input type="text" id="gaveUp" class="col-sm-3 col-sm-offset-3" placeholder="What did you give up?" />
+                <input type="text" id="donateTo" class="col-sm-3" placeholder="Donated to" />
             </div>
-            <div>
-              <label htmlfor="gaveUpCategory">CATERGORY OF WHAT YOU GAVE UP</label>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div>
+                <label htmlfor="gaveUpCategory">CATERGORY OF WHAT YOU GAVE UP</label>
+              </div>
+              <div>
+                  <select name="selectWhat" id="selectWhat">
+                    <option value="food" selected>Food/Beverage</option>
+                    <option value="beauty">Beauty/Personal Care</option>
+                    <option value="clothing">Clothing/Accessories</option>
+                    <option value="entertainment">Enertainment</option>
+                    <option value="service">Service</option>
+                    <option value="product">Other Product</option>
+                  </select>
+              </div>
             </div>
-            <div>
-                <select name="selectWhat" id="selectWhat">
-                  <option value="food" selected>Food/Beverage</option>
-                  <option value="beauty">Beauty/Personal Care</option>
-                  <option value="clothing">Clothing/Accessories</option>
-                  <option value="entertainment">Enertainment</option>
-                  <option value="service">Service</option>
-                  <option value="product">Other Product</option>
-                </select>
+
+            <div class="col-sm-3">
+              <div>
+                <label htmlfor="typeDonateTo">CATEGORY OF WHERE YOU DONATED
+                </label>
+              </div>
+              <div>
+                  <select name="selectWhere" id="selectWhere">
+                    <option value="charity" selected>Charity</option>
+                    <option value="family">Family Member/Friend</option>
+                    <option value="school">School</option>
+                    <option value="fundraiser">Fundraiser</option>
+                    <option value="other">Other</option>
+                  </select>
+              </div>
             </div>
-            <div class="row">
-                <textarea type="text" id="donateTo" class="col-sm-6 col-sm-offset-3" placeholder="Donated to"></textarea>
-            </div>
-            <div class="row">
-              <label htmlfor="typeDonateTo">CATEGORY OF WHERE YOU DONATED
-              </label>
-            </div>
-            <div>
-                <select name="selectWhere" id="selectWhere">
-                  <option value="charity" selected>Charity</option>
-                  <option value="family">Family Member/Friend</option>
-                  <option value="school">School</option>
-                  <option value="fundraiser">Fundraiser</option>
-                  <option value="other">Other</option>
-                </select>
-            </div>
+          </div>
+
             <div>
               <label htmlfor="showNameInfo">WOULD YOU LIKE TO DISPLAY YOUR NAME WITH YOUR DONATION INFO?
                 <div id="showNameInfo">
@@ -123,6 +130,7 @@
                 </div>
               </label>
             </div>
+
             <!-- TODO <div>
               <label htmlfor="socialMedia">Share on:
                 <input type="checkbox" id="facebook" /> Facebook <br />

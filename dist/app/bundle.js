@@ -95,7 +95,7 @@
 	
 	
 	// module
-	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px; }\n\n.wrapper {\n  min-height: 100%;\n  margin: 0 auto -58px; }\n\n.site-footer, .push {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header img {\n    display: inline-block; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 4) + ");\n  background-repeat: no-repeat; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px; }\n  .jumbotronDiv .bigChange {\n    font-weight: bolder; }\n  .jumbotronDiv smallSacrifices {\n    font-weight: lighter; }\n\n#about {\n  text-align: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px; }\n  #about p {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 5) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions h3 {\n    margin-top: 40px; }\n\n#donations h3 {\n  margin-top: 44px; }\n\n.tooltip.hidden {\n  display: none; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\nfooter {\n  background-color: #3b6670;\n  width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n", ""]);
+	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px;\n  font-weight: bolder; }\n\n.wrapper {\n  min-height: 100%;\n  margin: 0 auto -58px; }\n\n.site-footer, .push {\n  height: 58px; }\n\n.line {\n  text-decoration: line-through;\n  font-size: 2em;\n  color: white; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header img {\n    display: inline-block; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 4) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px; }\n  .jumbotronDiv .smallSacrifices {\n    font-weight: lighter; }\n  .jumbotronDiv .bigChange {\n    font-weight: bolder; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 5) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#logIn h3 {\n  margin: 30px; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px; }\n\n#form {\n  color: white; }\n  #form div {\n    margin: auto; }\n  #form label {\n    color: white;\n    font-family: \"Maitree\", serif; }\n  #form button {\n    margin: 10px; }\n  #form .signOut {\n    background-color: #9e9d9a; }\n  #form .signOut:hover {\n    background-color: #737372; }\n\n.inline {\n  display: inline-block; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 40px; }\n  #contributions #totalAmounts {\n    font-size: 26px;\n    color: #58948e;\n    margin-bottom: 44px; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  font-weight: bolder;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n#donations h3 {\n  margin-top: 44px; }\n\n.tooltip.hidden {\n  display: none; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n", ""]);
 	
 	// exports
 
@@ -458,7 +458,8 @@
 	///////////////// Authentication /////////////////////
 	
 	$(document).ready(function (){
-	  $("#form").hide();
+	  $("#form").hide();     // CHANGE
+	  $("#logIn").show();    // CHANGE
 	  $("#signOutNav").hide();
 	  $("#signOutMsg").hide();
 	  $("#formSubmitMsg").hide();
@@ -568,7 +569,7 @@
 	    gaveUp: document.getElementById('gaveUp').value,
 	    selectWhat: document.getElementById("selectWhat").value,
 	    selectWhere: document.getElementById("selectWhere").value,
-	    showNameInfo: document.getElementById("showNameInfo").value,
+	    showNameInfo: $('input[name=showInfo]:checked').val(),
 	    postTime: d.getTime(),
 	  }
 	  addDoGood(doGood);
@@ -576,7 +577,6 @@
 	}
 	
 	$('#submitForm').click(validateForm);
-	// $('#submitForm').click(getValueDoGood);
 	$('#showAnotherForm').click(showAnotherForm);
 
 
@@ -650,7 +650,6 @@
 	
 	  var color = d3.scaleOrdinal()
 	      .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
-	      // .range(['black', 'red', 'blue', 'yellow']);
 	
 	
 	  chartGroup.selectAll("circle")
@@ -682,9 +681,9 @@
 	              d3.select(".tooltip").classed("hidden", false)
 	              tooltip.html(function () {
 	                if (arr[i].showNameInfo === 'true') {
-	                  return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/>' + '<span class="dispName">' + arr[i].name + '</span><br/>' + '<span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispDonated"> gave up <br/></span>' + '<span class="dispDonatedText">' + arr[i].gaveUp + '</span>'}
+	                  return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>'}
 	                  else {
-	                    return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/> <span class="dispName"> Anonymous </span><br/>'  + '<span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispDonated"> gave up <br/><span class="dispDonatedText">' + arr[i].gaveUp + '</span><br/>'
+	                    return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>'
 	                  }
 	                })
 	              })

@@ -30,7 +30,8 @@
     </header>
 
     <div class="jumbotronDiv">
-      <p class="smallSacrifices">small sacrifices</p>
+      <img src="../app/img/logo_no_words.png" alt="Picture of Hidden Surplus Logo" />
+      <span class="line"> &emsp;&emsp;&emsp;</span><p class="smallSacrifices">small sacrifices</p>
       <p class="bigChange">CAN BRING BIG CHANGE</p>
       <a href="#doGood"><button class="hsButton" type="button">start now</button></a>
     </div>
@@ -39,7 +40,7 @@
       <section id="about"  class="container">
         <h3 class="title">WHAT IS <br/> HIDDEN SURPLUS?</h3>
         <p>
-          Hidden Surplus is a way to rethink how to put your money to a greater cause by recognizing that small sacrifices can bring big change, and it is a way to track these changes. <br/> Imagine if everyone decided to give up one item or service that they regularly purchase but do not actually need (what we refer to as our hidden surplus) and donated that money instead. We do not want you to give these things up indefinitely, just here and there, whether it's once a month or once a year. <br/> Hidden Surplus is a way to give donations without having to pull out extra funds from your finances, making donating very doable. Hidden Surplus challenges everyone to give up a luxury, put that money towards a good cause, and fill out the "<a href="#doGood">Do Good</a>" form, so everyone can see the amazing change being made!
+          Hidden Surplus is a way to rethink how to put your money to a greater cause by recognizing that small sacrifices can bring big change, and it is a way to track these changes.</p> <p> Imagine if everyone decided to give up one item or service that they regularly purchase but do not actually need (what we refer to as our hidden surplus) and donated that money instead. We do not want you to give these things up indefinitely, just here and there, whether it's once a month or once a year. </p> <p> Hidden Surplus is a way to give donations without having to pull out extra funds from your finances, making donating very doable. Hidden Surplus challenges everyone to give up a luxury, put that money towards a good cause, and fill out the "<a href="#doGood">Do Good</a>" form, so everyone can see the amazing change being made!
         </p>
       </section>
 
@@ -56,12 +57,12 @@
         If you need to fill out another form, push the button below.
       </p>
       <button id="showAnotherForm" type="button">
-        Another Form
+        ANOTHER FORM
       </button>
       <button class="signOut" type="button">LOG OUT</button>
     </div>
 
-    <div class="container-fluid">
+    <div  class="col-sm-12">
         <section id="logIn">
           <h2 id="signOutMsg"></h2>
           <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
@@ -71,65 +72,74 @@
           <button class="signIn" type="button">LOGIN</button>
         </section>
 
-        <section id="form">
+        <section  id="form">
           <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
           <h2 id="welcomeUser"></h2>
-          <button class="signOut" type="button">LOG OUT</button>
           <form id="doGoodForm">
-            <div>
-            <label htmlfor="name">Name:
-              <input type="text" id="name" placeholder="Joe" />
-            </label>
+            <div class="row">
+              <input type="text" id="name" class="col-sm-3 col-sm-offset-3" placeholder="Your Name" />
+              <input type="text" id="amount" class="col-sm-3" placeholder="$ Amount Donated" />
             </div>
+            <div class="row">
+                <input type="text" id="gaveUp" class="col-sm-3 col-sm-offset-3" placeholder="What did you give up?" />
+                <input type="text" id="donateTo" class="col-sm-3" placeholder="Donated to" />
+            </div>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div>
+                <label htmlfor="gaveUpCategory">CATERGORY OF WHAT YOU GAVE UP</label>
+              </div>
+              <div>
+                  <select name="selectWhat" id="selectWhat">
+                    <option value="food" selected>Food/Beverage</option>
+                    <option value="beauty">Beauty/Personal Care</option>
+                    <option value="clothing">Clothing/Accessories</option>
+                    <option value="entertainment">Enertainment</option>
+                    <option value="service">Service</option>
+                    <option value="product">Other Product</option>
+                  </select>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div>
+                <label htmlfor="typeDonateTo">CATEGORY OF WHERE YOU DONATED
+                </label>
+              </div>
+              <div>
+                  <select name="selectWhere" id="selectWhere">
+                    <option value="charity" selected>Charity</option>
+                    <option value="family">Family Member/Friend</option>
+                    <option value="school">School</option>
+                    <option value="fundraiser">Fundraiser</option>
+                    <option value="other">Other</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+
             <div>
-              <label htmlfor="amount">Amount Donated: $
-                <input type="text" id="amount" placeholder="5" />
+              <label htmlfor="showNameInfo">WOULD YOU LIKE TO DISPLAY YOUR NAME WITH YOUR DONATION INFO?
+                <div id="showNameInfo">
+                  <input class="inline" type="radio" name="showInfo" value="true">
+                  <label class="inline" for="showInfoY">Yes</label>
+                  <p class="inline">|</p>
+                  <input class="inline" type="radio" name="showInfo" value="false">
+                  <label class="inline" for="showInfoN">No</label>
+                </div>
               </label>
             </div>
-            <div>
-              <label htmlfor="gaveUp">What did you give up to donate?
-                <input type="text" id="gaveUp" placeholder="coffee" />
-              </label>
-              <label htmlfor="gaveUpCategory">What category does what you gave up fall into?
-                <select name="selectWhat" id="selectWhat">
-                  <option value="food" selected>Food/Beverage</option>
-                  <option value="beauty" selected>Beauty/Personal Care</option>
-                  <option value="clothing">Clothing</option>
-                  <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
-                  <option value="entertainment">Enertainment</option>
-                  <option value="product">Other Product</option>
-                </select>
-              </label>
-            </div>
-            <div>
-              <label htmlfor="donateTo">Donated to:
-                <input type="text" id="donateTo" placeholder="Food Bank"/>
-              </label>
-              <label htmlfor="typeDonateTo">What category does where you donated to fall into?
-                <select name="selectWhere" id="selectWhere">
-                  <option value="charity" selected>Charity</option>
-                  <option value="family">Family Member/Friend</option>
-                  <option value="school">School</option>
-                  <option value="fundraiser">Fundraiser</option>
-                  <option value="other">Other</option>
-                </select>
-              </label>
-            </div>
-            <div>
-              <label htmlfor="showNameInfo">Would you like to display your name with your donation information?
-                <select id="showNameInfo" name="showNameInfo">
-                  <option selected value="true"> Yes </option>
-                  <option value="false"> No </option>
-                </select>
-              </label>
-            </div>
+
             <!-- TODO <div>
               <label htmlfor="socialMedia">Share on:
                 <input type="checkbox" id="facebook" /> Facebook <br />
                 <input type="checkbox" id="twitter" /> Twitter
               </label>
             </div> -->
-            <input id="submitForm" type="submit" value="Submit">
+            <button id="submitForm" type="submit" name="button">submit</button>
+            <button class="signOut" type="button">log out</button>
+            <!-- <input  type="submit" value="submit"> -->
           </form>
         </section>
       </div>  <!-- Ends doGood div -->

@@ -61,7 +61,6 @@ function callFunction(){
 
   var color = d3.scaleOrdinal()
       .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
-      // .range(['black', 'red', 'blue', 'yellow']);
 
 
   chartGroup.selectAll("circle")
