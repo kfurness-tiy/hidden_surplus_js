@@ -5,6 +5,7 @@ $darkSlateTurq: rgb(59,102,112)
 $brightTurq: rgb(80,163,153)
 $ltSlateGray: rgb(111,144,151)
 $gray: rgb(158,157,154)
+$medGray: #737372
 $lato: 'Lato', sans-serif
 $mai: 'Maitree', serif
 
@@ -152,13 +153,23 @@ header
     margin: auto
   label
     color: white
+    font-size: 16px
     font-family: $mai
+  input
+    height: 40px
+    margin: 5px 1vw
+    width: 25vw
+    font-size: 18px
+    padding: 10px
   button
     margin: 10px
   .signOut
     background-color: $gray
   .signOut:hover
-    background-color: #737372
+    background-color: $medGray
+  .dropdown
+    display: inline-block
+    margin: 20px 30px
 
 .inline
   display: inline-block
