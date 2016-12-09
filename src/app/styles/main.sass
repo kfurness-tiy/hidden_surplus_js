@@ -6,6 +6,7 @@ $brightTurq: rgb(80,163,153)
 $ltSlateGray: rgb(111,144,151)
 $gray: rgb(158,157,154)
 $lato: 'Lato', sans-serif
+$mai: 'Maitree', serif
 
 =border-radius($radius)
   -webkit-border-radius: $radius
@@ -149,9 +150,12 @@ header
   color: white
   div
     margin: auto
+  label
+    color: white
+    font-family: $mai
 
-#showNameInfo
-  display: inline
+.inline
+  display: inline-block
 
 //// LOGIN
 #logIn
@@ -183,7 +187,8 @@ header
 
 .tooltip
   background-color: rgba(252,252,252, 0.6)
-  border-radius: 1em
+  border: 1px solid rgba(211, 209, 209, 0.3)
+  padding: 5px
   min-width: 150px
   margin: 3px auto
   text-align: center

@@ -57,12 +57,12 @@
         If you need to fill out another form, push the button below.
       </p>
       <button id="showAnotherForm" type="button">
-        Another Form
+        ANOTHER FORM
       </button>
       <button class="signOut" type="button">LOG OUT</button>
     </div>
 
-    <div class="container-fluid">
+    <div  class="col-sm-12">
         <section id="logIn">
           <h2 id="signOutMsg"></h2>
           <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
@@ -72,36 +72,39 @@
           <button class="signIn" type="button">LOGIN</button>
         </section>
 
-        <section id="form">
+        <section  id="form">
           <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
           <h2 id="welcomeUser"></h2>
           <button class="signOut" type="button">LOG OUT</button>
           <form id="doGoodForm">
-            <div>
-              <input type="text" id="name" class="col-sm-4 col-sm-offset-2" placeholder="Your Name" />
-              <input type="text" id="amount" class="col-sm-4" placeholder="$ Amount Donated" />
+            <div class="row">
+              <input type="text" id="name" class="col-sm-3 col-sm-offset-3" placeholder="Your Name" />
+              <input type="text" id="amount" class="col-sm-3" placeholder="$ Amount Donated" />
             </div>
-            <div >
-                <textarea type="text" id="gaveUp" class="col-sm-8 col-sm-offset-2" placeholder="What did you give up?"></textarea>
+            <div class="row">
+                <textarea type="text" id="gaveUp" class="col-sm-6 col-sm-offset-3" placeholder="What did you give up?"></textarea>
             </div>
             <div>
-              <label htmlfor="gaveUpCategory">What category does what you gave up fall into?</label>
+              <label htmlfor="gaveUpCategory">CATERGORY OF WHAT YOU GAVE UP</label>
             </div>
             <div>
                 <select name="selectWhat" id="selectWhat">
                   <option value="food" selected>Food/Beverage</option>
                   <option value="beauty">Beauty/Personal Care</option>
-                  <option value="clothing">Clothing</option>
-                  <option value="cheaper">Purchasing a cheaper product vs a more expensive one</option>
+                  <option value="clothing">Clothing/Accessories</option>
                   <option value="entertainment">Enertainment</option>
+                  <option value="service">Service</option>
                   <option value="product">Other Product</option>
                 </select>
             </div>
-            <div>
-              <label htmlfor="donateTo">Donated to:
-                <input type="text" id="donateTo" placeholder="Food Bank"/>
+            <div class="row">
+                <textarea type="text" id="donateTo" class="col-sm-6 col-sm-offset-3" placeholder="Donated to"></textarea>
+            </div>
+            <div class="row">
+              <label htmlfor="typeDonateTo">CATEGORY OF WHERE YOU DONATED
               </label>
-              <label htmlfor="typeDonateTo">What category does where you donated to fall into?
+            </div>
+            <div>
                 <select name="selectWhere" id="selectWhere">
                   <option value="charity" selected>Charity</option>
                   <option value="family">Family Member/Friend</option>
@@ -109,16 +112,15 @@
                   <option value="fundraiser">Fundraiser</option>
                   <option value="other">Other</option>
                 </select>
-              </label>
             </div>
             <div>
-              <label htmlfor="showNameInfo">Would you like to display your name with your donation information?
+              <label htmlfor="showNameInfo">WOULD YOU LIKE TO DISPLAY YOUR NAME WITH YOUR DONATION INFO?
                 <div id="showNameInfo">
-                  <input type="radio" name="showInfo" value="true">
-                  <label for="showInfoY">Yes</label>
-                  <p>|</p>
-                  <input type="radio" name="showInfo" value="false">
-                  <label for="showInfoN">No</label>
+                  <input class="inline" type="radio" name="showInfo" value="true">
+                  <label class="inline" for="showInfoY">Yes</label>
+                  <p class="inline">|</p>
+                  <input class="inline" type="radio" name="showInfo" value="false">
+                  <label class="inline" for="showInfoN">No</label>
                 </div>
               </label>
             </div>
@@ -128,7 +130,7 @@
                 <input type="checkbox" id="twitter" /> Twitter
               </label>
             </div> -->
-            <input id="submitForm" type="submit" value="Submit">
+            <input id="submitForm" type="submit" value="submit">
           </form>
         </section>
       </div>  <!-- Ends doGood div -->
