@@ -50,9 +50,13 @@ button
 
 .wrapper
   min-height: 100%
-  margin: 0 auto -58px
+  margin-bottom: -58px
 
-.site-footer, .push
+.wrapper:after
+  content: ""
+  display: block
+
+.site-footer, .wrapper:after
   height: 58px
 
 .line
@@ -155,7 +159,6 @@ header
   label
     color: white
     font-size: 16px
-    // font-family: $mai
   .typeInput
     input
       height: 40px
