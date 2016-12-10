@@ -65,10 +65,6 @@ i
 .site-footer, .wrapper:after
   height: 58px
 
-.line
-  text-decoration: line-through
-  font-size: 2em
-  color: white
 
 ////////// HEADER ////////////
 header
@@ -119,6 +115,24 @@ header
     font-weight: lighter
     line-height: 1
     text-align: center
+  .line span
+    display: inline-block
+    position: relative
+    color: white
+  .line span:before,
+  .line span:after
+    content: ''
+    position: absolute
+    height: 35px
+    border-bottom: 2px solid rgba(255,255,255,0.4)
+    top: 0
+    width: 140px
+  .line span:before
+    right: 100%
+    margin-right: 20px
+  .line span:after
+    left: 100%
+    margin-left: 20px
   .bigChange
     font-weight: bolder
 
@@ -126,27 +140,7 @@ header
   background-color: $turq
   padding: 5px
 
-.line span
-  display: inline-block
-  position: relative
-  color: white
 
-.line span:before,
-.line span:after
-  content: ''
-  position: absolute
-  height: 35px
-  border-bottom: 2px solid rgba(255,255,255,0.4)
-  top: 0
-  width: 140px
-
-.line span:before
-  right: 100%
-  margin-right: 20px
-
-.line span:after
-  left: 100%
-  margin-left: 20px
 
 
 //////// ABOUT /////////
@@ -222,6 +216,27 @@ header
     display: inline-block
     margin: 10px
     color: white
+  .dash
+    line-height: 1
+  .dash span
+    display: inline-block
+    position: relative
+    color: white
+  .dash span:before,
+  .dash span:after
+    content: ''
+    position: absolute
+    height: 15px
+    border-bottom: 2px solid rgba(255,255,255,0.4)
+    top: 0
+    width: 120px
+  .dash span:before
+    right: 100%
+    margin-right: 15px
+  .dash span:after
+    left: 100%
+    margin-left: 15px
+
 
 #formSubmitMsg
   h3
@@ -351,3 +366,21 @@ a:hover
       li
         font-size: 12px
         padding: 3px
+
+@media (max-width: 480px)
+  .line span:before,
+  .line span:after
+    display: none
+  .title
+    font-size: 22px
+  #form
+    .dash span:before,
+    .dash span:after
+      width: 60px
+
+@media (max-width: 379px)
+  #form
+    h3:first-child
+      margin-top: 25px
+    .dash
+      margin-top: 7px
