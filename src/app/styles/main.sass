@@ -114,14 +114,38 @@ header
   p
     color: white
     font-size: 55px
-  .smallSacrifices
+  .line
     font-weight: lighter
+    line-height: 1
+    text-align: center
   .bigChange
     font-weight: bolder
 
 #toggleButton
   background-color: $turq
   padding: 5px
+
+.line span
+  display: inline-block
+  position: relative
+  color: white
+
+.line span:before,
+.line span:after
+  content: ''
+  position: absolute
+  height: 35px
+  border-bottom: 2px solid rgba(255,255,255,0.4)
+  top: 0
+  width: 140px
+
+.line span:before
+  right: 100%
+  margin-right: 20px
+
+.line span:after
+  left: 100%
+  margin-left: 20px
 
 
 //////// ABOUT /////////
@@ -313,3 +337,22 @@ a:hover
     background-size: cover
     background-position: -705px 0px
     height: auto
+
+
+@media (max-width: 991px)
+  #toggleButton
+    display: block
+    float: right
+  nav
+    float: right
+    ul
+      li
+        display: block
+  header
+    display: block
+  .navbar-collapse.collapse
+    display: none!important
+  .collapse.in
+    display: block !important
+  .navbar-toggle
+    display: block
