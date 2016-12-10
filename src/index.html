@@ -22,16 +22,27 @@
     <div class="wrapper">
     <header class="container">
       <a href=""><img src="./app/img/logo.png" alt="Hidden Surplus Logo" /></a>
+
       <nav>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#doGood">DO GOOD</a></li>
-          <li><a href="#contributions">CONTRIBUTIONS</a></li>
-          <li><a href="#donations">DONATIONS</a></li>
-          <button id="signInNav" type="button" class="signIn"><i class="fa fa-google fa-lg" aria-hidden="true"></i>LOGIN</button>
-          <button id="signOutNav" type="button" class="signOut">LOG OUT</button>
-        </ul>
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" id="toggleButton" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            MENU
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#doGood">DO GOOD</a></li>
+            <li><a href="#contributions">CONTRIBUTIONS</a></li>
+            <li><a href="#donations">DONATIONS</a></li>
+            <button id="signInNav" type="button" class="signIn"><i class="fa fa-google fa-lg" aria-hidden="true"></i>LOGIN</button>
+            <button id="signOutNav" type="button" class="signOut">LOG OUT</button>
+          </ul>
+        </div>
+      </div>
       </nav>
+
     </header>
 
     <div class="jumbotronDiv">
