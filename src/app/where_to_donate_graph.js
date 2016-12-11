@@ -19,10 +19,14 @@ fbDoGood.on('value', (snapshot) => {
 
     let width = $(window).innerWidth() * 0.30,
         height = $(window).innerWidth() * 0.30,
-        radius = Math.min(width, height) / 2;
+        radius = Math.min(width, height) / 2.5,
+        donutWidth = 80;
 
     let color = d3.scaleOrdinal()
-        .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
+        .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)']);
+
+    let hoverColor = d3.scaleOrdinal()
+        .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)']);
 
     function genData () {
       let where = ['charity', 'family', 'school', 'fundraiser', 'other']
@@ -52,7 +56,7 @@ fbDoGood.on('value', (snapshot) => {
           .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")");
 
     let arc = d3.arc()
-      .innerRadius(0)
+      .innerRadius(radius - donutWidth)
       .outerRadius(radius);
 
     let pie = d3.pie()
@@ -65,7 +69,24 @@ fbDoGood.on('value', (snapshot) => {
         .attr('d', arc)
         .attr('fill', function(d, i) {
           return color(i);
-      });
+          })
+        .on("mouseover", function(d,i){
+            this.style.fill = hoverColor(i)
+            d3.select(this)
+              .transition()
+                .attr('d', arc
+                  .innerRadius(radius * 0.5)
+                  .outerRadius(radius * 1.05));
+        })
+        .on("mouseout", function(d,i){
+            this.style.fill = color(i);
+            d3.select(this)
+              .transition()
+                .attr('d', arc
+                  .innerRadius(radius - donutWidth)
+                  .outerRadius(radius));
+        })
+
 
 
   }
