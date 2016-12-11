@@ -9,7 +9,7 @@ fbDoGood.on('value', (snapshot) => {
 
   function whereToDonateDonut () {
 
-    var svgtest = d3.select('body').select('svg');
+    var svgtest = d3.select('body').select('.pie');
 
     if (!svgtest.empty()) {
       svgtest.remove();
@@ -59,6 +59,7 @@ fbDoGood.on('value', (snapshot) => {
 
     let svg = d3.select("#whereDonateChartDiv")
       .append("svg")
+        .classed("pie", true)
         .attr("width", width)
         .attr("height", height)
         .append("g")

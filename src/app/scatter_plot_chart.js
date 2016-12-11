@@ -20,7 +20,7 @@ fbDoGood.on('value', (snapshot) => {
 
 function callFunction(){
 
-  var svgtest = d3.select('body').select('svg');
+  var svgtest = d3.select('body').select('.scatter');
 
   if (!svgtest.empty()) {
     svgtest.remove();
@@ -29,7 +29,7 @@ function callFunction(){
   let heightPx = $(window).height() * 0.40;
   let widthPx = $(window).innerWidth() * 0.75;
 
-  var svg = d3.select("#svg").append('svg'),
+  var svg = d3.select("#svg").append('svg').classed("scatter", true),
     width = svg.attr("width", widthPx),
     height = svg.attr("height", heightPx),
     radius = 12;
