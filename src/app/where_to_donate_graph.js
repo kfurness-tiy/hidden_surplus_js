@@ -103,10 +103,9 @@ fbDoGood.on('value', (snapshot) => {
         .style("fill", "white")
 
       function showInfo (e) {
+        let newArr = [];
       svg.append("text")
             .data(function () {
-              console.log(Object.values(e));
-
               return Object.values(e);
               })
             .attr("text-anchor", "middle")
@@ -114,7 +113,7 @@ fbDoGood.on('value', (snapshot) => {
             .style("fill", "black")
             .text(function(d,i) {
               let percent = Math.floor((d.total / d.pieTotal) * 100)
-              return d.category + percent + "%"
+              return d.category+ " " + percent + "%"
             })
       }
 
