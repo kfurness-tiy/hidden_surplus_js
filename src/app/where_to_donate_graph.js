@@ -34,6 +34,8 @@ fbDoGood.on('value', (snapshot) => {
     let hoverColor = d3.scaleOrdinal()
         .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)', 'rgb(121,121,121)']);
 
+    let finalData = genData();
+
     function genData () {
       let where = ['charity', 'family', 'school', 'fundraiser', 'other']
 
@@ -47,13 +49,13 @@ fbDoGood.on('value', (snapshot) => {
             total += 1;
           }
         })
-        let obj = {"category": printedCategory[i], "total": total}
+        let obj = {"category": printedCategory[i], "total": total, "pieTotal": dataArr.length}
         dataset.push(obj);
       })
       return dataset;
       }
 
-    let finalData = genData();
+
 
     let svg = d3.select("#whereDonateChartDiv")
       .append("svg")
@@ -104,13 +106,15 @@ fbDoGood.on('value', (snapshot) => {
       svg.append("text")
             .data(function () {
               console.log(Object.values(e));
+
               return Object.values(e);
               })
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "middle")
             .style("fill", "black")
             .text(function(d,i) {
-              return d.category
+              let percent = Math.floor((d.total / d.pieTotal) * 100)
+              return d.category + percent + "%"
             })
       }
 
