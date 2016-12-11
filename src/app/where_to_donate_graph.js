@@ -40,13 +40,14 @@ fbDoGood.on('value', (snapshot) => {
       let dataset = new Array();
 
       where.map((c,i,a) => {
+        let printedCategory = ['Charity', 'Family/Friend', 'School', 'Fundraiser', 'Other']
         let total = 0;
         selectWhere.map((j) => {
           if (c === j) {
             total += 1;
           }
         })
-        let obj = {"category": c, "total": total}
+        let obj = {"category": printedCategory[i], "total": total}
         dataset.push(obj);
       })
       return dataset;
