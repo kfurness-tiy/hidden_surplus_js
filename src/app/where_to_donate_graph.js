@@ -77,6 +77,7 @@ fbDoGood.on('value', (snapshot) => {
                 .attr('d', arc
                   .innerRadius(radius * 0.5)
                   .outerRadius(radius * 1.05));
+            showInfo(d);
         })
         .on("mouseout", function(d,i){
             this.style.fill = color(i);
@@ -85,7 +86,44 @@ fbDoGood.on('value', (snapshot) => {
                 .attr('d', arc
                   .innerRadius(radius - donutWidth)
                   .outerRadius(radius));
+            removeInfo(d);
         })
+
+      let circle = svg.append("circle")
+        .attr("r", radius * 0.6)
+        .style("fill", "white")
+
+      function showInfo (e) {
+      svg.append("text")
+            .data(function () {
+              console.log(Object.values(e));
+              return Object.values(e);
+              })
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
+            .style("fill", "black")
+            .text(function(d,i) {
+              return d.category
+            })
+      }
+
+      function removeInfo() {
+        svg.selectAll("text")
+          .style("visibility", "hidden")
+      }
+
+      // svg.append("text").selectAll("tspan")
+      //   .data(finalData)
+      //   .enter().append("tspan")
+      //     .attr("text-anchor", "middle")
+      //     .attr("dominant-baseline", "middle")
+      //     .style("fill", "black")
+      //     .on("mouseover", function (d,i) {
+      //       d3.select(this)
+      //     })
+          // .text(function (d,i) {
+          //   return d.category
+          // })
 
 
 
