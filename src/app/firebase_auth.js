@@ -70,7 +70,7 @@ function signOut () {
     $("#logIn").show();
     $("#signOutMsg").show();
     $("#signOutMsg").html("Your have successfully logged out.");
-
+    document.getElementById("doGoodForm").reset();
   }, function(error) {
     $("#signOutMsg").html("We were not able to log you out. Please try again.");
   });
@@ -109,7 +109,7 @@ function showAnotherForm () {
 function addDoGood (obj) {
   let doGood = obj;
   const doGoodId = fbDoGood.push().key;
-  const newDonation = "new Donation " + fbDoGood.push().key;
+  const newDonation = "new_donation_" + fbUser.push().key;
 
   let updates = {};
   let userUpdated = {};
@@ -130,6 +130,8 @@ function getValueDoGood () {
     selectWhere: document.getElementById("selectWhere").value,
     showNameInfo: $('input[name=showInfo]:checked').val(),
     postTime: d.getTime(),
+    userId: user.uid,
+    userName: user.displayName,
   }
   addDoGood(doGood);
   goodDone();
