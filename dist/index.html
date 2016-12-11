@@ -90,7 +90,8 @@
 
 
         <section id="form">
-          <h3 class="title">START DOING SOME GOOD <br/> NOW</h3>
+          <h3 class="title">START DOING SOME GOOD </h3>
+          <h3 class="title dash"><span>NOW</span></h3>
           <h2 id="welcomeUser"></h2>
           <form id="doGoodForm">
             <div class="block-center typeInput">
@@ -139,7 +140,7 @@
             <div>
               <label htmlfor="showNameInfo">WOULD YOU LIKE TO DISPLAY YOUR NAME WITH YOUR DONATION INFO?
                 <div id="showNameInfo">
-                  <input class="inline" type="radio" name="showInfo" value="true">
+                  <input class="inline" type="radio" name="showInfo" value="true" checked>
                   <label class="inline" for="showInfoY">Yes</label>
                   <p class="inline">|</p>
                   <input class="inline" type="radio" name="showInfo" value="false">
@@ -174,15 +175,17 @@
         <p id="totalAmounts"></p>
       </section>
 
-      <div id="donations" class="text-center">
+      <div id="donations" class="text-center container">
         <h3 class="title">DONATIONS</h3>
         <div class="whereToDonate col-sm-6">
           <h3>Where to Donate</h3>
           <p>Don't know where to donate? <br/> Consider the following...</p>
+          <div id="whereDonateChartDiv"></div>
         </div>
         <div class="whatToDonate col-sm-6">
           <h3>Where to Find Your <br/> Hidden Surplus</h3>
           <p>Don't know what to give up? <br/> Consider the following...</p>
+          <div id="whatDonateChartDiv"></div>
         </div>
       </div>
     </main>
