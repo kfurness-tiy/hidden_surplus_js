@@ -9,6 +9,12 @@ fbDoGood.on('value', (snapshot) => {
 
   function whereToDonateDonut () {
 
+    var svgtest = d3.select('body').select('svg');
+
+    if (!svgtest.empty()) {
+      svgtest.remove();
+    }
+
     let fbData = snapshot.val();
     let dataArr = Object.values(fbData);
     let selectWhere = [];
@@ -23,10 +29,10 @@ fbDoGood.on('value', (snapshot) => {
         donutWidth = 80;
 
     let color = d3.scaleOrdinal()
-        .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)']);
+        .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
 
     let hoverColor = d3.scaleOrdinal()
-        .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)']);
+        .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)', 'rgb(121,121,121)']);
 
     function genData () {
       let where = ['charity', 'family', 'school', 'fundraiser', 'other']
