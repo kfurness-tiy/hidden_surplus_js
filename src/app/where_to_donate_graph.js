@@ -17,57 +17,56 @@ fbDoGood.on('value', (snapshot) => {
       selectWhere.push(c.selectWhere);
     })
 
-
-
-    let width = $(window).innerWidth() * 0.40,
-        height = $(window).innerWidth() * 0.40,
+    let width = $(window).innerWidth() * 0.30,
+        height = $(window).innerWidth() * 0.30,
         radius = Math.min(width, height) / 2;
 
     let color = d3.scaleOrdinal()
         .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
 
-        function genData () {
-          let where = ['charity', 'family', 'school', 'fundraiser', 'other']
+    function genData () {
+      let where = ['charity', 'family', 'school', 'fundraiser', 'other']
 
-          let dataset = new Array();
+      let dataset = new Array();
 
-          where.map((c,i,a) => {
-            let total = 0;
-            selectWhere.map((j) => {
-              if (c === j) {
-                total += 1;
-              }
-            })
-            let obj = {"category": c, "total": total}
-            dataset.push(obj);
-          })
-          console.log(dataset);
-          return dataset;
-        }
+      where.map((c,i,a) => {
+        let total = 0;
+        selectWhere.map((j) => {
+          if (c === j) {
+            total += 1;
+          }
+        })
+        let obj = {"category": c, "total": total}
+        dataset.push(obj);
+      })
+      return dataset;
+      }
 
-        genData();
+    let finalData = genData();
 
-    let svg = d3.select("#whereDonateChartDiv").append("svg")
-      .attr("width", width)
-      .attr("height", height);
-
-    var chartGroup = svg.append("g");
+    let svg = d3.select("#whereDonateChartDiv")
+      .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+          .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")");
 
     let arc = d3.arc()
-      .outerRadius(radius - 10)
-      .innerRadius(radius - 50)
-      .startAngle(0)
-      .endAngle(Math.PI / 2);
+      .innerRadius(0)
+      .outerRadius(radius);
 
     let pie = d3.pie()
-      .sort(null)
-      .value(function(d) {console.log(d);})
+      .value(function(d) { return d.total; })
+      .sort(null);
 
+    let path = svg.selectAll('path')
+      .data(pie(finalData))
+      .enter().append('path')
+        .attr('d', arc)
+        .attr('fill', function(d, i) {
+          return color(i);
+      });
 
-    chartGroup.selectAll("arc")
-        .data(pie(genData))
-      .enter().append("g")
-        .attr("class", "arc");
 
   }
 
