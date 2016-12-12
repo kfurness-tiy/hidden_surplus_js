@@ -61,12 +61,26 @@ function whatToDonateBar () {
 
   let maxTotal = getYAxis();
 
-  let width = $(window).innerWidth() * 0.30,
-  height = $(window).innerWidth() * 0.30;
+  let width = function (){
+    if($(window).innerWidth() > 767) {
+      return $(window).innerWidth() * 0.30
+    } else {
+      return $(window).innerWidth() * 0.75;
+      }
+    };
+  let height = function () {
+    if($(window).innerWidth() > 767) {
+      return $(window).innerWidth() * 0.30;
+    } else {
+      return $(window).innerWidth() * 0.75;
+      }
+   }
+
+   console.log(height());
 
   let x = d3.scaleBand()
     .domain(printedCategory)
-    .range([0, width])
+    .range([0, width()])
     .paddingInner(0.1176);
 
   let xAxis = d3.axisBottom(x);
@@ -74,8 +88,8 @@ function whatToDonateBar () {
   let svg = d3.select("#whatDonateChartDiv")
     .append("svg")
       .classed("bar", true)
-      .attr("height", height)
-      .attr("width", width)
+      .attr("height", height())
+      .attr("width", width())
 
   svg.selectAll("rect")
     .data(finalData)
@@ -84,12 +98,12 @@ function whatToDonateBar () {
           return d.total * 15;
       })
       .attr("width", function (d,i) {
-        let wide = Math.floor((width / 6) - 5)
+        let wide = Math.floor((width() / 6) - 5)
         return wide
       })
       // .attr("x",function (d,i) {return 60 * i;})
-      .attr("x", function (d,i) {return (width / 6) * i})
-      .attr("y", function (d,i) {return (height-20) - (d.total * 15)})
+      .attr("x", function (d,i) {return (width() / 6) * i})
+      .attr("y", function (d,i) {return (height() - 20) - (d.total * 15)})
       .attr("fill", function (d,i) {
         return color(i)
         })
@@ -103,7 +117,7 @@ function whatToDonateBar () {
 
     svg.append("g")
       .attr("class", "x axis hideAxis")
-      .attr("transform", "translate(0, "+(height - 40)+")")
+      .attr("transform", "translate(0, "+(height() - 40)+")")
       .call(xAxis);
 
 
