@@ -77,7 +77,9 @@ function whatToDonateBar () {
    }
 
   let tooltip = d3.select("body").append("div")
-    .attr("class", "tooltipBar");
+    .attr("class", "tooltipBar")
+    .style("opacity", "0")
+    .style("position", "absolute");
 
   let x = d3.scaleBand()
     .domain(printedCategory)
@@ -111,13 +113,14 @@ function whatToDonateBar () {
       .on("mouseover", function (d,i) {
         this.style.fill = hoverColor(i);
         tooltip.style("opacity", "5")
-          .style("left",d3.event.pageX+"px")
-          .style("top",d3.event.pageY+"px")
+          .style("left", d3.event.pageX - 50 + "px")
+          .style("top", d3.event.pageY - 70 + "px")
         d3.select(".tooltipBar").classed("hidden", false)
         tooltip.html(d.category + '<br/>' + d.total)
         })
       .on("mouseout", function (d,i) {
         this.style.fill = color(i);
+        d3.select(".tooltipBar").classed("hidden", true)
       });
 
 
