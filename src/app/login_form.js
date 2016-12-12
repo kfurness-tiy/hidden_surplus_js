@@ -88,10 +88,21 @@ function validateForm () {
   if ( name !== '' && amount !== '' && !isNaN(amount) && donateTo !== '' && gaveUp !== '') {
   getValueDoGood();
   return false;
-  }
-  else {
-    alert("It looks like some fields were not filled in correctly. Please try again.");
-    return false
+} else if (name === '') {
+  alert("Please fill in your name.")
+  return false;
+} else if (amount === '' || isNaN(amount)) {
+  alert("Please put in a number for the amount donated.")
+  return false;
+} else if (donateTo === '') {
+  alert("Please fill in where you donated to.")
+  return false;
+} else if (gaveUp === '') {
+  alert("Please fill in what you gave up.")
+  return false;
+} else {
+  alert("It looks like some fields were not filled in correctly. Please try again.");
+  return false
   }
 }
 
