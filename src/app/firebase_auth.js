@@ -17,8 +17,8 @@ var config = {
 ///////////////// Authentication /////////////////////
 
 $(document).ready(function (){
-  $("#form").show();     // CHANGE
-  $("#logIn").hide();    // CHANGE
+  $("#form").hide();     // CHANGE
+  // $("#logIn").show();    // CHANGE
   $("#signOutNav").hide();
   $("#signOutMsg").hide();
   $("#formSubmitMsg").hide();
