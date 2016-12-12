@@ -25,7 +25,7 @@ function whatToDonateBar () {
   })
 
   let getData = function () {
-    let arr = ['food', 'beauty', 'clothing', 'enertainment', 'service', 'product'];
+    let arr = ['food', 'beauty', 'clothing', 'entertainment', 'service', 'product'];
 
     let dataset = new Array();
 
@@ -62,7 +62,7 @@ function whatToDonateBar () {
   let maxTotal = getYAxis();
 
   let width = $(window).innerWidth() * 0.30,
-  height = $(window).innerWidth() * 0.30;
+  height = $(window).innerHeight() * 0.30;
 
   let x = d3.scaleBand()
     .domain(printedCategory)
@@ -88,15 +88,21 @@ function whatToDonateBar () {
         return wide
       })
       .attr("x",function (d,i) {return 60 * i;})
-      .attr("y", function (d,i) {return (height-40) - (d.total * 15)})
+      .attr("y", function (d,i) {return (height-20) - (d.total * 15)})
       .attr("fill", function (d,i) {
-        return color(i);
+        return color(i)
+        })
+      .on("mouseover", function (d,i) {
+        this.style.fill = hoverColor(i);
+        })
+      .on("mouseout", function (d,i) {
+        this.style.fill = color(i);
       });
+
 
     svg.append("g")
       .attr("class", "x axis hideAxis")
       .attr("transform", "translate(0, "+(height - 40)+")")
-      // .attr("transform", "translate(0, 250)")
       .call(xAxis);
 
 
