@@ -116,18 +116,12 @@ function whatToDonateBar () {
           .style("left", d3.event.pageX - 50 + "px")
           .style("top", d3.event.pageY - 70 + "px")
         d3.select(".tooltipBar").classed("hidden", false)
-        tooltip.html(d.category + '<br/>' + d.total)
+        tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
         })
       .on("mouseout", function (d,i) {
         this.style.fill = color(i);
         d3.select(".tooltipBar").classed("hidden", true)
       });
-
-
-    svg.append("g")
-      .attr("class", "x axis hideAxis")
-      .attr("transform", "translate(0, "+(height() - 40)+")")
-      .call(xAxis);
 
 
 }
