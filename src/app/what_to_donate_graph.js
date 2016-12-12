@@ -62,7 +62,7 @@ function whatToDonateBar () {
   let maxTotal = getYAxis();
 
   let width = $(window).innerWidth() * 0.30,
-  height = $(window).innerHeight() * 0.30;
+  height = $(window).innerWidth() * 0.30;
 
   let x = d3.scaleBand()
     .domain(printedCategory)
@@ -109,6 +109,7 @@ function whatToDonateBar () {
 
 }
 
+  $(window).resize(whatToDonateBar);
   d3.select(window).on("resize", whatToDonateBar);
   whatToDonateBar();
 });

@@ -125,6 +125,7 @@ fbDoGood.on('value', (snapshot) => {
 
   }
 
+  $(window).resize(whereToDonateDonut);
   d3.select(window).on("resize", whereToDonateDonut);
   whereToDonateDonut();
 });

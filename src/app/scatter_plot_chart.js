@@ -29,10 +29,13 @@ function callFunction(){
   let heightPx = $(window).height() * 0.40;
   let widthPx = $(window).innerWidth() * 0.75;
 
-  var svg = d3.select("#svg").append('svg').classed("scatter", true),
-    width = svg.attr("width", widthPx),
-    height = svg.attr("height", heightPx),
-    radius = 12;
+
+  var svg = d3.select("#svg")
+    .append('svg')
+      .classed("scatter", true),
+      width = svg.attr("width", widthPx),
+      height = svg.attr("height", heightPx),
+      radius = 12;
 
   var chartGroup = svg.append("g")
 
@@ -109,6 +112,7 @@ function callFunction(){
             }})
 }
 
+  $(window).resize(callFunction)
   d3.select(window).on("resize", callFunction);
   callFunction();
 });
