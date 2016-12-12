@@ -87,7 +87,8 @@ function whatToDonateBar () {
         let wide = Math.floor((width / 6) - 5)
         return wide
       })
-      .attr("x",function (d,i) {return 60 * i;})
+      // .attr("x",function (d,i) {return 60 * i;})
+      .attr("x", function (d,i) {return (width / 6) * i})
       .attr("y", function (d,i) {return (height-20) - (d.total * 15)})
       .attr("fill", function (d,i) {
         return color(i)
