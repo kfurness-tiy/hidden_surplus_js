@@ -123,21 +123,6 @@ fbDoGood.on('value', (snapshot) => {
           .style("visibility", "hidden")
       }
 
-      // svg.append("text").selectAll("tspan")
-      //   .data(finalData)
-      //   .enter().append("tspan")
-      //     .attr("text-anchor", "middle")
-      //     .attr("dominant-baseline", "middle")
-      //     .style("fill", "black")
-      //     .on("mouseover", function (d,i) {
-      //       d3.select(this)
-      //     })
-          // .text(function (d,i) {
-          //   return d.category
-          // })
-
-
-
   }
 
   d3.select(window).on("resize", whereToDonateDonut);
