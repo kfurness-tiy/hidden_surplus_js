@@ -22,9 +22,7 @@ function whatToDonateBar () {
     selectWhat.push(c.selectWhat);
   })
 
-  console.log(selectWhat);
-
-  let maxTotal = function () {
+  let getData = function () {
     let arr = ['food', 'beauty', 'clothing', 'enertainment', 'service', 'product'];
 
     let dataset = new Array();
@@ -43,7 +41,20 @@ function whatToDonateBar () {
     return dataset;
   }
 
-  let finalData = maxTotal();
+  let finalData = getData();
+
+  function getYAxis () {
+    let totalArr = [];
+    finalData.map((c,i) => {
+      totalArr.push(c.total)
+    })
+    let maxNum = Math.max(...totalArr);
+    return maxNum;
+  }
+
+  let maxTotal = getYAxis();
+
+  console.log(maxTotal);
 
   let width = $(window).innerWidth() * 0.30,
   height = $(window).innerWidth() * 0.30;
