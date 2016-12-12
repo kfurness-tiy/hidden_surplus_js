@@ -76,8 +76,6 @@ function whatToDonateBar () {
       }
    }
 
-   console.log(height());
-
   let x = d3.scaleBand()
     .domain(printedCategory)
     .range([0, width()])

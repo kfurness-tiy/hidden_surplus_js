@@ -23,10 +23,29 @@ fbDoGood.on('value', (snapshot) => {
       selectWhere.push(c.selectWhere);
     })
 
-    let width = $(window).innerWidth() * 0.30,
-        height = $(window).innerWidth() * 0.30,
-        radius = Math.min(width, height) / 2.5,
-        donutWidth = 80;
+    // let width = $(window).innerWidth() * 0.30,
+    //     height = $(window).innerWidth() * 0.30,
+    //     radius = Math.min(width, height) / 2.5,
+    //     donutWidth = 80;
+
+
+    let width = function (){
+      if($(window).innerWidth() > 767) {
+        return $(window).innerWidth() * 0.30
+      } else {
+        return $(window).innerWidth() * 0.75;
+        }
+      };
+    let height = function () {
+      if($(window).innerWidth() > 767) {
+        return $(window).innerWidth() * 0.30;
+      } else {
+        return $(window).innerWidth() * 0.75;
+        }
+     };
+     let radius = Math.min(width(), height()) / 2.5,
+         donutWidth = 80;
+
 
     let color = d3.scaleOrdinal()
         .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
@@ -60,10 +79,10 @@ fbDoGood.on('value', (snapshot) => {
     let svg = d3.select("#whereDonateChartDiv")
       .append("svg")
         .classed("pie", true)
-        .attr("width", width)
-        .attr("height", height)
+        .attr("width", width())
+        .attr("height", height())
         .append("g")
-          .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")");
+          .attr("transform", "translate(" + (width() / 2) + "," + (height() / 2) + ")");
 
     let arc = d3.arc()
       .innerRadius(radius - donutWidth)
