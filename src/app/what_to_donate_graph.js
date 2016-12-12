@@ -95,7 +95,8 @@ function whatToDonateBar () {
 
     svg.append("g")
       .attr("class", "x axis hideAxis")
-      .attr("transform", "translate(0,300)")
+      .attr("transform", "translate(0, "+(height - 40)+")")
+      // .attr("transform", "translate(0, 250)")
       .call(xAxis);
 
 
