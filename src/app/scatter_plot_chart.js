@@ -16,7 +16,7 @@ fbDoGood.on('value', (snapshot) => {
     return total
   });
 
-  document.getElementById('totalAmounts').innerHTML = "$" + total;
+  document.getElementById('totalAmounts').innerHTML = "$" + total.toFixed(2);
 
 function callFunction(){
 
