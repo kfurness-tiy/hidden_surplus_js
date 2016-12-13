@@ -58,7 +58,7 @@ function showForm() {
   $("#signInNav").hide();
   $("#form").show();
   $("#signOutNav").show();
-  $("#welcomeUser").html("Hello, " + user.displayName + ". Fill out the form below to do some good!");
+  $("#welcomeUser").html("Hello, " + user.displayName + ". <br/> Fill out the form below to do some good!");
 };
 
 function signOut () {

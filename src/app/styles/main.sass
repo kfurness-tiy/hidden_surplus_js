@@ -10,13 +10,9 @@ $lato: 'Lato', sans-serif
 $mai: 'Maitree', serif
 
 
-
-=border-radius($radius)
-  -webkit-border-radius: $radius
-  -moz-border-radius:    $radius
-  -ms-border-radius:     $radius
-  border-radius:         $radius
-
+@font-face
+  font-family: 'Lato'
+  src: font-files('./Lato-Light.ttf')
 
 /////// EVERYTHING //////////
 
@@ -52,7 +48,6 @@ i
 
 .title
   font-size: 26px
-  font-weight: bolder
 
 .wrapper
   min-height: 100%
@@ -133,14 +128,10 @@ header
   .line span:after
     left: 100%
     margin-left: 20px
-  .bigChange
-    font-weight: bolder
 
 #toggleButton
   background-color: $turq
   padding: 5px
-
-
 
 
 //////// ABOUT /////////
@@ -175,25 +166,19 @@ header
   background-position: center
   text-align: center
 
-#logIn
-  h3
-    margin: 30px
-  p
-    margin: 15px
-  button
-    margin: 30px
-    font-size: 16px
 
 #form
   .title
     color: white
   h2
     color: white
+    font-weight: 300
   div
     margin: auto
   label
     color: white
     font-size: 16px
+    font-weight: 300
   .typeInput
     input
       height: 40px
@@ -218,26 +203,28 @@ header
     display: inline-block
     margin: 10px
     color: white
-  .dash
-    line-height: 1
-  .dash span
-    display: inline-block
-    position: relative
-    color: white
-  .dash span:before,
-  .dash span:after
-    content: ''
-    position: absolute
-    height: 15px
-    border-bottom: 2px solid rgba(255,255,255,0.4)
-    top: 0
-    width: 120px
-  .dash span:before
-    right: 100%
-    margin-right: 15px
-  .dash span:after
-    left: 100%
-    margin-left: 15px
+
+.dash
+  line-height: 1
+  margin-top: 10px
+.dash span
+  display: inline-block
+  position: relative
+  color: white
+.dash span:before,
+.dash span:after
+  content: ''
+  position: absolute
+  height: 15px
+  border-bottom: 2px solid rgba(255,255,255,0.4)
+  top: 0
+  width: 120px
+.dash span:before
+  right: 100%
+  margin-right: 15px
+.dash span:after
+  left: 100%
+  margin-left: 15px
 
 
 #formSubmitMsg
@@ -255,6 +242,11 @@ header
     color: white
   h2
     color: white
+  p
+    margin: 15px
+  button
+    margin: 30px
+    font-size: 16px
 
 /////// CONTRIBUTIONS //////////
 #contributions
@@ -279,7 +271,6 @@ header
   min-width: 150px
   margin: 3px auto
   text-align: center
-  font-weight: bolder
   color: black
   .dispAmount
     font-size: 24px
