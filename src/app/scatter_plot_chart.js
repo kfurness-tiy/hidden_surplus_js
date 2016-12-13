@@ -50,7 +50,7 @@ function callFunction(){
   let dayOld = timeNow - day;
 
   function randomSize(unit) {
-    let num = Math.round(Math.random() * (unit - radius * 2) + radius)
+    let num = Math.round(Math.random() * ((unit - radius * 2) - 5) + radius)
     return num;
   }
 
@@ -111,10 +111,19 @@ function callFunction(){
              const self = this;
             eventFocus(d,i,a,self);
           })
+           .on("touchstart", function (d,i,a) {
+             const self = this;
+            eventFocus(d,i,a,self);
+          })
           .on("mouseout", function (d,i,a){
             const self = this;
             eventErase(d,i,a,self);
           } )
+          .on("touchend", function (d,i,a){
+            const self = this;
+            eventErase(d,i,a,self);
+          } )
+
 }
 
   $(window).resize(callFunction)
