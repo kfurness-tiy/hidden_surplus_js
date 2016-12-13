@@ -94,6 +94,21 @@ function whatToDonateBar () {
       .attr("height", height())
       .attr("width", width())
 
+  let eventFocus = (d,i,a,self) => {
+    self.style.fill = hoverColor(i);
+    tooltip.style("opacity", "5")
+      .style("left", d3.event.pageX - 50 + "px")
+      .style("top", d3.event.pageY - 70 + "px")
+    d3.select(".tooltipBar").classed("hidden", false)
+    tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
+  }
+
+  let eventErase = (d,i,a,self) => {
+    self.style.fill = color(i);
+    d3.select(".tooltipBar").classed("hidden", true)
+  }
+
+
   svg.selectAll("rect")
     .data(finalData)
     .enter().append("rect")
@@ -104,25 +119,27 @@ function whatToDonateBar () {
         let wide = Math.floor((width() / 6) - 5)
         return wide
       })
-      // .attr("x",function (d,i) {return 60 * i;})
       .attr("x", function (d,i) {return (width() / 6) * i})
       .attr("y", function (d,i) {return (height() - 20) - (d.total * 15)})
       .attr("fill", function (d,i) {
         return color(i)
         })
-      .on("mouseover", function (d,i) {
-        this.style.fill = hoverColor(i);
-        tooltip.style("opacity", "5")
-          .style("left", d3.event.pageX - 50 + "px")
-          .style("top", d3.event.pageY - 70 + "px")
-        d3.select(".tooltipBar").classed("hidden", false)
-        tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
+        .on("mouseover", function (d,i,a) {
+          const self = this;
+          eventFocus(d,i,a,self);
         })
-      .on("mouseout", function (d,i) {
-        this.style.fill = color(i);
-        d3.select(".tooltipBar").classed("hidden", true)
-      });
-
+        .on("touchstart", function (d,i,a) {
+          const self = this;
+          eventFocus(d,i,a,self);
+        })
+        .on("mouseout", function (d,i,a) {
+          const self = this;
+          eventErase(d,i,a,self)
+        })
+        .on("touchend", function (d,i,a) {
+          const self = this;
+          eventErase(d,i,a,self)
+        })
 
 }
 
