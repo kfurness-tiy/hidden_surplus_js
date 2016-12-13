@@ -126,7 +126,7 @@ function callFunction(){
 
 }
 
-  $(window).resize(callFunction)
+  $(window).resize(callFunction);
   d3.select(window).on("resize", callFunction);
   callFunction();
 });
