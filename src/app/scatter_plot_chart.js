@@ -49,13 +49,8 @@ function callFunction(){
   let day = 86400000;
   let dayOld = timeNow - day;
 
-  function randomWidth() {
-    let num = Math.round(Math.random() * (widthPx - radius * 2) + radius)
-    return num;
-  }
-
-  function randomHeight() {
-    let num = Math.round(Math.random() * (heightPx - radius * 2) + radius)
+  function randomSize(unit) {
+    let num = Math.round(Math.random() * (unit - radius * 2) + radius)
     return num;
   }
 
@@ -69,8 +64,8 @@ function callFunction(){
   chartGroup.selectAll("circle")
     .data(arr)
     .enter().append("circle")
-      .attr("cx", function(d) { return randomWidth() })
-      .attr("cy", function(d) { return randomHeight() })
+      .attr("cx", function(d) { return randomSize(widthPx) })
+      .attr("cy", function(d) { return randomSize(heightPx) })
       .attr("r", radius)
       .attr("class", function(d) {
         if (dayOld <= d.postTime) {
