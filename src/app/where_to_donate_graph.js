@@ -23,21 +23,17 @@ fbDoGood.on('value', (snapshot) => {
       selectWhere.push(c.selectWhere);
     })
 
-    // let width = $(window).innerWidth() * 0.30,
-    //     height = $(window).innerWidth() * 0.30,
-    //     radius = Math.min(width, height) / 2.5,
-    //     donutWidth = 80;
 
 
     let width = function (){
-      if($(window).innerWidth() > 767) {
+      if($(window).innerWidth() > 752) {
         return $(window).innerWidth() * 0.30
       } else {
         return $(window).innerWidth() * 0.75;
         }
       };
     let height = function () {
-      if($(window).innerWidth() > 767) {
+      if($(window).innerWidth() > 752) {
         return $(window).innerWidth() * 0.30;
       } else {
         return $(window).innerWidth() * 0.75;
