@@ -92,6 +92,26 @@ fbDoGood.on('value', (snapshot) => {
       .value(function(d) { return d.total; })
       .sort(null);
 
+    let eventFocus = (d,i,a,self) => {
+      self.style.fill = hoverColor(i)
+      d3.select(self)
+        .transition()
+          .attr('d', arc
+            .innerRadius(radius * 0.5)
+            .outerRadius(radius * 1.05));
+      showInfo(d);
+    }
+
+    let eventErase = (d,i,a,self) => {
+      self.style.fill = color(i);
+      d3.select(self)
+        .transition()
+          .attr('d', arc
+            .innerRadius(radius - donutWidth)
+            .outerRadius(radius));
+      removeInfo(d);
+    }
+
     let path = svg.selectAll('path')
       .data(pie(finalData))
       .enter().append('path')
@@ -99,24 +119,23 @@ fbDoGood.on('value', (snapshot) => {
         .attr('fill', function(d, i) {
           return color(i);
           })
-        .on("mouseover", function(d,i){
-            this.style.fill = hoverColor(i)
-            d3.select(this)
-              .transition()
-                .attr('d', arc
-                  .innerRadius(radius * 0.5)
-                  .outerRadius(radius * 1.05));
-            showInfo(d);
+        .on("mouseover", function (d,i,a) {
+          const self = this;
+          eventFocus(d,i,a,this);
         })
-        .on("mouseout", function(d,i){
-            this.style.fill = color(i);
-            d3.select(this)
-              .transition()
-                .attr('d', arc
-                  .innerRadius(radius - donutWidth)
-                  .outerRadius(radius));
-            removeInfo(d);
+        .on("touchstart", function (d,i,a) {
+          const self = this;
+          eventFocus(d,i,a,this);
         })
+        .on("mouseout", function (d,i,a) {
+          const self = this;
+          eventErase(d,i,a,self);
+        })
+        .on("touchend", function (d,i,a) {
+          const self = this;
+          eventErase(d,i,a,self);
+        })
+
 
       let circle = svg.append("circle")
         .attr("r", radius * 0.6)

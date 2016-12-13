@@ -60,7 +60,7 @@ function callFunction(){
   var color = d3.scaleOrdinal()
       .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
 
-  var eventFocus = (d,i,a,self) => {
+  let eventFocus = (d,i,a,self) => {
       self.style.fill = "rgb(51,51,51)"
       d3.select(self).attr("r", 15)
           .classed("growRad", true)
@@ -77,7 +77,7 @@ function callFunction(){
         })
       }
 
-  var eventErase = (d,i,a,self) => {
+  let eventErase = (d,i,a,self) => {
     d3.select(".tooltip").classed("hidden", true)
     d3.select(self).attr("r", 12)
      .classed("growRad", false)
