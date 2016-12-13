@@ -52,7 +52,7 @@
 	__webpack_require__(/*! jquery */ 1);
 	__webpack_require__(/*! bootstrap */ 2);
 	__webpack_require__(/*! ./styles/main.sass */ 15);
-	__webpack_require__(/*! ./firebase_auth.js */ 21);
+	__webpack_require__(/*! ./login_form.js */ 21);
 	__webpack_require__(/*! ./scatter_plot_chart.js */ 22);
 	__webpack_require__(/*! ./where_to_donate_graph.js */ 23);
 	__webpack_require__(/*! ./what_to_donate_graph.js */ 24);
@@ -12805,7 +12805,7 @@
 	
 	
 	// module
-	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\ni {\n  color: white;\n  margin-right: 6px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px;\n  font-weight: bolder; }\n\n.wrapper {\n  min-height: 100%;\n  margin-bottom: -58px; }\n\n.wrapper:after {\n  content: \"\";\n  display: block; }\n\n.site-footer, .wrapper:after {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header .logo {\n    display: inline-block;\n    padding: 8px 0; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 18) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px; }\n  .jumbotronDiv .line {\n    font-weight: lighter;\n    line-height: 1;\n    text-align: center; }\n  .jumbotronDiv .line span {\n    display: inline-block;\n    position: relative;\n    color: white; }\n  .jumbotronDiv .line span:before,\n  .jumbotronDiv .line span:after {\n    content: '';\n    position: absolute;\n    height: 35px;\n    border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n    top: 0;\n    width: 140px; }\n  .jumbotronDiv .line span:before {\n    right: 100%;\n    margin-right: 20px; }\n  .jumbotronDiv .line span:after {\n    left: 100%;\n    margin-left: 20px; }\n  .jumbotronDiv .bigChange {\n    font-weight: bolder; }\n\n#toggleButton {\n  background-color: #72bfb8;\n  padding: 5px; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 19) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#logIn h3 {\n  margin: 30px; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px;\n  font-size: 16px; }\n\n#form .title {\n  color: white; }\n\n#form div {\n  margin: auto; }\n\n#form label {\n  color: white;\n  font-size: 16px; }\n\n#form .typeInput input {\n  height: 40px;\n  margin: 5px 1vw;\n  width: 25vw;\n  font-size: 18px;\n  padding: 10px; }\n\n#form button {\n  margin: 10px; }\n\n#form select {\n  height: 30px;\n  background: white;\n  font-size: 16px; }\n\n#form .signOut {\n  background-color: #9e9d9a; }\n\n#form .signOut:hover {\n  background-color: #737372; }\n\n#form .dropdown {\n  display: inline-block;\n  margin: 20px 6vw; }\n\n#form .inline {\n  display: inline-block;\n  margin: 10px;\n  color: white; }\n\n#form .dash {\n  line-height: 1; }\n\n#form .dash span {\n  display: inline-block;\n  position: relative;\n  color: white; }\n\n#form .dash span:before,\n#form .dash span:after {\n  content: '';\n  position: absolute;\n  height: 15px;\n  border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n  top: 0;\n  width: 120px; }\n\n#form .dash span:before {\n  right: 100%;\n  margin-right: 15px; }\n\n#form .dash span:after {\n  left: 100%;\n  margin-left: 15px; }\n\n#formSubmitMsg h3 {\n  color: white; }\n\n#formSubmitMsg p {\n  color: white; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 40px; }\n  #contributions #totalAmounts {\n    font-size: 26px;\n    color: #58948e;\n    margin-bottom: 44px; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  font-weight: bolder;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n#donations h3 {\n  margin-top: 44px; }\n\n.tooltip.hidden {\n  display: none; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\n.donate {\n  margin-bottom: 20px; }\n\n#whereDonateChartDiv text {\n  font-size: 16px; }\n\nsvg.bar {\n  padding-bottom: 10px;\n  margin-bottom: 10px; }\n\ng.hideAxis line,\ng.hideAxis path {\n  display: none; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n\n@media (max-width: 767px) {\n  nav {\n    float: right; }\n    nav ul li {\n      display: block; }\n  header {\n    display: block; } }\n\n@media (max-width: 700px) {\n  .jumbotronDiv {\n    background-size: cover; }\n    .jumbotronDiv p {\n      font-size: 35px; }\n  #form .typeInput input {\n    display: block;\n    margin: 10px auto;\n    width: auto; } }\n\n@media (max-width: 600px) {\n  #doGood {\n    background-size: cover;\n    background-position: -900px 0px;\n    height: auto; } }\n\n@media (max-width: 991px) {\n  header .logo {\n    width: 275px;\n    padding: 8px 0; }\n  header nav ul {\n    padding: 0; }\n  header nav li {\n    font-size: 12px;\n    padding: 3px; } }\n\n@media (max-width: 480px) {\n  .line span:before,\n  .line span:after {\n    display: none; }\n  .title {\n    font-size: 22px; }\n  #form .dash span:before,\n  #form .dash span:after {\n    width: 60px; } }\n\n@media (max-width: 379px) {\n  #form h3:first-child {\n    margin-top: 25px; }\n  #form .dash {\n    margin-top: 7px; } }\n", ""]);
+	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\ni {\n  color: white;\n  margin-right: 6px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px;\n  font-weight: bolder; }\n\n.wrapper {\n  min-height: 100%;\n  margin-bottom: -58px; }\n\n.wrapper:after {\n  content: \"\";\n  display: block; }\n\n.site-footer, .wrapper:after {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header .logo {\n    display: inline-block;\n    padding: 8px 0; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 18) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px; }\n  .jumbotronDiv .line {\n    font-weight: lighter;\n    line-height: 1;\n    text-align: center; }\n  .jumbotronDiv .line span {\n    display: inline-block;\n    position: relative;\n    color: white; }\n  .jumbotronDiv .line span:before,\n  .jumbotronDiv .line span:after {\n    content: '';\n    position: absolute;\n    height: 35px;\n    border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n    top: 0;\n    width: 140px; }\n  .jumbotronDiv .line span:before {\n    right: 100%;\n    margin-right: 20px; }\n  .jumbotronDiv .line span:after {\n    left: 100%;\n    margin-left: 20px; }\n  .jumbotronDiv .bigChange {\n    font-weight: bolder; }\n\n#toggleButton {\n  background-color: #72bfb8;\n  padding: 5px; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 19) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#logIn h3 {\n  margin: 30px; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px;\n  font-size: 16px; }\n\n#form .title {\n  color: white; }\n\n#form div {\n  margin: auto; }\n\n#form label {\n  color: white;\n  font-size: 16px; }\n\n#form .typeInput input {\n  height: 40px;\n  margin: 5px 1vw;\n  width: 25vw;\n  font-size: 18px;\n  padding: 10px; }\n\n#form button {\n  margin: 10px; }\n\n#form select {\n  height: 30px;\n  background: white;\n  font-size: 16px; }\n\n#form .signOut {\n  background-color: #9e9d9a; }\n\n#form .signOut:hover {\n  background-color: #737372; }\n\n#form .dropdown {\n  display: inline-block;\n  margin: 20px 6vw; }\n\n#form .inline {\n  display: inline-block;\n  margin: 10px;\n  color: white; }\n\n#form .dash {\n  line-height: 1; }\n\n#form .dash span {\n  display: inline-block;\n  position: relative;\n  color: white; }\n\n#form .dash span:before,\n#form .dash span:after {\n  content: '';\n  position: absolute;\n  height: 15px;\n  border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n  top: 0;\n  width: 120px; }\n\n#form .dash span:before {\n  right: 100%;\n  margin-right: 15px; }\n\n#form .dash span:after {\n  left: 100%;\n  margin-left: 15px; }\n\n#formSubmitMsg h3 {\n  color: white; }\n\n#formSubmitMsg p {\n  color: white; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 15vh; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  font-weight: bolder;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n.tooltip.hidden {\n  display: none; }\n\n.totalAmounts {\n  text-align: center;\n  padding: 15px;\n  background-color: #50a399; }\n  .totalAmounts p {\n    color: white;\n    text-transform: uppercase;\n    margin-bottom: 0px;\n    font-size: 22px; }\n  .totalAmounts #totalAmounts {\n    font-size: 36px;\n    margin-bottom: 0px; }\n\n#donations h3 {\n  margin-top: 44px;\n  color: #3b6670; }\n\n#donations .hoverMsg {\n  font-style: italic;\n  font-size: 14px;\n  margin-top: 10px; }\n\n.tooltipBar {\n  font-size: 16px;\n  text-align: center;\n  background-color: rgba(252, 252, 252, 0.8);\n  border: 1px solid rgba(211, 209, 209, 0.3); }\n  .tooltipBar .hidden {\n    display: none; }\n  .tooltipBar .fromDisp {\n    font-style: italic;\n    font-size: 14px; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\n.donate {\n  margin-bottom: 20px; }\n\n#whereDonateChartDiv text {\n  font-size: 16px; }\n\nsvg.bar {\n  padding-bottom: 10px;\n  margin-bottom: 10px; }\n\ng.hideAxis line,\ng.hideAxis path {\n  display: none; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n\n@media (max-width: 767px) {\n  nav {\n    float: right; }\n    nav ul li {\n      display: block; }\n  header {\n    display: block; } }\n\n@media (max-width: 700px) {\n  .jumbotronDiv {\n    background-size: cover; }\n    .jumbotronDiv p {\n      font-size: 35px; }\n  #form .typeInput input {\n    display: block;\n    margin: 10px auto;\n    width: auto; } }\n\n@media (max-width: 600px) {\n  #doGood {\n    background-size: cover;\n    background-position: -900px 0px;\n    height: auto; } }\n\n@media (max-width: 991px) {\n  header .logo {\n    width: 275px;\n    padding: 8px 0; }\n  header nav ul {\n    padding: 0; }\n  header nav li {\n    font-size: 12px;\n    padding: 3px; } }\n\n@media (max-width: 480px) {\n  .line span:before,\n  .line span:after {\n    display: none; }\n  .title {\n    font-size: 22px; }\n  #form .dash span:before,\n  #form .dash span:after {\n    width: 60px; } }\n\n@media (max-width: 379px) {\n  #form h3:first-child {\n    margin-top: 25px; }\n  #form .dash {\n    margin-top: 7px; } }\n", ""]);
 	
 	// exports
 
@@ -13144,9 +13144,9 @@
 
 /***/ },
 /* 21 */
-/*!**********************************!*\
-  !*** ./src/app/firebase_auth.js ***!
-  \**********************************/
+/*!*******************************!*\
+  !*** ./src/app/login_form.js ***!
+  \*******************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13168,8 +13168,8 @@
 	///////////////// Authentication /////////////////////
 	
 	$(document).ready(function (){
-	  $("#form").show();     // CHANGE
-	  $("#logIn").hide();    // CHANGE
+	  $("#form").hide();     // CHANGE
+	  // $("#logIn").show();    // CHANGE
 	  $("#signOutNav").hide();
 	  $("#signOutMsg").hide();
 	  $("#formSubmitMsg").hide();
@@ -13239,10 +13239,21 @@
 	  if ( name !== '' && amount !== '' && !isNaN(amount) && donateTo !== '' && gaveUp !== '') {
 	  getValueDoGood();
 	  return false;
-	  }
-	  else {
-	    alert("It looks like some fields were not filled in correctly. Please try again.");
-	    return false
+	} else if (name === '') {
+	  alert("Please fill in your name.")
+	  return false;
+	} else if (amount === '' || isNaN(amount)) {
+	  alert("Please put in a number for the amount donated.")
+	  return false;
+	} else if (donateTo === '') {
+	  alert("Please fill in where you donated to.")
+	  return false;
+	} else if (gaveUp === '') {
+	  alert("Please fill in what you gave up.")
+	  return false;
+	} else {
+	  alert("It looks like some fields were not filled in correctly. Please try again.");
+	  return false
 	  }
 	}
 	
@@ -13317,7 +13328,7 @@
 	    return total
 	  });
 	
-	  document.getElementById('totalAmounts').innerHTML = "$" + total;
+	  document.getElementById('totalAmounts').innerHTML = "$" + total.toFixed(2);
 	
 	function callFunction(){
 	
@@ -13350,13 +13361,8 @@
 	  let day = 86400000;
 	  let dayOld = timeNow - day;
 	
-	  function randomWidth() {
-	    let num = Math.round(Math.random() * (widthPx - radius * 2) + radius)
-	    return num;
-	  }
-	
-	  function randomHeight() {
-	    let num = Math.round(Math.random() * (heightPx - radius * 2) + radius)
+	  function randomSize(unit) {
+	    let num = Math.round(Math.random() * (unit - radius * 2) + radius)
 	    return num;
 	  }
 	
@@ -13370,8 +13376,8 @@
 	  chartGroup.selectAll("circle")
 	    .data(arr)
 	    .enter().append("circle")
-	      .attr("cx", function(d) { return randomWidth() })
-	      .attr("cy", function(d) { return randomHeight() })
+	      .attr("cx", function(d) { return randomSize(widthPx) })
+	      .attr("cy", function(d) { return randomSize(heightPx) })
 	      .attr("r", radius)
 	      .attr("class", function(d) {
 	        if (dayOld <= d.postTime) {
@@ -13663,6 +13669,11 @@
 	      }
 	   }
 	
+	  let tooltip = d3.select("body").append("div")
+	    .attr("class", "tooltipBar")
+	    .style("opacity", "0")
+	    .style("position", "absolute");
+	
 	  let x = d3.scaleBand()
 	    .domain(printedCategory)
 	    .range([0, width()])
@@ -13694,16 +13705,16 @@
 	        })
 	      .on("mouseover", function (d,i) {
 	        this.style.fill = hoverColor(i);
+	        tooltip.style("opacity", "5")
+	          .style("left", d3.event.pageX - 50 + "px")
+	          .style("top", d3.event.pageY - 70 + "px")
+	        d3.select(".tooltipBar").classed("hidden", false)
+	        tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
 	        })
 	      .on("mouseout", function (d,i) {
 	        this.style.fill = color(i);
+	        d3.select(".tooltipBar").classed("hidden", true)
 	      });
-	
-	
-	    svg.append("g")
-	      .attr("class", "x axis hideAxis")
-	      .attr("transform", "translate(0, "+(height() - 40)+")")
-	      .call(xAxis);
 	
 	
 	}
