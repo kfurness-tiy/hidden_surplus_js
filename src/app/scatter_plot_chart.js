@@ -60,6 +60,33 @@ function callFunction(){
   var color = d3.scaleOrdinal()
       .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
 
+  var eventFocus = (d,i,a,self) => {
+      self.style.fill = "rgb(51,51,51)"
+      d3.select(self).attr("r", 15)
+          .classed("growRad", true)
+      tooltip.style("opacity", "5")
+        .style("left",d3.event.pageX+"px")
+        .style("top",d3.event.pageY+"px")
+      d3.select(".tooltip").classed("hidden", false)
+      tooltip.html(function () {
+        if (arr[i].showNameInfo === 'true') {
+          return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>'}
+          else {
+            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>'
+          }
+        })
+      }
+
+  var eventErase = (d,i,a,self) => {
+    d3.select(".tooltip").classed("hidden", true)
+    d3.select(self).attr("r", 12)
+     .classed("growRad", false)
+     if ($(self).hasClass("newer")) {
+        self.style.fill = recentColor(i);}
+      else {
+        self.style.fill = color(i);
+      }
+    }
 
   chartGroup.selectAll("circle")
     .data(arr)
@@ -80,31 +107,14 @@ function callFunction(){
            else {
              return color(i);
            }})
-          .on("mouseover", function(d,i,a){
-              this.style.fill = "rgb(51,51,51)"
-              d3.select(this).attr("r", 15)
-                  .classed("growRad", true)
-              tooltip.style("opacity", "5")
-                .style("left",d3.event.pageX+"px")
-                .style("top",d3.event.pageY+"px")
-              d3.select(".tooltip").classed("hidden", false)
-              tooltip.html(function () {
-                if (arr[i].showNameInfo === 'true') {
-                  return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>'}
-                  else {
-                    return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>'
-                  }
-                })
-              })
-          .on("mouseout", function(d, i) {
-             d3.select(".tooltip").classed("hidden", true)
-             d3.select(this).attr("r", 12)
-              .classed("growRad", false)
-              if ($(this).hasClass("newer")) {
-                 this.style.fill = recentColor(i);}
-               else {
-                 this.style.fill = color(i);
-            }})
+           .on("mouseover", function (d,i,a) {
+             const self = this;
+            eventFocus(d,i,a,self);
+          })
+          .on("mouseout", function (d,i,a){
+            const self = this;
+            eventErase(d,i,a,self);
+          } )
 }
 
   $(window).resize(callFunction)
