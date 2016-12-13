@@ -78,6 +78,7 @@ header
   li
     display: inline-block
     padding: 1em
+    font-weight: 300
   a
     color: $darkGray
   a:hover
@@ -165,6 +166,8 @@ header
   background-repeat: no-repeat
   background-position: center
   text-align: center
+  p
+    font-weight: 300
 
 
 #form
@@ -247,6 +250,8 @@ header
   button
     margin: 30px
     font-size: 16px
+  #signOutMsg
+    font-weight: 300
 
 /////// CONTRIBUTIONS //////////
 #contributions
@@ -292,12 +297,14 @@ header
   padding: 15px
   background-color: $brightTurq
   p
+    font-weight: 300
     color: white
     text-transform: uppercase
     margin-bottom: 0px
     font-size: 22px
   #totalAmounts
     font-size: 36px
+    font-weight: 500
     margin-bottom: 0px
 
 #donations
@@ -359,45 +366,13 @@ a:hover
 
 
 ///////////// MEDIA QUERY ////////////
-@media (max-width: 767px)
-  nav
-    float: right
-    ul
-      li
-        display: block
-  header
-    display: block
 
-
-@media (max-width: 700px)
-  .jumbotronDiv
-    background-size: cover
-    p
-      font-size: 35px
+@media (max-width: 379px)
   #form
-    .typeInput
-      input
-        display: block
-        margin: 10px auto
-        width: auto
-
-@media (max-width: 600px)
-  #doGood
-    background-size: cover
-    height: auto
-
-
-@media (max-width: 991px)
-  header
-    .logo
-      width: 275px
-      padding: 8px 0
-    nav
-      ul
-        padding: 0
-      li
-        font-size: 12px
-        padding: 3px
+  h3:first-child
+    margin-top: 25px
+  .dash
+    margin-top: 7px
 
 @media (max-width: 480px)
   .line span:before,
@@ -410,9 +385,43 @@ a:hover
     .dash span:after
       width: 60px
 
-@media (max-width: 379px)
+@media (max-width: 600px)
+  #doGood
+    background-size: cover
+    height: auto
+
+@media (max-width: 700px)
+  .jumbotronDiv
+    background-size: cover
+    p
+      font-size: 35px
   #form
-    h3:first-child
-      margin-top: 25px
-    .dash
-      margin-top: 7px
+    .typeInput
+      input
+        display: block
+        margin: 10px auto
+        width: auto
+  #doGood
+    background-size: cover
+    height: auto
+
+@media (max-width: 767px)
+  nav
+    float: right
+    ul
+      li
+        display: block
+  header
+    display: block
+
+@media (max-width: 992px)
+  header
+    .logo
+      width: 275px
+      padding: 8px 0
+  nav
+    ul
+      padding: 0
+    li
+      font-size: 12px
+      padding: 3px
