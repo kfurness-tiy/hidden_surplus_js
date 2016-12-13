@@ -18,6 +18,7 @@ $mai: 'Maitree', serif
 
 *
   font-family: $lato
+  font-weight: 300
   color: $darkGray
   margin: 0
 
@@ -78,7 +79,6 @@ header
   li
     display: inline-block
     padding: 1em
-    font-weight: 300
   a
     color: $darkGray
   a:hover
@@ -107,28 +107,31 @@ header
   p
     color: white
     font-size: 55px
+    font-weight: 500
   .line
     font-weight: lighter
     line-height: 1
     text-align: center
-  .line span
-    display: inline-block
-    position: relative
-    color: white
-  .line span:before,
-  .line span:after
-    content: ''
-    position: absolute
-    height: 35px
-    border-bottom: 2px solid rgba(255,255,255,0.4)
-    top: 0
-    width: 140px
-  .line span:before
-    right: 100%
-    margin-right: 20px
-  .line span:after
-    left: 100%
-    margin-left: 20px
+    span
+      display: inline-block
+      position: relative
+      color: white
+      font-weight: lighter
+      margin: 10px
+    span:before,
+    span:after
+      content: ''
+      position: absolute
+      height: 35px
+      border-bottom: 2px solid rgba(255,255,255,0.4)
+      top: 0
+      width: 140px
+    span:before
+      right: 100%
+      margin-right: 20px
+    span:after
+      left: 100%
+      margin-left: 20px
 
 #toggleButton
   background-color: $turq
@@ -166,8 +169,6 @@ header
   background-repeat: no-repeat
   background-position: center
   text-align: center
-  p
-    font-weight: 300
 
 
 #form
@@ -210,25 +211,25 @@ header
 .dash
   line-height: 1
   margin-top: 10px
-.dash span
-  display: inline-block
-  position: relative
-  color: white
-.dash span:before,
-.dash span:after
-  content: ''
-  position: absolute
-  height: 15px
-  border-bottom: 2px solid rgba(255,255,255,0.4)
-  top: 0
-  width: 120px
-.dash span:before
-  right: 100%
-  margin-right: 15px
-.dash span:after
-  left: 100%
-  margin-left: 15px
-
+  span
+    display: inline-block
+    position: relative
+    color: white
+    font-weight: 500
+  span:before,
+  span:after
+    content: ''
+    position: absolute
+    height: 15px
+    border-bottom: 2px solid rgba(255,255,255,0.4)
+    top: 0
+    width: 120px
+  span:before
+    right: 100%
+    margin-right: 15px
+  span:after
+    left: 100%
+    margin-left: 15px
 
 #formSubmitMsg
   h3
@@ -395,6 +396,12 @@ a:hover
     background-size: cover
     p
       font-size: 35px
+    .line
+      span:before,
+      span::after
+        height: 22px
+        width: 70px
+
   #form
     .typeInput
       input
