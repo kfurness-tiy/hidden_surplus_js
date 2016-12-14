@@ -22,6 +22,4 @@ Kelly Furness
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
-
-<!-- TODO Finish README.md -->
+Kelly Furness, ISC
