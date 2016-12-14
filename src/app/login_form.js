@@ -23,8 +23,8 @@ $(document).ready(function (){
   $("#formSubmitMsg").hide();
 });
 
-let user;
-let provider = new firebase.auth.GoogleAuthProvider();
+var user;
+var provider = new firebase.auth.GoogleAuthProvider();
 
 function signIn() {
   firebase.auth().signInWithPopup(provider).then(function(result) {

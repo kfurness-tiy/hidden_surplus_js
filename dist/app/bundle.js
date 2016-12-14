@@ -57,7 +57,6 @@
 	__webpack_require__(/*! ./where_to_donate_graph.js */ 23);
 	__webpack_require__(/*! ./what_to_donate_graph.js */ 24);
 
-
 /***/ },
 /* 1 */
 /*!*********************************!*\
@@ -12805,7 +12804,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Lato';\n  src: font-files(\"./Lato-Light.ttf\"); }\n\n* {\n  font-family: \"Lato\", sans-serif;\n  font-weight: 300;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\ni {\n  color: white;\n  margin-right: 6px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px; }\n\n.wrapper {\n  min-height: 100%;\n  margin-bottom: -58px; }\n\n.wrapper:after {\n  content: \"\";\n  display: block; }\n\n.site-footer, .wrapper:after {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header .logo {\n    display: inline-block;\n    padding: 8px 0; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 18) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px;\n    font-weight: 500; }\n  .jumbotronDiv .line {\n    font-weight: lighter;\n    line-height: 1;\n    text-align: center; }\n    .jumbotronDiv .line span {\n      display: inline-block;\n      position: relative;\n      color: white;\n      font-weight: lighter;\n      margin: 10px; }\n    .jumbotronDiv .line span:before,\n    .jumbotronDiv .line span:after {\n      content: '';\n      position: absolute;\n      height: 35px;\n      border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n      top: 0;\n      width: 140px; }\n    .jumbotronDiv .line span:before {\n      right: 100%;\n      margin-right: 20px; }\n    .jumbotronDiv .line span:after {\n      left: 100%;\n      margin-left: 20px; }\n\n#toggleButton {\n  background-color: #72bfb8;\n  padding: 5px; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 19) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#form .title {\n  color: white; }\n\n#form h2 {\n  color: white;\n  font-weight: 300; }\n\n#form div {\n  margin: auto; }\n\n#form label {\n  color: white;\n  font-size: 16px;\n  font-weight: 300; }\n\n#form .typeInput input {\n  height: 40px;\n  margin: 5px 1vw;\n  width: 25vw;\n  font-size: 18px;\n  padding: 10px; }\n\n#form button {\n  margin: 10px; }\n\n#form select {\n  height: 30px;\n  background: white;\n  font-size: 16px; }\n\n#form .signOut {\n  background-color: #9e9d9a; }\n\n#form .signOut:hover {\n  background-color: #737372; }\n\n#form .dropdown {\n  display: inline-block;\n  margin: 20px 6vw; }\n\n#form .inline {\n  display: inline-block;\n  margin: 10px;\n  color: white; }\n\n.dash {\n  line-height: 1;\n  margin-top: 10px; }\n  .dash span {\n    display: inline-block;\n    position: relative;\n    color: white;\n    font-weight: 500; }\n  .dash span:before,\n  .dash span:after {\n    content: '';\n    position: absolute;\n    height: 15px;\n    border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n    top: 0;\n    width: 120px; }\n  .dash span:before {\n    right: 100%;\n    margin-right: 15px; }\n  .dash span:after {\n    left: 100%;\n    margin-left: 15px; }\n\n#formSubmitMsg h3 {\n  color: white; }\n\n#formSubmitMsg p {\n  color: white; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px;\n  font-size: 16px; }\n\n#logIn #signOutMsg {\n  font-weight: 300; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 15vh; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n.tooltip.hidden {\n  display: none; }\n\n.totalAmounts {\n  text-align: center;\n  padding: 15px;\n  background-color: #50a399; }\n  .totalAmounts p {\n    font-weight: 300;\n    color: white;\n    text-transform: uppercase;\n    margin-bottom: 0px;\n    font-size: 22px; }\n  .totalAmounts #totalAmounts {\n    font-size: 36px;\n    font-weight: 500;\n    margin-bottom: 0px; }\n\n#donations h3 {\n  margin-top: 44px;\n  color: #3b6670; }\n\n#donations .hoverMsg {\n  font-style: italic;\n  font-size: 14px;\n  margin-top: 10px; }\n\n.tooltipBar {\n  font-size: 16px;\n  text-align: center;\n  background-color: rgba(252, 252, 252, 0.8);\n  border: 1px solid rgba(211, 209, 209, 0.3); }\n  .tooltipBar .hidden {\n    display: none; }\n  .tooltipBar .fromDisp {\n    font-style: italic;\n    font-size: 14px; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\n.donate {\n  margin-bottom: 20px; }\n\n#whereDonateChartDiv text {\n  font-size: 16px; }\n\nsvg.bar {\n  padding-bottom: 10px;\n  margin-bottom: 10px; }\n\ng.hideAxis line,\ng.hideAxis path {\n  display: none; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n\n@media (max-width: 992px) {\n  header .logo {\n    width: 275px;\n    padding: 8px 0; }\n  nav ul {\n    padding: 0; }\n  nav li {\n    font-size: 12px;\n    padding: 3px; } }\n\n@media (max-width: 767px) {\n  nav {\n    float: right; }\n    nav ul li {\n      display: block; }\n  header {\n    display: block; } }\n\n@media (max-width: 700px) {\n  .jumbotronDiv {\n    background-size: cover; }\n    .jumbotronDiv p {\n      font-size: 35px; }\n    .jumbotronDiv .line span:before,\n    .jumbotronDiv .line span::after {\n      height: 22px;\n      width: 70px; }\n  #form .typeInput input {\n    display: block;\n    margin: 10px auto;\n    width: auto; }\n  #doGood {\n    background-size: cover;\n    height: auto; } }\n\n@media (max-width: 600px) {\n  #doGood {\n    background-size: cover;\n    height: auto; } }\n\n@media (max-width: 480px) {\n  .line span:before,\n  .line span:after {\n    display: none; }\n  .title {\n    font-size: 22px; }\n  #form .dash span:before,\n  #form .dash span:after {\n    width: 60px; } }\n\n@media (max-width: 410px) {\n  header .logo {\n    width: 200px;\n    padding: 8px 0; }\n  nav button {\n    width: 80px; } }\n\n@media (max-width: 379px) {\n  h3:first-child {\n    margin-top: 25px; }\n  .dash {\n    margin-top: 7px; } }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'Lato';\n  src: font-files(\"./Lato-Light.ttf\"); }\n\n* {\n  font-family: \"Lato\", sans-serif;\n  font-weight: 300;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\ni {\n  color: white;\n  margin-right: 6px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px; }\n\n.wrapper {\n  min-height: 100%;\n  margin-bottom: -58px; }\n\n.wrapper:after {\n  content: \"\";\n  display: block; }\n\n.site-footer, .wrapper:after {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header .logo {\n    display: inline-block;\n    padding: 8px 0; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 18) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px;\n    font-weight: 500; }\n  .jumbotronDiv .line {\n    font-weight: lighter;\n    line-height: 1;\n    text-align: center; }\n    .jumbotronDiv .line span {\n      display: inline-block;\n      position: relative;\n      color: white;\n      font-weight: lighter;\n      margin: 10px; }\n    .jumbotronDiv .line span:before,\n    .jumbotronDiv .line span:after {\n      content: '';\n      position: absolute;\n      height: 35px;\n      border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n      top: 0;\n      width: 140px; }\n    .jumbotronDiv .line span:before {\n      right: 100%;\n      margin-right: 20px; }\n    .jumbotronDiv .line span:after {\n      left: 100%;\n      margin-left: 20px; }\n\n#toggleButton {\n  background-color: #72bfb8;\n  padding: 5px; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 19) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#form .title {\n  color: white; }\n\n#form h2 {\n  color: white;\n  font-weight: 300; }\n\n#form div {\n  margin: auto; }\n\n#form label {\n  color: white;\n  font-size: 16px;\n  font-weight: 300; }\n\n#form .typeInput input {\n  height: 40px;\n  margin: 5px 1vw;\n  width: 25vw;\n  font-size: 18px;\n  padding: 10px; }\n\n#form button {\n  margin: 10px; }\n\n#form select {\n  height: 30px;\n  background: white;\n  font-size: 16px; }\n\n#form .signOut {\n  background-color: #9e9d9a; }\n\n#form .signOut:hover {\n  background-color: #737372; }\n\n#form .dropdown {\n  display: inline-block;\n  margin: 20px 6vw; }\n\n#form .inline {\n  display: inline-block;\n  margin: 10px;\n  color: white; }\n\n.dash {\n  line-height: 1;\n  margin-top: 10px; }\n  .dash span {\n    display: inline-block;\n    position: relative;\n    color: white;\n    font-weight: 500; }\n  .dash span:before,\n  .dash span:after {\n    content: '';\n    position: absolute;\n    height: 15px;\n    border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n    top: 0;\n    width: 120px; }\n  .dash span:before {\n    right: 100%;\n    margin-right: 15px; }\n  .dash span:after {\n    left: 100%;\n    margin-left: 15px; }\n\n#formSubmitMsg h3 {\n  color: white; }\n\n#formSubmitMsg p {\n  color: white; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px;\n  font-size: 16px; }\n\n#logIn #signOutMsg {\n  font-weight: 300; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 15vh;\n    max-width: 1200px; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n.tooltip.hidden {\n  display: none; }\n\n.totalAmounts {\n  max-width: 1656px;\n  text-align: center;\n  padding: 15px;\n  background-color: #50a399; }\n  .totalAmounts p {\n    font-weight: 300;\n    color: white;\n    text-transform: uppercase;\n    margin-bottom: 0px;\n    font-size: 22px; }\n  .totalAmounts #totalAmounts {\n    font-size: 36px;\n    font-weight: 500;\n    margin-bottom: 0px; }\n\n#donations h3 {\n  margin-top: 44px;\n  color: #3b6670; }\n\n#donations .hoverMsg {\n  font-style: italic;\n  font-size: 14px;\n  margin-top: 10px; }\n\n.tooltipBar {\n  font-size: 16px;\n  text-align: center;\n  background-color: rgba(252, 252, 252, 0.8);\n  border: 1px solid rgba(211, 209, 209, 0.3); }\n  .tooltipBar .hidden {\n    display: none; }\n  .tooltipBar .fromDisp {\n    font-style: italic;\n    font-size: 14px; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\n.donate {\n  margin-bottom: 20px; }\n\n#whereDonateChartDiv text {\n  font-size: 16px; }\n\nsvg.bar {\n  padding-bottom: 10px;\n  margin-bottom: 10px; }\n\ng.hideAxis line,\ng.hideAxis path {\n  display: none; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1656px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n\n@media (max-width: 992px) {\n  header .logo {\n    width: 275px;\n    padding: 8px 0; }\n  nav ul {\n    padding: 0; }\n  nav li {\n    font-size: 12px;\n    padding: 3px; } }\n\n@media (max-width: 767px) {\n  nav {\n    float: right; }\n    nav ul li {\n      display: block; }\n  header {\n    display: block; } }\n\n@media (max-width: 700px) {\n  .jumbotronDiv {\n    background-size: cover; }\n    .jumbotronDiv p {\n      font-size: 35px; }\n    .jumbotronDiv .line span:before,\n    .jumbotronDiv .line span::after {\n      height: 22px;\n      width: 70px; }\n  #form .typeInput input {\n    display: block;\n    margin: 10px auto;\n    width: auto; }\n  #doGood {\n    background-size: cover;\n    height: auto; } }\n\n@media (max-width: 600px) {\n  #doGood {\n    background-color: #3b6670;\n    background-size: cover;\n    height: auto; } }\n\n@media (max-width: 480px) {\n  .line span:before,\n  .line span:after {\n    display: none; }\n  .title {\n    font-size: 22px; }\n  #form .dash span:before,\n  #form .dash span:after {\n    width: 60px; } }\n\n@media (max-width: 410px) {\n  header .logo {\n    width: 200px;\n    padding: 8px 0; }\n  nav button {\n    width: 80px; } }\n\n@media (max-width: 379px) {\n  h3:first-child {\n    margin-top: 25px; }\n  .dash {\n    margin-top: 7px; } }\n", ""]);
 	
 	// exports
 
@@ -13152,38 +13151,38 @@
 	'use strict';
 	
 	var config = {
-	   apiKey: "AIzaSyAxBPqozNv7Ra_Kn8m9E0l2BWUjMhm_pfI",
-	   authDomain: "hidden-surplus-js.firebaseapp.com",
-	   databaseURL: "https://hidden-surplus-js.firebaseio.com",
-	   storageBucket: "hidden-surplus-js.appspot.com",
-	   messagingSenderId: "393536735786"
-	 };
+	  apiKey: "AIzaSyAxBPqozNv7Ra_Kn8m9E0l2BWUjMhm_pfI",
+	  authDomain: "hidden-surplus-js.firebaseapp.com",
+	  databaseURL: "https://hidden-surplus-js.firebaseio.com",
+	  storageBucket: "hidden-surplus-js.appspot.com",
+	  messagingSenderId: "393536735786"
+	};
 	
-	 firebase.initializeApp(config);
+	firebase.initializeApp(config);
 	
-	 const fbRef = firebase.database().ref();
-	 const fbDoGood = fbRef.child("doGood");
-	 const fbUser = fbRef.child('users');
+	var fbRef = firebase.database().ref();
+	var fbDoGood = fbRef.child("doGood");
+	var fbUser = fbRef.child('users');
 	
 	///////////////// Authentication /////////////////////
 	
-	$(document).ready(function (){
+	$(document).ready(function () {
 	  $("#form").hide();
 	  $("#signOutNav").hide();
 	  $("#signOutMsg").hide();
 	  $("#formSubmitMsg").hide();
 	});
 	
-	let user;
-	let provider = new firebase.auth.GoogleAuthProvider();
+	var user;
+	var provider = new firebase.auth.GoogleAuthProvider();
 	
 	function signIn() {
-	  firebase.auth().signInWithPopup(provider).then(function(result) {
+	  firebase.auth().signInWithPopup(provider).then(function (result) {
 	    var token = result.credential.accessToken;
 	    user = result.user;
 	    showForm();
 	    writeUserData(user.uid, user.displayName, user.email);
-	  }).catch(function(error) {
+	  }).catch(function (error) {
 	    var errorCode = error.code;
 	    var errorMessage = error.message;
 	    var email = error.email;
@@ -13194,7 +13193,7 @@
 	function writeUserData(userId, name, email) {
 	  firebase.database().ref('users/' + userId).set({
 	    name: name,
-	    email: email,
+	    email: email
 	  });
 	}
 	
@@ -13206,8 +13205,8 @@
 	  $("#welcomeUser").html("Hello, " + user.displayName + ". <br/> Fill out the form below to do some good!");
 	};
 	
-	function signOut () {
-	  firebase.auth().signOut().then(function() {
+	function signOut() {
+	  firebase.auth().signOut().then(function () {
 	    $("#form").hide();
 	    $("#signOutNav").hide();
 	    $("#formSubmitMsg").hide();
@@ -13216,7 +13215,7 @@
 	    $("#signOutMsg").show();
 	    $("#signOutMsg").html("Your have successfully logged out.");
 	    document.getElementById("doGoodForm").reset();
-	  }, function(error) {
+	  }, function (error) {
 	    $("#signOutMsg").html("We were not able to log you out. Please try again.");
 	  });
 	};
@@ -13225,59 +13224,59 @@
 	$('.signOut').click(signOut);
 	
 	/////////////////// Form //////////////////////////
-	function validateForm () {
-	  let name = document.getElementById('name').value;
-	  let amount = Number(document.getElementById('amount').value);
-	  let donateTo = document.getElementById('donateTo').value;
-	  let gaveUp = document.getElementById('gaveUp').value;
-	  if ( name !== '' && amount !== '' && !isNaN(amount) && donateTo !== '' && gaveUp !== '') {
-	  getValueDoGood();
-	  return false;
-	} else if (name === '') {
-	  alert("Please fill in your name.")
-	  return false;
-	} else if (amount === '' || isNaN(amount)) {
-	  alert("Please put in a number for the amount donated.")
-	  return false;
-	} else if (donateTo === '') {
-	  alert("Please fill in where you donated to.")
-	  return false;
-	} else if (gaveUp === '') {
-	  alert("Please fill in what you gave up.")
-	  return false;
-	} else {
-	  alert("It looks like some fields were not filled in correctly. Please try again.");
-	  return false
+	function validateForm() {
+	  var name = document.getElementById('name').value;
+	  var amount = Number(document.getElementById('amount').value);
+	  var donateTo = document.getElementById('donateTo').value;
+	  var gaveUp = document.getElementById('gaveUp').value;
+	  if (name !== '' && amount !== '' && !isNaN(amount) && donateTo !== '' && gaveUp !== '') {
+	    getValueDoGood();
+	    return false;
+	  } else if (name === '') {
+	    alert("Please fill in your name.");
+	    return false;
+	  } else if (amount === '' || isNaN(amount)) {
+	    alert("Please put in a number for the amount donated.");
+	    return false;
+	  } else if (donateTo === '') {
+	    alert("Please fill in where you donated to.");
+	    return false;
+	  } else if (gaveUp === '') {
+	    alert("Please fill in what you gave up.");
+	    return false;
+	  } else {
+	    alert("It looks like some fields were not filled in correctly. Please try again.");
+	    return false;
 	  }
 	}
 	
-	function goodDone () {
+	function goodDone() {
 	  $('#formSubmitMsg').show();
 	  $('#form').hide();
 	}
 	
-	function showAnotherForm () {
+	function showAnotherForm() {
 	  document.getElementById("doGoodForm").reset();
 	  $('#form').show();
 	  $('#formSubmitMsg').hide();
 	}
 	
-	function addDoGood (obj) {
-	  let doGood = obj;
-	  const doGoodId = fbDoGood.push().key;
-	  const newDonation = "new_donation_" + fbUser.push().key;
+	function addDoGood(obj) {
+	  var doGood = obj;
+	  var doGoodId = fbDoGood.push().key;
+	  var newDonation = "new_donation_" + fbUser.push().key;
 	
-	  let updates = {};
-	  let userUpdated = {};
+	  var updates = {};
+	  var userUpdated = {};
 	  updates['doGood/' + doGoodId] = doGood;
 	  userUpdated['users/' + user.uid + '/' + newDonation] = doGood;
 	  fbRef.update(updates);
 	  fbRef.update(userUpdated);
 	}
 	
-	function getValueDoGood () {
-	  let d = new Date();
-	  let doGood = {
+	function getValueDoGood() {
+	  var d = new Date();
+	  var doGood = {
 	    name: document.getElementById('name').value,
 	    amount: Number(document.getElementById('amount').value),
 	    donateTo: document.getElementById('donateTo').value,
@@ -13287,15 +13286,14 @@
 	    showNameInfo: $('input[name=showInfo]:checked').val(),
 	    postTime: d.getTime(),
 	    userId: user.uid,
-	    userName: user.displayName,
-	  }
+	    userName: user.displayName
+	  };
 	  addDoGood(doGood);
 	  goodDone();
 	}
 	
 	$('#submitForm').click(validateForm);
 	$('#showAnotherForm').click(showAnotherForm);
-
 
 /***/ },
 /* 22 */
@@ -13306,133 +13304,115 @@
 
 	'use strict';
 	
-	const fbRef = firebase.database().ref();
-	const fbDoGood = fbRef.child("doGood");
+	var fbRef = firebase.database().ref();
+	var fbDoGood = fbRef.child("doGood");
 	
-	fbDoGood.on('value', (snapshot) => {
+	fbDoGood.on('value', function (snapshot) {
 	
-	  let data = snapshot.val();
-	  let arr = Object.values(data);
-	  let total = 0;
+	  var data = snapshot.val();
+	  var arr = Object.values(data);
+	  var total = 0;
 	
-	  arr.map((c,i,a) => {
+	  arr.map(function (c, i, a) {
 	    total += c.amount;
-	    return total
+	    return total;
 	  });
 	
 	  document.getElementById('totalAmounts').innerHTML = "$" + total.toFixed(2);
 	
-	function callFunction(){
+	  function callFunction() {
 	
-	  var svgtest = d3.select('body').select('.scatter');
+	    var svgtest = d3.select('body').select('.scatter');
 	
-	  if (!svgtest.empty()) {
-	    svgtest.remove();
-	  }
-	
-	  let heightPx = $(window).height() * 0.40;
-	  let widthPx = $(window).innerWidth() * 0.75;
-	
-	  var svg = d3.select("#svg")
-	    .append('svg')
-	      .classed("scatter", true),
-	      width = svg.attr("width", widthPx),
-	      height = svg.attr("height", heightPx),
-	      radius = 12;
-	
-	  var chartGroup = svg.append("g")
-	
-	  var tooltip = d3.select("body").append("div")
-	    .classed("tooltip", true)
-	    .style("opacity", "0")
-	    .style("position", "absolute");
-	
-	  let time = new Date();
-	  let timeNow = time.getTime();
-	  let day = 86400000;
-	  let dayOld = timeNow - day;
-	
-	  function randomSize(unit) {
-	    let num = Math.round(Math.random() * ((unit - radius * 2) + 5) + radius)
-	    return num;
-	  }
-	
-	  var recentColor = d3.scaleOrdinal()
-	      .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)']);
-	
-	  var color = d3.scaleOrdinal()
-	      .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
-	
-	  let eventFocus = (d,i,a,self) => {
-	      self.style.fill = "rgb(51,51,51)"
-	      d3.select(self).attr("r", 15)
-	          .classed("growRad", true)
-	      tooltip.style("opacity", "5")
-	        .style("left",d3.event.pageX+"px")
-	        .style("top",d3.event.pageY+"px")
-	      d3.select(".tooltip").classed("hidden", false)
-	      tooltip.html(function () {
-	        if (arr[i].showNameInfo === 'true') {
-	          return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>'}
-	          else {
-	            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>'
-	          }
-	        })
-	      }
-	
-	  let eventErase = (d,i,a,self) => {
-	    d3.select(".tooltip").classed("hidden", true)
-	    d3.select(self).attr("r", 12)
-	     .classed("growRad", false)
-	     if ($(self).hasClass("newer")) {
-	        self.style.fill = recentColor(i);}
-	      else {
-	        self.style.fill = color(i);
-	      }
+	    if (!svgtest.empty()) {
+	      svgtest.remove();
 	    }
 	
-	  chartGroup.selectAll("circle")
-	    .data(arr)
-	    .enter().append("circle")
-	      .attr("cx", function(d) { return randomSize(widthPx) })
-	      .attr("cy", function(d) { return randomSize(heightPx) })
-	      .attr("r", radius)
-	      .attr("class", function(d) {
-	        if (dayOld <= d.postTime) {
-	          return "newer"
-	        } else  {
-	          return "older"
+	    var heightPx = $(window).height() * 0.40;
+	    var widthPx = $(window).innerWidth() * 0.75;
+	
+	    var svg = d3.select("#svg").append('svg').classed("scatter", true),
+	        width = svg.attr("width", widthPx),
+	        height = svg.attr("height", heightPx),
+	        radius = 12;
+	
+	    var chartGroup = svg.append("g");
+	
+	    var tooltip = d3.select("body").append("div").classed("tooltip", true).style("opacity", "0").style("position", "absolute");
+	
+	    var time = new Date();
+	    var timeNow = time.getTime();
+	    var day = 86400000;
+	    var dayOld = timeNow - day;
+	
+	    function randomSize(unit) {
+	      var num = Math.round(Math.random() * (unit - radius * 2 + 5) + radius);
+	      return num;
+	    }
+	
+	    var recentColor = d3.scaleOrdinal().range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)']);
+	
+	    var color = d3.scaleOrdinal().range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
+	
+	    var eventFocus = function eventFocus(d, i, a, self) {
+	      self.style.fill = "rgb(51,51,51)";
+	      d3.select(self).attr("r", 15).classed("growRad", true);
+	      tooltip.style("opacity", "5").style("left", d3.event.pageX + "px").style("top", d3.event.pageY + "px");
+	      d3.select(".tooltip").classed("hidden", false);
+	      tooltip.html(function () {
+	        if (arr[i].showNameInfo === 'true') {
+	          return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>';
+	        } else {
+	          return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>';
 	        }
-	      })
-	      .style("fill", function(d, i) {
-	          if ($(this).hasClass("newer")) {
-	             return recentColor(i);}
-	           else {
-	             return color(i);
-	           }})
-	           .on("mouseover", function (d,i,a) {
-	             const self = this;
-	            eventFocus(d,i,a,self);
-	          })
-	           .on("touchstart", function (d,i,a) {
-	             const self = this;
-	            eventFocus(d,i,a,self);
-	          })
-	          .on("mouseout", function (d,i,a){
-	            const self = this;
-	            eventErase(d,i,a,self);
-	          } )
-	          .on("touchend", function (d,i,a){
-	            const self = this;
-	            eventErase(d,i,a,self);
-	          } )
-	        }
+	      });
+	    };
+	
+	    var eventErase = function eventErase(d, i, a, self) {
+	      d3.select(".tooltip").classed("hidden", true);
+	      d3.select(self).attr("r", 12).classed("growRad", false);
+	      if ($(self).hasClass("newer")) {
+	        self.style.fill = recentColor(i);
+	      } else {
+	        self.style.fill = color(i);
+	      }
+	    };
+	
+	    chartGroup.selectAll("circle").data(arr).enter().append("circle").attr("cx", function (d) {
+	      return randomSize(widthPx);
+	    }).attr("cy", function (d) {
+	      return randomSize(heightPx);
+	    }).attr("r", radius).attr("class", function (d) {
+	      if (dayOld <= d.postTime) {
+	        return "newer";
+	      } else {
+	        return "older";
+	      }
+	    }).style("fill", function (d, i) {
+	      if ($(this).hasClass("newer")) {
+	        return recentColor(i);
+	      } else {
+	        return color(i);
+	      }
+	    }).on("mouseover", function (d, i, a) {
+	      var self = this;
+	      eventFocus(d, i, a, self);
+	    }).on("touchstart", function (d, i, a) {
+	      var self = this;
+	      eventFocus(d, i, a, self);
+	    }).on("mouseout", function (d, i, a) {
+	      var self = this;
+	      eventErase(d, i, a, self);
+	    }).on("touchend", function (d, i, a) {
+	      var self = this;
+	      eventErase(d, i, a, self);
+	    });
+	  }
 	
 	  $(window).resize(callFunction);
 	  d3.select(window).on("resize", callFunction);
 	  callFunction();
 	});
-
 
 /***/ },
 /* 23 */
@@ -13443,12 +13423,12 @@
 
 	'use strict';
 	
-	const fbRef = firebase.database().ref();
-	const fbDoGood = fbRef.child("doGood");
+	var fbRef = firebase.database().ref();
+	var fbDoGood = fbRef.child("doGood");
 	
-	fbDoGood.on('value', (snapshot) => {
+	fbDoGood.on('value', function (snapshot) {
 	
-	  function whereToDonateDonut () {
+	  function whereToDonateDonut() {
 	
 	    var svgtest = d3.select('body').select('.pie');
 	
@@ -13456,151 +13436,113 @@
 	      svgtest.remove();
 	    }
 	
-	    let fbData = snapshot.val();
-	    let dataArr = Object.values(fbData);
-	    let selectWhere = [];
+	    var fbData = snapshot.val();
+	    var dataArr = Object.values(fbData);
+	    var selectWhere = [];
 	
-	    dataArr.map((c,i,a) => {
+	    dataArr.map(function (c, i, a) {
 	      selectWhere.push(c.selectWhere);
-	    })
+	    });
 	
-	
-	    let width = function (){
-	      if($(window).innerWidth() > 752) {
-	        return $(window).innerWidth() * 0.30
-	      } else {
-	        return $(window).innerWidth() * 0.75;
-	        }
-	      };
-	    let height = function () {
-	      if($(window).innerWidth() > 752) {
+	    var width = function width() {
+	      if ($(window).innerWidth() > 752) {
 	        return $(window).innerWidth() * 0.30;
 	      } else {
 	        return $(window).innerWidth() * 0.75;
-	        }
-	     };
-	     let radius = Math.min(width(), height()) / 2.5,
-	         donutWidth = 80;
+	      }
+	    };
+	    var height = function height() {
+	      if ($(window).innerWidth() > 752) {
+	        return $(window).innerWidth() * 0.30;
+	      } else {
+	        return $(window).innerWidth() * 0.75;
+	      }
+	    };
+	    var radius = Math.min(width(), height()) / 2.5,
+	        donutWidth = 80;
 	
+	    var color = d3.scaleOrdinal().range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
 	
-	    let color = d3.scaleOrdinal()
-	        .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
+	    var hoverColor = d3.scaleOrdinal().range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)', 'rgb(121,121,121)']);
 	
-	    let hoverColor = d3.scaleOrdinal()
-	        .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)', 'rgb(121,121,121)']);
+	    var finalData = genData();
 	
-	    let finalData = genData();
+	    function genData() {
+	      var where = ['charity', 'family', 'school', 'fundraiser', 'other'];
 	
-	    function genData () {
-	      let where = ['charity', 'family', 'school', 'fundraiser', 'other']
+	      var dataset = new Array();
 	
-	      let dataset = new Array();
-	
-	      where.map((c,i,a) => {
-	        let printedCategory = ['Charity', 'Family/Friend', 'School', 'Fundraiser', 'Other']
-	        let total = 0;
-	        selectWhere.map((j) => {
+	      where.map(function (c, i, a) {
+	        var printedCategory = ['Charity', 'Family/Friend', 'School', 'Fundraiser', 'Other'];
+	        var total = 0;
+	        selectWhere.map(function (j) {
 	          if (c === j) {
 	            total += 1;
 	          }
-	        })
-	        let obj = {"category": printedCategory[i], "total": total, "pieTotal": dataArr.length}
+	        });
+	        var obj = { "category": printedCategory[i], "total": total, "pieTotal": dataArr.length };
 	        dataset.push(obj);
-	      })
+	      });
 	      return dataset;
-	      }
+	    }
 	
-	    let svg = d3.select("#whereDonateChartDiv")
-	      .append("svg")
-	        .classed("pie", true)
-	        .attr("width", width())
-	        .attr("height", height())
-	        .append("g")
-	          .attr("transform", "translate(" + (width() / 2) + "," + (height() / 2) + ")");
+	    var svg = d3.select("#whereDonateChartDiv").append("svg").classed("pie", true).attr("width", width()).attr("height", height()).append("g").attr("transform", "translate(" + width() / 2 + "," + height() / 2 + ")");
 	
-	    let arc = d3.arc()
-	      .innerRadius(radius - donutWidth)
-	      .outerRadius(radius);
+	    var arc = d3.arc().innerRadius(radius - donutWidth).outerRadius(radius);
 	
-	    let pie = d3.pie()
-	      .value(function(d) { return d.total; })
-	      .sort(null);
+	    var pie = d3.pie().value(function (d) {
+	      return d.total;
+	    }).sort(null);
 	
-	    let eventFocus = (d,i,a,self) => {
-	      self.style.fill = hoverColor(i)
-	      d3.select(self)
-	        .transition()
-	          .attr('d', arc
-	            .innerRadius(radius * 0.5)
-	            .outerRadius(radius * 1.05));
+	    var eventFocus = function eventFocus(d, i, a, self) {
+	      self.style.fill = hoverColor(i);
+	      d3.select(self).transition().attr('d', arc.innerRadius(radius * 0.5).outerRadius(radius * 1.05));
 	      showInfo(d);
-	    }
+	    };
 	
-	    let eventErase = (d,i,a,self) => {
+	    var eventErase = function eventErase(d, i, a, self) {
 	      self.style.fill = color(i);
-	      d3.select(self)
-	        .transition()
-	          .attr('d', arc
-	            .innerRadius(radius - donutWidth)
-	            .outerRadius(radius));
+	      d3.select(self).transition().attr('d', arc.innerRadius(radius - donutWidth).outerRadius(radius));
 	      removeInfo(d);
+	    };
+	
+	    var path = svg.selectAll('path').data(pie(finalData)).enter().append('path').attr('d', arc).attr('fill', function (d, i) {
+	      return color(i);
+	    }).on("mouseover", function (d, i, a) {
+	      var self = this;
+	      eventFocus(d, i, a, this);
+	    }).on("touchstart", function (d, i, a) {
+	      var self = this;
+	      eventFocus(d, i, a, this);
+	    }).on("mouseout", function (d, i, a) {
+	      var self = this;
+	      eventErase(d, i, a, self);
+	    }).on("touchend", function (d, i, a) {
+	      var self = this;
+	      eventErase(d, i, a, self);
+	    });
+	
+	    var circle = svg.append("circle").attr("r", radius * 0.6).style("fill", "white");
+	
+	    function showInfo(e) {
+	      var newArr = [];
+	      svg.append("text").data(function () {
+	        return Object.values(e);
+	      }).attr("text-anchor", "middle").attr("dominant-baseline", "middle").style("fill", "black").text(function (d, i) {
+	        var percent = Math.floor(d.total / d.pieTotal * 100);
+	        return d.category + " " + percent + "%";
+	      });
 	    }
 	
-	    let path = svg.selectAll('path')
-	      .data(pie(finalData))
-	      .enter().append('path')
-	        .attr('d', arc)
-	        .attr('fill', function(d, i) {
-	          return color(i);
-	          })
-	        .on("mouseover", function (d,i,a) {
-	          const self = this;
-	          eventFocus(d,i,a,this);
-	        })
-	        .on("touchstart", function (d,i,a) {
-	          const self = this;
-	          eventFocus(d,i,a,this);
-	        })
-	        .on("mouseout", function (d,i,a) {
-	          const self = this;
-	          eventErase(d,i,a,self);
-	        })
-	        .on("touchend", function (d,i,a) {
-	          const self = this;
-	          eventErase(d,i,a,self);
-	        })
-	
-	
-	      let circle = svg.append("circle")
-	        .attr("r", radius * 0.6)
-	        .style("fill", "white")
-	
-	      function showInfo (e) {
-	        let newArr = [];
-	      svg.append("text")
-	            .data(function () {
-	              return Object.values(e);
-	              })
-	            .attr("text-anchor", "middle")
-	            .attr("dominant-baseline", "middle")
-	            .style("fill", "black")
-	            .text(function(d,i) {
-	              let percent = Math.floor((d.total / d.pieTotal) * 100)
-	              return d.category+ " " + percent + "%"
-	            })
-	      }
-	
-	      function removeInfo() {
-	        svg.selectAll("text")
-	          .style("visibility", "hidden")
-	      }
+	    function removeInfo() {
+	      svg.selectAll("text").style("visibility", "hidden");
+	    }
 	  }
 	
 	  $(window).resize(whereToDonateDonut);
 	  d3.select(window).on("resize", whereToDonateDonut);
 	  whereToDonateDonut();
 	});
-
 
 /***/ },
 /* 24 */
@@ -13611,152 +13553,129 @@
 
 	'use strict';
 	
-	const fbRef = firebase.database().ref();
-	const fbDoGood = fbRef.child("doGood");
+	var fbRef = firebase.database().ref();
+	var fbDoGood = fbRef.child("doGood");
 	
-	fbDoGood.on('value', (snapshot) => {
+	fbDoGood.on('value', function (snapshot) {
 	
-	function whatToDonateBar () {
+	  function whatToDonateBar() {
 	
-	  var svgtest = d3.select('body').select('.bar');
+	    var svgtest = d3.select('body').select('.bar');
 	
-	  if (!svgtest.empty()) {
-	    svgtest.remove();
-	  }
+	    if (!svgtest.empty()) {
+	      svgtest.remove();
+	    }
 	
-	  let printedCategory = ['Food/Beverage', 'Beauty', 'Clothing/Accesories', 'Enertainment', 'Service', 'Other']
+	    var printedCategory = ['Food/Beverage', 'Beauty', 'Clothing/Accesories', 'Enertainment', 'Service', 'Other'];
 	
-	  let fbData = snapshot.val();
-	  let dataArr = Object.values(fbData);
-	  let selectWhat = [];
+	    var fbData = snapshot.val();
+	    var dataArr = Object.values(fbData);
+	    var selectWhat = [];
 	
-	  dataArr.map((c) => {
-	    selectWhat.push(c.selectWhat);
-	  })
+	    dataArr.map(function (c) {
+	      selectWhat.push(c.selectWhat);
+	    });
 	
-	  let getData = function () {
-	    let arr = ['food', 'beauty', 'clothing', 'entertainment', 'service', 'product'];
+	    var getData = function getData() {
+	      var arr = ['food', 'beauty', 'clothing', 'entertainment', 'service', 'product'];
 	
-	    let dataset = new Array();
+	      var dataset = new Array();
 	
-	    arr.map((c, i) => {
-	      let total = 0;
-	      selectWhat.map((d) => {
-	        if (c === d) {
-	          total += 1;
-	        }
+	      arr.map(function (c, i) {
+	        var total = 0;
+	        selectWhat.map(function (d) {
+	          if (c === d) {
+	            total += 1;
+	          }
+	        });
+	        var obj = { "category": printedCategory[i], "total": total };
+	        dataset.push(obj);
 	      });
-	      let obj = {"category": printedCategory[i], "total": total};
-	      dataset.push(obj);
-	    })
-	    return dataset;
-	  }
+	      return dataset;
+	    };
 	
-	  let finalData = getData();
+	    var finalData = getData();
 	
-	  let color = d3.scaleOrdinal()
-	      .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
+	    var color = d3.scaleOrdinal().range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
 	
-	  let hoverColor = d3.scaleOrdinal()
-	      .range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)', 'rgb(121,121,121)']);
+	    var hoverColor = d3.scaleOrdinal().range(['rgb(30,156,150)', 'rgb(115,191,184)', 'rgb(59,102,112)', 'rgb(158,157,154)', 'rgb(80,163,153)', 'rgb(121,121,121)']);
 	
-	  function getYAxis () {
-	    let totalArr = [];
-	    finalData.map((c,i) => {
-	      totalArr.push(c.total)
-	    })
-	    let maxNum = Math.max(...totalArr);
-	    return maxNum;
-	  }
+	    function getYAxis() {
+	      var totalArr = [];
+	      finalData.map(function (c, i) {
+	        totalArr.push(c.total);
+	      });
+	      var maxNum = Math.max.apply(Math, totalArr);
+	      return maxNum;
+	    }
 	
-	  let maxTotal = getYAxis();
+	    var maxTotal = getYAxis();
 	
-	  let width = function (){
-	    if($(window).innerWidth() > 752) {
-	      return $(window).innerWidth() * 0.30
-	    } else {
-	      return $(window).innerWidth() * 0.75;
+	    var width = function width() {
+	      if ($(window).innerWidth() > 752) {
+	        return $(window).innerWidth() * 0.30;
+	      } else {
+	        return $(window).innerWidth() * 0.75;
 	      }
 	    };
-	  let height = function () {
-	    if($(window).innerWidth() > 752) {
-	      return $(window).innerWidth() * 0.30;
-	    } else {
-	      return $(window).innerWidth() * 0.50;
+	    var height = function height() {
+	      if ($(window).innerWidth() > 752) {
+	        return $(window).innerWidth() * 0.30;
+	      } else {
+	        return $(window).innerWidth() * 0.50;
 	      }
-	   }
+	    };
 	
-	  let tooltip = d3.select("body").append("div")
-	    .attr("class", "tooltipBar")
-	    .style("opacity", "0")
-	    .style("position", "absolute");
+	    var tooltip = d3.select("body").append("div").attr("class", "tooltipBar").style("opacity", "0").style("position", "absolute");
 	
-	  let x = d3.scaleBand()
-	    .domain(printedCategory)
-	    .range([0, width()])
-	    .paddingInner(0.1176);
+	    var x = d3.scaleBand().domain(printedCategory).range([0, width()]).paddingInner(0.1176);
 	
-	  let xAxis = d3.axisBottom(x);
+	    var xAxis = d3.axisBottom(x);
 	
-	  let svg = d3.select("#whatDonateChartDiv")
-	    .append("svg")
-	      .classed("bar", true)
-	      .attr("height", height())
-	      .attr("width", width())
+	    var svg = d3.select("#whatDonateChartDiv").append("svg").classed("bar", true).attr("height", height()).attr("width", width());
 	
-	  let eventFocus = (d,i,a,self) => {
-	    self.style.fill = hoverColor(i);
-	    tooltip.style("opacity", "5")
-	      .style("left", d3.event.pageX - 50 + "px")
-	      .style("top", d3.event.pageY - 70 + "px")
-	    d3.select(".tooltipBar").classed("hidden", false)
-	    tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
+	    var eventFocus = function eventFocus(d, i, a, self) {
+	      self.style.fill = hoverColor(i);
+	      tooltip.style("opacity", "5").style("left", d3.event.pageX - 50 + "px").style("top", d3.event.pageY - 70 + "px");
+	      d3.select(".tooltipBar").classed("hidden", false);
+	      tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>');
+	    };
+	
+	    var eventErase = function eventErase(d, i, a, self) {
+	      self.style.fill = color(i);
+	      d3.select(".tooltipBar").classed("hidden", true);
+	    };
+	
+	    svg.selectAll("rect").data(finalData).enter().append("rect").attr("height", function (d) {
+	      return d.total * 15;
+	    }).attr("width", function (d, i) {
+	      var wide = Math.floor(width() / 6 - 5);
+	      return wide;
+	    }).attr("x", function (d, i) {
+	      return width() / 6 * i;
+	    }).attr("y", function (d, i) {
+	      return height() - 20 - d.total * 15;
+	    }).attr("fill", function (d, i) {
+	      return color(i);
+	    }).on("mouseover", function (d, i, a) {
+	      var self = this;
+	      eventFocus(d, i, a, self);
+	    }).on("touchstart", function (d, i, a) {
+	      var self = this;
+	      eventFocus(d, i, a, self);
+	    }).on("mouseout", function (d, i, a) {
+	      var self = this;
+	      eventErase(d, i, a, self);
+	    }).on("touchend", function (d, i, a) {
+	      var self = this;
+	      eventErase(d, i, a, self);
+	    });
 	  }
-	
-	  let eventErase = (d,i,a,self) => {
-	    self.style.fill = color(i);
-	    d3.select(".tooltipBar").classed("hidden", true)
-	  }
-	
-	
-	  svg.selectAll("rect")
-	    .data(finalData)
-	    .enter().append("rect")
-	      .attr("height", function (d) {
-	          return d.total * 15;
-	      })
-	      .attr("width", function (d,i) {
-	        let wide = Math.floor((width() / 6) - 5)
-	        return wide
-	      })
-	      .attr("x", function (d,i) {return (width() / 6) * i})
-	      .attr("y", function (d,i) {return (height() - 20) - (d.total * 15)})
-	      .attr("fill", function (d,i) {
-	        return color(i)
-	        })
-	        .on("mouseover", function (d,i,a) {
-	          const self = this;
-	          eventFocus(d,i,a,self);
-	        })
-	        .on("touchstart", function (d,i,a) {
-	          const self = this;
-	          eventFocus(d,i,a,self);
-	        })
-	        .on("mouseout", function (d,i,a) {
-	          const self = this;
-	          eventErase(d,i,a,self)
-	        })
-	        .on("touchend", function (d,i,a) {
-	          const self = this;
-	          eventErase(d,i,a,self)
-	        })
-	      }
 	
 	  $(window).resize(whatToDonateBar);
 	  d3.select(window).on("resize", whatToDonateBar);
 	  whatToDonateBar();
 	});
-
 
 /***/ }
 /******/ ]);
