@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack -d && cp src/index.html dist/index.html && cp -R src/app/img/ dist/app/img/ && webpack-dev-server --content-base src/ --inline --hot",
-    "postinstall": "webpack -p && cp src/index.html dist/index.html && cp -R src/app/img dist/app/img"
+    "postinstall": "webpack && cp src/index.html dist/index.html && cp -R src/app/img dist/app/img"
   },
   "author": "\"Kelly Furness <kelly.n.waite@gmail.com> (http://kellyfurness.com)",
   "license": "ISC",
