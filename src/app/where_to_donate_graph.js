@@ -24,7 +24,6 @@ fbDoGood.on('value', (snapshot) => {
     })
 
 
-
     let width = function (){
       if($(window).innerWidth() > 752) {
         return $(window).innerWidth() * 0.30

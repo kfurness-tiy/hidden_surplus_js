@@ -72,7 +72,7 @@ function whatToDonateBar () {
     if($(window).innerWidth() > 752) {
       return $(window).innerWidth() * 0.30;
     } else {
-      return $(window).innerWidth() * 0.75;
+      return $(window).innerWidth() * 0.50;
       }
    }
 
