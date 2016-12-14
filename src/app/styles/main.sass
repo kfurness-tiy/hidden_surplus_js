@@ -368,28 +368,27 @@ a:hover
 
 ///////////// MEDIA QUERY ////////////
 
-@media (max-width: 379px)
-  #form
-  h3:first-child
-    margin-top: 25px
-  .dash
-    margin-top: 7px
 
-@media (max-width: 480px)
-  .line span:before,
-  .line span:after
-    display: none
-  .title
-    font-size: 22px
-  #form
-    .dash span:before,
-    .dash span:after
-      width: 60px
+@media (max-width: 992px)
+  header
+    .logo
+      width: 275px
+      padding: 8px 0
+  nav
+    ul
+      padding: 0
+    li
+      font-size: 12px
+      padding: 3px
 
-@media (max-width: 600px)
-  #doGood
-    background-size: cover
-    height: auto
+@media (max-width: 767px)
+  nav
+    float: right
+    ul
+      li
+        display: block
+  header
+    display: block
 
 @media (max-width: 700px)
   .jumbotronDiv
@@ -412,23 +411,36 @@ a:hover
     background-size: cover
     height: auto
 
-@media (max-width: 767px)
-  nav
-    float: right
-    ul
-      li
-        display: block
-  header
-    display: block
+@media (max-width: 600px)
+  #doGood
+    background-size: cover
+    height: auto
 
-@media (max-width: 992px)
+
+@media (max-width: 480px)
+  .line span:before,
+  .line span:after
+    display: none
+  .title
+    font-size: 22px
+  #form
+    .dash span:before,
+    .dash span:after
+      width: 60px
+
+@media (max-width: 410px)
   header
+    a
     .logo
-      width: 275px
+      width: 200px
       padding: 8px 0
   nav
-    ul
-      padding: 0
-    li
-      font-size: 12px
-      padding: 3px
+    button
+      width: 80px
+
+@media (max-width: 379px)
+  #form
+  h3:first-child
+    margin-top: 25px
+  .dash
+    margin-top: 7px
