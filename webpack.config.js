@@ -52,9 +52,11 @@ var config = {
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
+          keep_fnames: true,
           dead_code: false,
           unused: false
-        }
+        },
+        mangle: false
       })
     ]
 };

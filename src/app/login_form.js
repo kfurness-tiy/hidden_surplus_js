@@ -27,7 +27,9 @@ var user;
 var provider = new firebase.auth.GoogleAuthProvider();
 
 function signIn() {
+  console.log('peanut butter');
   firebase.auth().signInWithPopup(provider).then(function(result) {
+    console.log('jelly');
     var token = result.credential.accessToken;
     user = result.user;
     showForm();
