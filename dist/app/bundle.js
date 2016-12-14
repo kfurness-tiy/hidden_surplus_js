@@ -12805,7 +12805,7 @@
 	
 	
 	// module
-	exports.push([module.id, "* {\n  font-family: \"Lato\", sans-serif;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\ni {\n  color: white;\n  margin-right: 6px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px;\n  font-weight: bolder; }\n\n.wrapper {\n  min-height: 100%;\n  margin-bottom: -58px; }\n\n.wrapper:after {\n  content: \"\";\n  display: block; }\n\n.site-footer, .wrapper:after {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header .logo {\n    display: inline-block;\n    padding: 8px 0; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 18) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px; }\n  .jumbotronDiv .line {\n    font-weight: lighter;\n    line-height: 1;\n    text-align: center; }\n  .jumbotronDiv .line span {\n    display: inline-block;\n    position: relative;\n    color: white; }\n  .jumbotronDiv .line span:before,\n  .jumbotronDiv .line span:after {\n    content: '';\n    position: absolute;\n    height: 35px;\n    border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n    top: 0;\n    width: 140px; }\n  .jumbotronDiv .line span:before {\n    right: 100%;\n    margin-right: 20px; }\n  .jumbotronDiv .line span:after {\n    left: 100%;\n    margin-left: 20px; }\n  .jumbotronDiv .bigChange {\n    font-weight: bolder; }\n\n#toggleButton {\n  background-color: #72bfb8;\n  padding: 5px; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 19) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#logIn h3 {\n  margin: 30px; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px;\n  font-size: 16px; }\n\n#form .title {\n  color: white; }\n\n#form div {\n  margin: auto; }\n\n#form label {\n  color: white;\n  font-size: 16px; }\n\n#form .typeInput input {\n  height: 40px;\n  margin: 5px 1vw;\n  width: 25vw;\n  font-size: 18px;\n  padding: 10px; }\n\n#form button {\n  margin: 10px; }\n\n#form select {\n  height: 30px;\n  background: white;\n  font-size: 16px; }\n\n#form .signOut {\n  background-color: #9e9d9a; }\n\n#form .signOut:hover {\n  background-color: #737372; }\n\n#form .dropdown {\n  display: inline-block;\n  margin: 20px 6vw; }\n\n#form .inline {\n  display: inline-block;\n  margin: 10px;\n  color: white; }\n\n#form .dash {\n  line-height: 1; }\n\n#form .dash span {\n  display: inline-block;\n  position: relative;\n  color: white; }\n\n#form .dash span:before,\n#form .dash span:after {\n  content: '';\n  position: absolute;\n  height: 15px;\n  border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n  top: 0;\n  width: 120px; }\n\n#form .dash span:before {\n  right: 100%;\n  margin-right: 15px; }\n\n#form .dash span:after {\n  left: 100%;\n  margin-left: 15px; }\n\n#formSubmitMsg h3 {\n  color: white; }\n\n#formSubmitMsg p {\n  color: white; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 15vh; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  font-weight: bolder;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n.tooltip.hidden {\n  display: none; }\n\n.totalAmounts {\n  text-align: center;\n  padding: 15px;\n  background-color: #50a399; }\n  .totalAmounts p {\n    color: white;\n    text-transform: uppercase;\n    margin-bottom: 0px;\n    font-size: 22px; }\n  .totalAmounts #totalAmounts {\n    font-size: 36px;\n    margin-bottom: 0px; }\n\n#donations h3 {\n  margin-top: 44px;\n  color: #3b6670; }\n\n#donations .hoverMsg {\n  font-style: italic;\n  font-size: 14px;\n  margin-top: 10px; }\n\n.tooltipBar {\n  font-size: 16px;\n  text-align: center;\n  background-color: rgba(252, 252, 252, 0.8);\n  border: 1px solid rgba(211, 209, 209, 0.3); }\n  .tooltipBar .hidden {\n    display: none; }\n  .tooltipBar .fromDisp {\n    font-style: italic;\n    font-size: 14px; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\n.donate {\n  margin-bottom: 20px; }\n\n#whereDonateChartDiv text {\n  font-size: 16px; }\n\nsvg.bar {\n  padding-bottom: 10px;\n  margin-bottom: 10px; }\n\ng.hideAxis line,\ng.hideAxis path {\n  display: none; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n\n@media (max-width: 767px) {\n  nav {\n    float: right; }\n    nav ul li {\n      display: block; }\n  header {\n    display: block; } }\n\n@media (max-width: 700px) {\n  .jumbotronDiv {\n    background-size: cover; }\n    .jumbotronDiv p {\n      font-size: 35px; }\n  #form .typeInput input {\n    display: block;\n    margin: 10px auto;\n    width: auto; } }\n\n@media (max-width: 600px) {\n  #doGood {\n    background-size: cover;\n    background-position: -900px 0px;\n    height: auto; } }\n\n@media (max-width: 991px) {\n  header .logo {\n    width: 275px;\n    padding: 8px 0; }\n  header nav ul {\n    padding: 0; }\n  header nav li {\n    font-size: 12px;\n    padding: 3px; } }\n\n@media (max-width: 480px) {\n  .line span:before,\n  .line span:after {\n    display: none; }\n  .title {\n    font-size: 22px; }\n  #form .dash span:before,\n  #form .dash span:after {\n    width: 60px; } }\n\n@media (max-width: 379px) {\n  #form h3:first-child {\n    margin-top: 25px; }\n  #form .dash {\n    margin-top: 7px; } }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'Lato';\n  src: font-files(\"./Lato-Light.ttf\"); }\n\n* {\n  font-family: \"Lato\", sans-serif;\n  font-weight: 300;\n  color: #333333;\n  margin: 0; }\n\nhtml, body {\n  height: 100%; }\n\np {\n  font-size: 16px;\n  line-height: 160%; }\n\nbutton {\n  border-radius: 4px;\n  background-color: #72bfb8;\n  border: none;\n  color: white;\n  width: 160px;\n  height: 45px; }\n\ni {\n  color: white;\n  margin-right: 6px; }\n\n.container-fluid {\n  margin-right: 0;\n  margin-left: 0;\n  padding-right: 0;\n  padding-left: 0; }\n\n.title {\n  font-size: 26px; }\n\n.wrapper {\n  min-height: 100%;\n  margin-bottom: -58px; }\n\n.wrapper:after {\n  content: \"\";\n  display: block; }\n\n.site-footer, .wrapper:after {\n  height: 58px; }\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  header .logo {\n    display: inline-block;\n    padding: 8px 0; }\n  header nav {\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right; }\n  header ul {\n    margin-bottom: 0; }\n  header li {\n    display: inline-block;\n    padding: 1em; }\n  header a {\n    color: #333333; }\n  header a:hover {\n    color: #72bfb8;\n    font-weight: bolder; }\n  header button {\n    height: 32px;\n    width: 93px;\n    font-family: 'Maitree', serif; }\n\n.jumbotronDiv {\n  display: flex;\n  height: 550px;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-position: center;\n  background-image: url(" + __webpack_require__(/*! ../img/jumbotrong.jpg */ 18) + ");\n  background-repeat: no-repeat;\n  text-align: center; }\n  .jumbotronDiv button {\n    font-size: 18px; }\n  .jumbotronDiv p {\n    color: white;\n    font-size: 55px;\n    font-weight: 500; }\n  .jumbotronDiv .line {\n    font-weight: lighter;\n    line-height: 1;\n    text-align: center; }\n    .jumbotronDiv .line span {\n      display: inline-block;\n      position: relative;\n      color: white;\n      font-weight: lighter;\n      margin: 10px; }\n    .jumbotronDiv .line span:before,\n    .jumbotronDiv .line span:after {\n      content: '';\n      position: absolute;\n      height: 35px;\n      border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n      top: 0;\n      width: 140px; }\n    .jumbotronDiv .line span:before {\n      right: 100%;\n      margin-right: 20px; }\n    .jumbotronDiv .line span:after {\n      left: 100%;\n      margin-left: 20px; }\n\n#toggleButton {\n  background-color: #72bfb8;\n  padding: 5px; }\n\n#about {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  #about .title {\n    color: #3b6670;\n    margin-top: 44px;\n    margin-bottom: 22px; }\n  #about p {\n    margin-bottom: 10px;\n    max-width: 700px; }\n    #about p a {\n      color: #3b6670; }\n    #about p a:hover {\n      color: #72bfb8; }\n  #about p:last-child {\n    margin-bottom: 44px; }\n\n.doGoodSection {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 550px;\n  background-image: url(" + __webpack_require__(/*! ../img/doGood.jpg */ 19) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  text-align: center; }\n\n#form .title {\n  color: white; }\n\n#form h2 {\n  color: white;\n  font-weight: 300; }\n\n#form div {\n  margin: auto; }\n\n#form label {\n  color: white;\n  font-size: 16px;\n  font-weight: 300; }\n\n#form .typeInput input {\n  height: 40px;\n  margin: 5px 1vw;\n  width: 25vw;\n  font-size: 18px;\n  padding: 10px; }\n\n#form button {\n  margin: 10px; }\n\n#form select {\n  height: 30px;\n  background: white;\n  font-size: 16px; }\n\n#form .signOut {\n  background-color: #9e9d9a; }\n\n#form .signOut:hover {\n  background-color: #737372; }\n\n#form .dropdown {\n  display: inline-block;\n  margin: 20px 6vw; }\n\n#form .inline {\n  display: inline-block;\n  margin: 10px;\n  color: white; }\n\n.dash {\n  line-height: 1;\n  margin-top: 10px; }\n  .dash span {\n    display: inline-block;\n    position: relative;\n    color: white;\n    font-weight: 500; }\n  .dash span:before,\n  .dash span:after {\n    content: '';\n    position: absolute;\n    height: 15px;\n    border-bottom: 2px solid rgba(255, 255, 255, 0.4);\n    top: 0;\n    width: 120px; }\n  .dash span:before {\n    right: 100%;\n    margin-right: 15px; }\n  .dash span:after {\n    left: 100%;\n    margin-left: 15px; }\n\n#formSubmitMsg h3 {\n  color: white; }\n\n#formSubmitMsg p {\n  color: white; }\n\n#logIn p {\n  color: white; }\n\n#logIn h3 {\n  color: white; }\n\n#logIn h2 {\n  color: white; }\n\n#logIn p {\n  margin: 15px; }\n\n#logIn button {\n  margin: 30px;\n  font-size: 16px; }\n\n#logIn #signOutMsg {\n  font-weight: 300; }\n\n#contributions {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  max-width: 1271px;\n  margin: auto;\n  background: linear-gradient(to right, #d1d1d1 0%, #faf7fa 29%, #faf7fa 70%, #d1d1d1 100%); }\n  #contributions .title {\n    margin-top: 40px;\n    color: #3b6670; }\n  #contributions svg {\n    margin-bottom: 15vh; }\n\n.tooltip {\n  background-color: rgba(252, 252, 252, 0.6);\n  border: 1px solid rgba(211, 209, 209, 0.3);\n  padding: 5px;\n  min-width: 150px;\n  margin: 3px auto;\n  text-align: center;\n  color: black; }\n  .tooltip .dispAmount {\n    font-size: 24px; }\n  .tooltip .dispTo {\n    font-size: 12px;\n    font-style: italic; }\n  .tooltip .dispToText {\n    font-size: 16px; }\n  .tooltip hr {\n    margin: 3px;\n    border: 1px solid rgba(59, 102, 112, 0.4); }\n\n.tooltip.hidden {\n  display: none; }\n\n.totalAmounts {\n  text-align: center;\n  padding: 15px;\n  background-color: #50a399; }\n  .totalAmounts p {\n    font-weight: 300;\n    color: white;\n    text-transform: uppercase;\n    margin-bottom: 0px;\n    font-size: 22px; }\n  .totalAmounts #totalAmounts {\n    font-size: 36px;\n    font-weight: 500;\n    margin-bottom: 0px; }\n\n#donations h3 {\n  margin-top: 44px;\n  color: #3b6670; }\n\n#donations .hoverMsg {\n  font-style: italic;\n  font-size: 14px;\n  margin-top: 10px; }\n\n.tooltipBar {\n  font-size: 16px;\n  text-align: center;\n  background-color: rgba(252, 252, 252, 0.8);\n  border: 1px solid rgba(211, 209, 209, 0.3); }\n  .tooltipBar .hidden {\n    display: none; }\n  .tooltipBar .fromDisp {\n    font-style: italic;\n    font-size: 14px; }\n\n.growRad {\n  stroke-width: 5;\n  stroke: #50a399; }\n\n.donate {\n  margin-bottom: 20px; }\n\n#whereDonateChartDiv text {\n  font-size: 16px; }\n\nsvg.bar {\n  padding-bottom: 10px;\n  margin-bottom: 10px; }\n\ng.hideAxis line,\ng.hideAxis path {\n  display: none; }\n\nfooter {\n  background-color: #3b6670;\n  max-width: 1271px;\n  margin: auto; }\n  footer div {\n    padding: 10px 0; }\n\nbutton:hover {\n  background-color: #58948e; }\n\na:hover {\n  text-decoration: none; }\n\n@media (max-width: 992px) {\n  header .logo {\n    width: 275px;\n    padding: 8px 0; }\n  nav ul {\n    padding: 0; }\n  nav li {\n    font-size: 12px;\n    padding: 3px; } }\n\n@media (max-width: 767px) {\n  nav {\n    float: right; }\n    nav ul li {\n      display: block; }\n  header {\n    display: block; } }\n\n@media (max-width: 700px) {\n  .jumbotronDiv {\n    background-size: cover; }\n    .jumbotronDiv p {\n      font-size: 35px; }\n    .jumbotronDiv .line span:before,\n    .jumbotronDiv .line span::after {\n      height: 22px;\n      width: 70px; }\n  #form .typeInput input {\n    display: block;\n    margin: 10px auto;\n    width: auto; }\n  #doGood {\n    background-size: cover;\n    height: auto; } }\n\n@media (max-width: 600px) {\n  #doGood {\n    background-size: cover;\n    height: auto; } }\n\n@media (max-width: 480px) {\n  .line span:before,\n  .line span:after {\n    display: none; }\n  .title {\n    font-size: 22px; }\n  #form .dash span:before,\n  #form .dash span:after {\n    width: 60px; } }\n\n@media (max-width: 410px) {\n  header .logo {\n    width: 200px;\n    padding: 8px 0; }\n  nav button {\n    width: 80px; } }\n\n@media (max-width: 379px) {\n  h3:first-child {\n    margin-top: 25px; }\n  .dash {\n    margin-top: 7px; } }\n", ""]);
 	
 	// exports
 
@@ -13168,31 +13168,25 @@
 	///////////////// Authentication /////////////////////
 	
 	$(document).ready(function (){
-	  $("#form").hide();     // CHANGE
-	  // $("#logIn").show();    // CHANGE
+	  $("#form").hide();
 	  $("#signOutNav").hide();
 	  $("#signOutMsg").hide();
 	  $("#formSubmitMsg").hide();
-	})
+	});
 	
-	let user;
+	var user;
 	let provider = new firebase.auth.GoogleAuthProvider();
 	
 	function signIn() {
 	  firebase.auth().signInWithPopup(provider).then(function(result) {
-	    // This gives you a Google Access Token. You can use it to access the Google API.
 	    var token = result.credential.accessToken;
-	    // The signed-in user info.
 	    user = result.user;
 	    showForm();
 	    writeUserData(user.uid, user.displayName, user.email);
 	  }).catch(function(error) {
-	    // Handle Errors here.
 	    var errorCode = error.code;
 	    var errorMessage = error.message;
-	    // The email of the user's account used.
 	    var email = error.email;
-	    // The firebase.auth.AuthCredential type that was used.
 	    var credential = error.credential;
 	  });
 	};
@@ -13209,7 +13203,7 @@
 	  $("#signInNav").hide();
 	  $("#form").show();
 	  $("#signOutNav").show();
-	  $("#welcomeUser").html("Hello, " + user.displayName + ". Fill out the form below to do some good!");
+	  $("#welcomeUser").html("Hello, " + user.displayName + ". <br/> Fill out the form below to do some good!");
 	};
 	
 	function signOut () {
@@ -13317,10 +13311,8 @@
 	
 	fbDoGood.on('value', (snapshot) => {
 	
-	
 	  let data = snapshot.val();
 	  let arr = Object.values(data);
-	
 	  let total = 0;
 	
 	  arr.map((c,i,a) => {
@@ -13340,7 +13332,6 @@
 	
 	  let heightPx = $(window).height() * 0.40;
 	  let widthPx = $(window).innerWidth() * 0.75;
-	
 	
 	  var svg = d3.select("#svg")
 	    .append('svg')
@@ -13362,7 +13353,7 @@
 	  let dayOld = timeNow - day;
 	
 	  function randomSize(unit) {
-	    let num = Math.round(Math.random() * (unit - radius * 2) + radius)
+	    let num = Math.round(Math.random() * ((unit - radius * 2) - 5) + radius)
 	    return num;
 	  }
 	
@@ -13372,6 +13363,33 @@
 	  var color = d3.scaleOrdinal()
 	      .range(['rgba(30,156,150,0.2)', 'rgba(115,191,184,0.2)', 'rgba(59,102,112,0.2)', 'rgba(158,157,154,0.2)', 'rgba(80,163,153,0.2)']);
 	
+	  let eventFocus = (d,i,a,self) => {
+	      self.style.fill = "rgb(51,51,51)"
+	      d3.select(self).attr("r", 15)
+	          .classed("growRad", true)
+	      tooltip.style("opacity", "5")
+	        .style("left",d3.event.pageX+"px")
+	        .style("top",d3.event.pageY+"px")
+	      d3.select(".tooltip").classed("hidden", false)
+	      tooltip.html(function () {
+	        if (arr[i].showNameInfo === 'true') {
+	          return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>'}
+	          else {
+	            return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>'
+	          }
+	        })
+	      }
+	
+	  let eventErase = (d,i,a,self) => {
+	    d3.select(".tooltip").classed("hidden", true)
+	    d3.select(self).attr("r", 12)
+	     .classed("growRad", false)
+	     if ($(self).hasClass("newer")) {
+	        self.style.fill = recentColor(i);}
+	      else {
+	        self.style.fill = color(i);
+	      }
+	    }
 	
 	  chartGroup.selectAll("circle")
 	    .data(arr)
@@ -13392,34 +13410,25 @@
 	           else {
 	             return color(i);
 	           }})
-	          .on("mouseover", function(d,i,a){
-	              this.style.fill = "rgb(51,51,51)"
-	              d3.select(this).attr("r", 15)
-	                  .classed("growRad", true)
-	              tooltip.style("opacity", "5")
-	                .style("left",d3.event.pageX+"px")
-	                .style("top",d3.event.pageY+"px")
-	              d3.select(".tooltip").classed("hidden", false)
-	              tooltip.html(function () {
-	                if (arr[i].showNameInfo === 'true') {
-	                  return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span> <br/> <span class="dispToText"> ' + arr[i].donateTo + '</span><hr/>' + '<span class="dispTo">' + arr[i].name + ' gave up <br/></span>' + '<span class="dispToText">' + arr[i].gaveUp + '</span>'}
-	                  else {
-	                    return '<span class="dispAmount"> $' + arr[i].amount + '</span><br/><span class="dispTo"> donated to </span><br/><span class="dispToText">' + arr[i].donateTo + '</span><hr/><span class="dispTo"> Anonymous gave up <br/></span><span class="dispToText">' + arr[i].gaveUp + '</span><br/>'
-	                  }
-	                })
-	              })
-	          .on("mouseout", function(d, i) {
-	             d3.select(".tooltip").classed("hidden", true)
-	             d3.select(this).attr("r", 12)
-	              .classed("growRad", false)
-	              if ($(this).hasClass("newer")) {
-	                 this.style.fill = recentColor(i);}
-	               else {
-	                 this.style.fill = color(i);
-	            }})
-	}
+	           .on("mouseover", function (d,i,a) {
+	             const self = this;
+	            eventFocus(d,i,a,self);
+	          })
+	           .on("touchstart", function (d,i,a) {
+	             const self = this;
+	            eventFocus(d,i,a,self);
+	          })
+	          .on("mouseout", function (d,i,a){
+	            const self = this;
+	            eventErase(d,i,a,self);
+	          } )
+	          .on("touchend", function (d,i,a){
+	            const self = this;
+	            eventErase(d,i,a,self);
+	          } )
+	        }
 	
-	  $(window).resize(callFunction)
+	  $(window).resize(callFunction);
 	  d3.select(window).on("resize", callFunction);
 	  callFunction();
 	});
@@ -13436,8 +13445,6 @@
 	
 	const fbRef = firebase.database().ref();
 	const fbDoGood = fbRef.child("doGood");
-	
-	
 	
 	fbDoGood.on('value', (snapshot) => {
 	
@@ -13457,21 +13464,16 @@
 	      selectWhere.push(c.selectWhere);
 	    })
 	
-	    // let width = $(window).innerWidth() * 0.30,
-	    //     height = $(window).innerWidth() * 0.30,
-	    //     radius = Math.min(width, height) / 2.5,
-	    //     donutWidth = 80;
-	
 	
 	    let width = function (){
-	      if($(window).innerWidth() > 767) {
+	      if($(window).innerWidth() > 752) {
 	        return $(window).innerWidth() * 0.30
 	      } else {
 	        return $(window).innerWidth() * 0.75;
 	        }
 	      };
 	    let height = function () {
-	      if($(window).innerWidth() > 767) {
+	      if($(window).innerWidth() > 752) {
 	        return $(window).innerWidth() * 0.30;
 	      } else {
 	        return $(window).innerWidth() * 0.75;
@@ -13508,8 +13510,6 @@
 	      return dataset;
 	      }
 	
-	
-	
 	    let svg = d3.select("#whereDonateChartDiv")
 	      .append("svg")
 	        .classed("pie", true)
@@ -13526,6 +13526,26 @@
 	      .value(function(d) { return d.total; })
 	      .sort(null);
 	
+	    let eventFocus = (d,i,a,self) => {
+	      self.style.fill = hoverColor(i)
+	      d3.select(self)
+	        .transition()
+	          .attr('d', arc
+	            .innerRadius(radius * 0.5)
+	            .outerRadius(radius * 1.05));
+	      showInfo(d);
+	    }
+	
+	    let eventErase = (d,i,a,self) => {
+	      self.style.fill = color(i);
+	      d3.select(self)
+	        .transition()
+	          .attr('d', arc
+	            .innerRadius(radius - donutWidth)
+	            .outerRadius(radius));
+	      removeInfo(d);
+	    }
+	
 	    let path = svg.selectAll('path')
 	      .data(pie(finalData))
 	      .enter().append('path')
@@ -13533,24 +13553,23 @@
 	        .attr('fill', function(d, i) {
 	          return color(i);
 	          })
-	        .on("mouseover", function(d,i){
-	            this.style.fill = hoverColor(i)
-	            d3.select(this)
-	              .transition()
-	                .attr('d', arc
-	                  .innerRadius(radius * 0.5)
-	                  .outerRadius(radius * 1.05));
-	            showInfo(d);
+	        .on("mouseover", function (d,i,a) {
+	          const self = this;
+	          eventFocus(d,i,a,this);
 	        })
-	        .on("mouseout", function(d,i){
-	            this.style.fill = color(i);
-	            d3.select(this)
-	              .transition()
-	                .attr('d', arc
-	                  .innerRadius(radius - donutWidth)
-	                  .outerRadius(radius));
-	            removeInfo(d);
+	        .on("touchstart", function (d,i,a) {
+	          const self = this;
+	          eventFocus(d,i,a,this);
 	        })
+	        .on("mouseout", function (d,i,a) {
+	          const self = this;
+	          eventErase(d,i,a,self);
+	        })
+	        .on("touchend", function (d,i,a) {
+	          const self = this;
+	          eventErase(d,i,a,self);
+	        })
+	
 	
 	      let circle = svg.append("circle")
 	        .attr("r", radius * 0.6)
@@ -13575,7 +13594,6 @@
 	        svg.selectAll("text")
 	          .style("visibility", "hidden")
 	      }
-	
 	  }
 	
 	  $(window).resize(whereToDonateDonut);
@@ -13595,7 +13613,6 @@
 	
 	const fbRef = firebase.database().ref();
 	const fbDoGood = fbRef.child("doGood");
-	
 	
 	fbDoGood.on('value', (snapshot) => {
 	
@@ -13655,17 +13672,17 @@
 	  let maxTotal = getYAxis();
 	
 	  let width = function (){
-	    if($(window).innerWidth() > 767) {
+	    if($(window).innerWidth() > 752) {
 	      return $(window).innerWidth() * 0.30
 	    } else {
 	      return $(window).innerWidth() * 0.75;
 	      }
 	    };
 	  let height = function () {
-	    if($(window).innerWidth() > 767) {
+	    if($(window).innerWidth() > 752) {
 	      return $(window).innerWidth() * 0.30;
 	    } else {
-	      return $(window).innerWidth() * 0.75;
+	      return $(window).innerWidth() * 0.50;
 	      }
 	   }
 	
@@ -13687,6 +13704,21 @@
 	      .attr("height", height())
 	      .attr("width", width())
 	
+	  let eventFocus = (d,i,a,self) => {
+	    self.style.fill = hoverColor(i);
+	    tooltip.style("opacity", "5")
+	      .style("left", d3.event.pageX - 50 + "px")
+	      .style("top", d3.event.pageY - 70 + "px")
+	    d3.select(".tooltipBar").classed("hidden", false)
+	    tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
+	  }
+	
+	  let eventErase = (d,i,a,self) => {
+	    self.style.fill = color(i);
+	    d3.select(".tooltipBar").classed("hidden", true)
+	  }
+	
+	
 	  svg.selectAll("rect")
 	    .data(finalData)
 	    .enter().append("rect")
@@ -13697,27 +13729,28 @@
 	        let wide = Math.floor((width() / 6) - 5)
 	        return wide
 	      })
-	      // .attr("x",function (d,i) {return 60 * i;})
 	      .attr("x", function (d,i) {return (width() / 6) * i})
 	      .attr("y", function (d,i) {return (height() - 20) - (d.total * 15)})
 	      .attr("fill", function (d,i) {
 	        return color(i)
 	        })
-	      .on("mouseover", function (d,i) {
-	        this.style.fill = hoverColor(i);
-	        tooltip.style("opacity", "5")
-	          .style("left", d3.event.pageX - 50 + "px")
-	          .style("top", d3.event.pageY - 70 + "px")
-	        d3.select(".tooltipBar").classed("hidden", false)
-	        tooltip.html('<span class="totalBarDisp">' + d.total + ' donations' + '</span> <br/> <span class="fromDisp"> from </span> <br/> <span class="categoryDisp">' + d.category + '</span>')
+	        .on("mouseover", function (d,i,a) {
+	          const self = this;
+	          eventFocus(d,i,a,self);
 	        })
-	      .on("mouseout", function (d,i) {
-	        this.style.fill = color(i);
-	        d3.select(".tooltipBar").classed("hidden", true)
-	      });
-	
-	
-	}
+	        .on("touchstart", function (d,i,a) {
+	          const self = this;
+	          eventFocus(d,i,a,self);
+	        })
+	        .on("mouseout", function (d,i,a) {
+	          const self = this;
+	          eventErase(d,i,a,self)
+	        })
+	        .on("touchend", function (d,i,a) {
+	          const self = this;
+	          eventErase(d,i,a,self)
+	        })
+	      }
 	
 	  $(window).resize(whatToDonateBar);
 	  d3.select(window).on("resize", whatToDonateBar);

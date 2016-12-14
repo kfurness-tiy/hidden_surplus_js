@@ -3,8 +3,6 @@
 const fbRef = firebase.database().ref();
 const fbDoGood = fbRef.child("doGood");
 
-
-
 fbDoGood.on('value', (snapshot) => {
 
   function whereToDonateDonut () {
@@ -68,8 +66,6 @@ fbDoGood.on('value', (snapshot) => {
       })
       return dataset;
       }
-
-
 
     let svg = d3.select("#whereDonateChartDiv")
       .append("svg")
@@ -155,7 +151,6 @@ fbDoGood.on('value', (snapshot) => {
         svg.selectAll("text")
           .style("visibility", "hidden")
       }
-
   }
 
   $(window).resize(whereToDonateDonut);

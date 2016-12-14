@@ -5,10 +5,8 @@ const fbDoGood = fbRef.child("doGood");
 
 fbDoGood.on('value', (snapshot) => {
 
-
   let data = snapshot.val();
   let arr = Object.values(data);
-
   let total = 0;
 
   arr.map((c,i,a) => {
@@ -28,7 +26,6 @@ function callFunction(){
 
   let heightPx = $(window).height() * 0.40;
   let widthPx = $(window).innerWidth() * 0.75;
-
 
   var svg = d3.select("#svg")
     .append('svg')
@@ -50,7 +47,7 @@ function callFunction(){
   let dayOld = timeNow - day;
 
   function randomSize(unit) {
-    let num = Math.round(Math.random() * ((unit - radius * 2) - 5) + radius)
+    let num = Math.round(Math.random() * ((unit - radius * 2) + 5) + radius)
     return num;
   }
 
@@ -123,8 +120,7 @@ function callFunction(){
             const self = this;
             eventErase(d,i,a,self);
           } )
-
-}
+        }
 
   $(window).resize(callFunction);
   d3.select(window).on("resize", callFunction);

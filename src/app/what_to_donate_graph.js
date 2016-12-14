@@ -3,7 +3,6 @@
 const fbRef = firebase.database().ref();
 const fbDoGood = fbRef.child("doGood");
 
-
 fbDoGood.on('value', (snapshot) => {
 
 function whatToDonateBar () {
@@ -140,8 +139,7 @@ function whatToDonateBar () {
           const self = this;
           eventErase(d,i,a,self)
         })
-
-}
+      }
 
   $(window).resize(whatToDonateBar);
   d3.select(window).on("resize", whatToDonateBar);
