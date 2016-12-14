@@ -13174,7 +13174,7 @@
 	  $("#formSubmitMsg").hide();
 	});
 	
-	var user;
+	let user;
 	let provider = new firebase.auth.GoogleAuthProvider();
 	
 	function signIn() {
@@ -13353,7 +13353,7 @@
 	  let dayOld = timeNow - day;
 	
 	  function randomSize(unit) {
-	    let num = Math.round(Math.random() * ((unit - radius * 2) - 5) + radius)
+	    let num = Math.round(Math.random() * ((unit - radius * 2) + 5) + radius)
 	    return num;
 	  }
 	
