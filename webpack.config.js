@@ -52,7 +52,8 @@ var config = {
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
-          dead_code: false
+          dead_code: false,
+          unused: false
         }
       })
     ]
