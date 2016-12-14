@@ -10,18 +10,15 @@ $lato: 'Lato', sans-serif
 $mai: 'Maitree', serif
 
 
-
-=border-radius($radius)
-  -webkit-border-radius: $radius
-  -moz-border-radius:    $radius
-  -ms-border-radius:     $radius
-  border-radius:         $radius
-
+@font-face
+  font-family: 'Lato'
+  src: font-files('./Lato-Light.ttf')
 
 /////// EVERYTHING //////////
 
 *
   font-family: $lato
+  font-weight: 300
   color: $darkGray
   margin: 0
 
@@ -52,7 +49,6 @@ i
 
 .title
   font-size: 26px
-  font-weight: bolder
 
 .wrapper
   min-height: 100%
@@ -111,36 +107,35 @@ header
   p
     color: white
     font-size: 55px
+    font-weight: 500
   .line
     font-weight: lighter
     line-height: 1
     text-align: center
-  .line span
-    display: inline-block
-    position: relative
-    color: white
-  .line span:before,
-  .line span:after
-    content: ''
-    position: absolute
-    height: 35px
-    border-bottom: 2px solid rgba(255,255,255,0.4)
-    top: 0
-    width: 140px
-  .line span:before
-    right: 100%
-    margin-right: 20px
-  .line span:after
-    left: 100%
-    margin-left: 20px
-  .bigChange
-    font-weight: bolder
+    span
+      display: inline-block
+      position: relative
+      color: white
+      font-weight: lighter
+      margin: 10px
+    span:before,
+    span:after
+      content: ''
+      position: absolute
+      height: 35px
+      border-bottom: 2px solid rgba(255,255,255,0.4)
+      top: 0
+      width: 140px
+    span:before
+      right: 100%
+      margin-right: 20px
+    span:after
+      left: 100%
+      margin-left: 20px
 
 #toggleButton
   background-color: $turq
   padding: 5px
-
-
 
 
 //////// ABOUT /////////
@@ -175,23 +170,19 @@ header
   background-position: center
   text-align: center
 
-#logIn
-  h3
-    margin: 30px
-  p
-    margin: 15px
-  button
-    margin: 30px
-    font-size: 16px
 
 #form
   .title
     color: white
+  h2
+    color: white
+    font-weight: 300
   div
     margin: auto
   label
     color: white
     font-size: 16px
+    font-weight: 300
   .typeInput
     input
       height: 40px
@@ -216,27 +207,29 @@ header
     display: inline-block
     margin: 10px
     color: white
-  .dash
-    line-height: 1
-  .dash span
+
+.dash
+  line-height: 1
+  margin-top: 10px
+  span
     display: inline-block
     position: relative
     color: white
-  .dash span:before,
-  .dash span:after
+    font-weight: 500
+  span:before,
+  span:after
     content: ''
     position: absolute
     height: 15px
     border-bottom: 2px solid rgba(255,255,255,0.4)
     top: 0
     width: 120px
-  .dash span:before
+  span:before
     right: 100%
     margin-right: 15px
-  .dash span:after
+  span:after
     left: 100%
     margin-left: 15px
-
 
 #formSubmitMsg
   h3
@@ -253,6 +246,13 @@ header
     color: white
   h2
     color: white
+  p
+    margin: 15px
+  button
+    margin: 30px
+    font-size: 16px
+  #signOutMsg
+    font-weight: 300
 
 /////// CONTRIBUTIONS //////////
 #contributions
@@ -267,11 +267,8 @@ header
     margin-top: 40px
     color: $darkSlateTurq
   svg
-    margin-bottom: 40px
-  #totalAmounts
-    font-size: 26px
-    color: rgb(88,148,142)
-    margin-bottom: 44px
+    margin-bottom: 15vh
+
 
 .tooltip
   background-color: rgba(252,252,252, 0.6)
@@ -280,7 +277,6 @@ header
   min-width: 150px
   margin: 3px auto
   text-align: center
-  font-weight: bolder
   color: black
   .dispAmount
     font-size: 24px
@@ -293,14 +289,44 @@ header
     margin: 3px
     border: 1px solid rgba(59, 102, 112, 0.4)
 
+.tooltip.hidden
+  display: none
 
 ////// DONATIONS //////////
+.totalAmounts
+  text-align: center
+  padding: 15px
+  background-color: $brightTurq
+  p
+    font-weight: 300
+    color: white
+    text-transform: uppercase
+    margin-bottom: 0px
+    font-size: 22px
+  #totalAmounts
+    font-size: 36px
+    font-weight: 500
+    margin-bottom: 0px
+
 #donations
   h3
     margin-top: 44px
+    color: $darkSlateTurq
+  .hoverMsg
+    font-style: italic
+    font-size: 14px
+    margin-top: 10px
 
-.tooltip.hidden
-  display: none
+.tooltipBar
+  font-size: 16px
+  text-align: center
+  background-color: rgba(252, 252, 252, 0.8)
+  border: 1px solid rgba(211, 209, 209, 0.3)
+  .hidden
+    display: none
+  .fromDisp
+    font-style: italic
+    font-size: 14px
 
 .growRad
   stroke-width: 5
@@ -312,6 +338,14 @@ header
 #whereDonateChartDiv
   text
     font-size: 16px
+
+svg.bar
+  padding-bottom: 10px
+  margin-bottom: 10px
+
+g.hideAxis line,
+g.hideAxis path
+  display: none
 
 ///////// FOOTER ///////////
 footer
@@ -333,45 +367,13 @@ a:hover
 
 
 ///////////// MEDIA QUERY ////////////
-@media (max-width: 767px)
-  nav
-    float: right
-    ul
-      li
-        display: block
-  header
-    display: block
 
-@media (max-width: 700px)
-  .jumbotronDiv
-    background-size: cover
-    p
-      font-size: 35px
+@media (max-width: 379px)
   #form
-    .typeInput
-      input
-        display: block
-        margin: 10px auto
-        width: auto
-
-@media (max-width: 600px)
-  #doGood
-    background-size: cover
-    background-position: -900px 0px
-    height: auto
-
-
-@media (max-width: 991px)
-  header
-    .logo
-      width: 275px
-      padding: 8px 0
-    nav
-      ul
-        padding: 0
-      li
-        font-size: 12px
-        padding: 3px
+  h3:first-child
+    margin-top: 25px
+  .dash
+    margin-top: 7px
 
 @media (max-width: 480px)
   .line span:before,
@@ -384,9 +386,49 @@ a:hover
     .dash span:after
       width: 60px
 
-@media (max-width: 379px)
+@media (max-width: 600px)
+  #doGood
+    background-size: cover
+    height: auto
+
+@media (max-width: 700px)
+  .jumbotronDiv
+    background-size: cover
+    p
+      font-size: 35px
+    .line
+      span:before,
+      span::after
+        height: 22px
+        width: 70px
+
   #form
-    h3:first-child
-      margin-top: 25px
-    .dash
-      margin-top: 7px
+    .typeInput
+      input
+        display: block
+        margin: 10px auto
+        width: auto
+  #doGood
+    background-size: cover
+    height: auto
+
+@media (max-width: 767px)
+  nav
+    float: right
+    ul
+      li
+        display: block
+  header
+    display: block
+
+@media (max-width: 992px)
+  header
+    .logo
+      width: 275px
+      padding: 8px 0
+  nav
+    ul
+      padding: 0
+    li
+      font-size: 12px
+      padding: 3px

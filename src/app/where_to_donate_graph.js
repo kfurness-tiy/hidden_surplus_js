@@ -23,10 +23,24 @@ fbDoGood.on('value', (snapshot) => {
       selectWhere.push(c.selectWhere);
     })
 
-    let width = $(window).innerWidth() * 0.30,
-        height = $(window).innerWidth() * 0.30,
-        radius = Math.min(width, height) / 2.5,
-        donutWidth = 80;
+
+    let width = function (){
+      if($(window).innerWidth() > 752) {
+        return $(window).innerWidth() * 0.30
+      } else {
+        return $(window).innerWidth() * 0.75;
+        }
+      };
+    let height = function () {
+      if($(window).innerWidth() > 752) {
+        return $(window).innerWidth() * 0.30;
+      } else {
+        return $(window).innerWidth() * 0.75;
+        }
+     };
+     let radius = Math.min(width(), height()) / 2.5,
+         donutWidth = 80;
+
 
     let color = d3.scaleOrdinal()
         .range(['rgba(30,156,150,0.4)', 'rgba(115,191,184,0.4)', 'rgba(59,102,112,0.4)', 'rgba(158,157,154,0.4)', 'rgba(80,163,153,0.4)', 'rgba(121,121,121,0.4)']);
@@ -60,10 +74,10 @@ fbDoGood.on('value', (snapshot) => {
     let svg = d3.select("#whereDonateChartDiv")
       .append("svg")
         .classed("pie", true)
-        .attr("width", width)
-        .attr("height", height)
+        .attr("width", width())
+        .attr("height", height())
         .append("g")
-          .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")");
+          .attr("transform", "translate(" + (width() / 2) + "," + (height() / 2) + ")");
 
     let arc = d3.arc()
       .innerRadius(radius - donutWidth)
@@ -73,6 +87,26 @@ fbDoGood.on('value', (snapshot) => {
       .value(function(d) { return d.total; })
       .sort(null);
 
+    let eventFocus = (d,i,a,self) => {
+      self.style.fill = hoverColor(i)
+      d3.select(self)
+        .transition()
+          .attr('d', arc
+            .innerRadius(radius * 0.5)
+            .outerRadius(radius * 1.05));
+      showInfo(d);
+    }
+
+    let eventErase = (d,i,a,self) => {
+      self.style.fill = color(i);
+      d3.select(self)
+        .transition()
+          .attr('d', arc
+            .innerRadius(radius - donutWidth)
+            .outerRadius(radius));
+      removeInfo(d);
+    }
+
     let path = svg.selectAll('path')
       .data(pie(finalData))
       .enter().append('path')
@@ -80,24 +114,23 @@ fbDoGood.on('value', (snapshot) => {
         .attr('fill', function(d, i) {
           return color(i);
           })
-        .on("mouseover", function(d,i){
-            this.style.fill = hoverColor(i)
-            d3.select(this)
-              .transition()
-                .attr('d', arc
-                  .innerRadius(radius * 0.5)
-                  .outerRadius(radius * 1.05));
-            showInfo(d);
+        .on("mouseover", function (d,i,a) {
+          const self = this;
+          eventFocus(d,i,a,this);
         })
-        .on("mouseout", function(d,i){
-            this.style.fill = color(i);
-            d3.select(this)
-              .transition()
-                .attr('d', arc
-                  .innerRadius(radius - donutWidth)
-                  .outerRadius(radius));
-            removeInfo(d);
+        .on("touchstart", function (d,i,a) {
+          const self = this;
+          eventFocus(d,i,a,this);
         })
+        .on("mouseout", function (d,i,a) {
+          const self = this;
+          eventErase(d,i,a,self);
+        })
+        .on("touchend", function (d,i,a) {
+          const self = this;
+          eventErase(d,i,a,self);
+        })
+
 
       let circle = svg.append("circle")
         .attr("r", radius * 0.6)
@@ -123,23 +156,9 @@ fbDoGood.on('value', (snapshot) => {
           .style("visibility", "hidden")
       }
 
-      // svg.append("text").selectAll("tspan")
-      //   .data(finalData)
-      //   .enter().append("tspan")
-      //     .attr("text-anchor", "middle")
-      //     .attr("dominant-baseline", "middle")
-      //     .style("fill", "black")
-      //     .on("mouseover", function (d,i) {
-      //       d3.select(this)
-      //     })
-          // .text(function (d,i) {
-          //   return d.category
-          // })
-
-
-
   }
 
+  $(window).resize(whereToDonateDonut);
   d3.select(window).on("resize", whereToDonateDonut);
   whereToDonateDonut();
 });

@@ -17,8 +17,8 @@ var config = {
 ///////////////// Authentication /////////////////////
 
 $(document).ready(function (){
-  $("#form").show();     // CHANGE
-  $("#logIn").hide();    // CHANGE
+  $("#form").hide();     // CHANGE
+  // $("#logIn").show();    // CHANGE
   $("#signOutNav").hide();
   $("#signOutMsg").hide();
   $("#formSubmitMsg").hide();
@@ -58,7 +58,7 @@ function showForm() {
   $("#signInNav").hide();
   $("#form").show();
   $("#signOutNav").show();
-  $("#welcomeUser").html("Hello, " + user.displayName + ". Fill out the form below to do some good!");
+  $("#welcomeUser").html("Hello, " + user.displayName + ". <br/> Fill out the form below to do some good!");
 };
 
 function signOut () {
@@ -88,10 +88,21 @@ function validateForm () {
   if ( name !== '' && amount !== '' && !isNaN(amount) && donateTo !== '' && gaveUp !== '') {
   getValueDoGood();
   return false;
-  }
-  else {
-    alert("It looks like some fields were not filled in correctly. Please try again.");
-    return false
+} else if (name === '') {
+  alert("Please fill in your name.")
+  return false;
+} else if (amount === '' || isNaN(amount)) {
+  alert("Please put in a number for the amount donated.")
+  return false;
+} else if (donateTo === '') {
+  alert("Please fill in where you donated to.")
+  return false;
+} else if (gaveUp === '') {
+  alert("Please fill in what you gave up.")
+  return false;
+} else {
+  alert("It looks like some fields were not filled in correctly. Please try again.");
+  return false
   }
 }
 
